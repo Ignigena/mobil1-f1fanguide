@@ -20,6 +20,28 @@
 		863C366715F8EE150015BD7D /* M1SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C366615F8EE150015BD7D /* M1SecondViewController.m */; };
 		863C366915F8EE150015BD7D /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C366815F8EE150015BD7D /* second.png */; };
 		863C366B15F8EE150015BD7D /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C366A15F8EE150015BD7D /* second@2x.png */; };
+		863C367715F8EF410015BD7D /* AMCountdownModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C367615F8EF410015BD7D /* AMCountdownModel.m */; };
+		863C369215F90A030015BD7D /* SBTickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C368A15F907E60015BD7D /* SBTickerView.m */; };
+		863C369315F90A030015BD7D /* SBDoubleSidedLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C368C15F907E60015BD7D /* SBDoubleSidedLayer.m */; };
+		863C369415F90A030015BD7D /* SBGradientOverlayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C368E15F907E60015BD7D /* SBGradientOverlayLayer.m */; };
+		863C369515F90A030015BD7D /* AMNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C368615F907D80015BD7D /* AMNumberView.m */; };
+		863C369615F90EAB0015BD7D /* UIView+SBExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C368815F907E60015BD7D /* UIView+SBExtras.m */; };
+		863C369715F910230015BD7D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C369015F9099D0015BD7D /* QuartzCore.framework */; };
+		86F25FC315FA456500A9C7C1 /* TickerBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FC215FA456500A9C7C1 /* TickerBackground@2x.png */; };
+		86F25FC515FA4C5B00A9C7C1 /* FlipClock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FC415FA4C5B00A9C7C1 /* FlipClock@2x.png */; };
+		86F25FCE15FA5AEC00A9C7C1 /* M1CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F25FCD15FA5AEC00A9C7C1 /* M1CountdownViewController.m */; };
+		86F25FD115FA62D200A9C7C1 /* AMCountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F25FD015FA62D200A9C7C1 /* AMCountdownView.m */; };
+		86F25FDB15FA813A00A9C7C1 /* M1MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F25FDA15FA813A00A9C7C1 /* M1MapViewController.m */; };
+		86F25FDD15FA851E00A9C7C1 /* COTA.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FDC15FA851E00A9C7C1 /* COTA.png */; };
+		86F25FE315FA92DD00A9C7C1 /* TickerFrame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FE215FA92DD00A9C7C1 /* TickerFrame@2x.png */; };
+		86F25FE515FAA3B400A9C7C1 /* TickerGradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FE415FAA3B400A9C7C1 /* TickerGradient@2x.png */; };
+		86F25FEC15FE1EDB00A9C7C1 /* Novecentowide-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FE615FE1E3B00A9C7C1 /* Novecentowide-Bold.otf */; };
+		86F25FED15FE1EDE00A9C7C1 /* Novecentowide-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FE715FE1E3B00A9C7C1 /* Novecentowide-Book.otf */; };
+		86F25FEE15FE1EE000A9C7C1 /* Novecentowide-DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FE815FE1E3B00A9C7C1 /* Novecentowide-DemiBold.otf */; };
+		86F25FEF15FE1EE300A9C7C1 /* Novecentowide-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FE915FE1E3B00A9C7C1 /* Novecentowide-Light.otf */; };
+		86F25FF015FE1EE500A9C7C1 /* Novecentowide-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FEA15FE1E3B00A9C7C1 /* Novecentowide-Medium.otf */; };
+		86F25FF115FE1EE800A9C7C1 /* Novecentowide-Normal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FEB15FE1E3B00A9C7C1 /* Novecentowide-Normal.otf */; };
+		86F25FF315FE231500A9C7C1 /* CountdownTitle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FF215FE231500A9C7C1 /* CountdownTitle@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +64,37 @@
 		863C366615F8EE150015BD7D /* M1SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M1SecondViewController.m; sourceTree = "<group>"; };
 		863C366815F8EE150015BD7D /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		863C366A15F8EE150015BD7D /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		863C367515F8EF410015BD7D /* AMCountdownModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMCountdownModel.h; sourceTree = "<group>"; };
+		863C367615F8EF410015BD7D /* AMCountdownModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMCountdownModel.m; sourceTree = "<group>"; };
+		863C368515F907D80015BD7D /* AMNumberView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMNumberView.h; sourceTree = "<group>"; };
+		863C368615F907D80015BD7D /* AMNumberView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMNumberView.m; sourceTree = "<group>"; };
+		863C368715F907E60015BD7D /* UIView+SBExtras.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SBExtras.h"; sourceTree = "<group>"; };
+		863C368815F907E60015BD7D /* UIView+SBExtras.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SBExtras.m"; sourceTree = "<group>"; };
+		863C368915F907E60015BD7D /* SBTickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBTickerView.h; sourceTree = "<group>"; };
+		863C368A15F907E60015BD7D /* SBTickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBTickerView.m; sourceTree = "<group>"; };
+		863C368B15F907E60015BD7D /* SBDoubleSidedLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBDoubleSidedLayer.h; sourceTree = "<group>"; };
+		863C368C15F907E60015BD7D /* SBDoubleSidedLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBDoubleSidedLayer.m; sourceTree = "<group>"; };
+		863C368D15F907E60015BD7D /* SBGradientOverlayLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBGradientOverlayLayer.h; sourceTree = "<group>"; };
+		863C368E15F907E60015BD7D /* SBGradientOverlayLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBGradientOverlayLayer.m; sourceTree = "<group>"; };
+		863C369015F9099D0015BD7D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		86F25FC215FA456500A9C7C1 /* TickerBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TickerBackground@2x.png"; path = "Ticker/TickerBackground@2x.png"; sourceTree = "<group>"; };
+		86F25FC415FA4C5B00A9C7C1 /* FlipClock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FlipClock@2x.png"; path = "Ticker/FlipClock@2x.png"; sourceTree = "<group>"; };
+		86F25FCC15FA5AEC00A9C7C1 /* M1CountdownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M1CountdownViewController.h; sourceTree = "<group>"; };
+		86F25FCD15FA5AEC00A9C7C1 /* M1CountdownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M1CountdownViewController.m; sourceTree = "<group>"; };
+		86F25FCF15FA62D100A9C7C1 /* AMCountdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMCountdownView.h; sourceTree = "<group>"; };
+		86F25FD015FA62D200A9C7C1 /* AMCountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMCountdownView.m; sourceTree = "<group>"; };
+		86F25FD915FA813A00A9C7C1 /* M1MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M1MapViewController.h; sourceTree = "<group>"; };
+		86F25FDA15FA813A00A9C7C1 /* M1MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M1MapViewController.m; sourceTree = "<group>"; };
+		86F25FDC15FA851E00A9C7C1 /* COTA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = COTA.png; path = ../../../Desktop/COTA.png; sourceTree = "<group>"; };
+		86F25FE215FA92DD00A9C7C1 /* TickerFrame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TickerFrame@2x.png"; path = "Ticker/TickerFrame@2x.png"; sourceTree = "<group>"; };
+		86F25FE415FAA3B400A9C7C1 /* TickerGradient@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TickerGradient@2x.png"; path = "Ticker/TickerGradient@2x.png"; sourceTree = "<group>"; };
+		86F25FE615FE1E3B00A9C7C1 /* Novecentowide-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Novecentowide-Bold.otf"; sourceTree = "<group>"; };
+		86F25FE715FE1E3B00A9C7C1 /* Novecentowide-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Novecentowide-Book.otf"; sourceTree = "<group>"; };
+		86F25FE815FE1E3B00A9C7C1 /* Novecentowide-DemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Novecentowide-DemiBold.otf"; sourceTree = "<group>"; };
+		86F25FE915FE1E3B00A9C7C1 /* Novecentowide-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Novecentowide-Light.otf"; sourceTree = "<group>"; };
+		86F25FEA15FE1E3B00A9C7C1 /* Novecentowide-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Novecentowide-Medium.otf"; sourceTree = "<group>"; };
+		86F25FEB15FE1E3B00A9C7C1 /* Novecentowide-Normal.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Novecentowide-Normal.otf"; sourceTree = "<group>"; };
+		86F25FF215FE231500A9C7C1 /* CountdownTitle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CountdownTitle@2x.png"; path = "Ticker/CountdownTitle@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				863C369715F910230015BD7D /* QuartzCore.framework in Frameworks */,
 				863C364A15F8EE150015BD7D /* UIKit.framework in Frameworks */,
 				863C364C15F8EE150015BD7D /* Foundation.framework in Frameworks */,
 				863C364E15F8EE150015BD7D /* CoreGraphics.framework in Frameworks */,
@@ -78,6 +132,7 @@
 		863C364815F8EE150015BD7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				863C369015F9099D0015BD7D /* QuartzCore.framework */,
 				863C364915F8EE150015BD7D /* UIKit.framework */,
 				863C364B15F8EE150015BD7D /* Foundation.framework */,
 				863C364D15F8EE150015BD7D /* CoreGraphics.framework */,
@@ -91,8 +146,13 @@
 				863C365815F8EE150015BD7D /* M1AppDelegate.h */,
 				863C365915F8EE150015BD7D /* M1AppDelegate.m */,
 				863C365B15F8EE150015BD7D /* MainStoryboard.storyboard */,
+				86F25FCC15FA5AEC00A9C7C1 /* M1CountdownViewController.h */,
+				86F25FCD15FA5AEC00A9C7C1 /* M1CountdownViewController.m */,
+				86F25FBD15FA447300A9C7C1 /* AMCountdownTicker */,
 				863C365E15F8EE150015BD7D /* M1FirstViewController.h */,
 				863C365F15F8EE150015BD7D /* M1FirstViewController.m */,
+				86F25FD915FA813A00A9C7C1 /* M1MapViewController.h */,
+				86F25FDA15FA813A00A9C7C1 /* M1MapViewController.m */,
 				863C366115F8EE150015BD7D /* first.png */,
 				863C366315F8EE150015BD7D /* first@2x.png */,
 				863C366515F8EE150015BD7D /* M1SecondViewController.h */,
@@ -107,12 +167,61 @@
 		863C365015F8EE150015BD7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				86F25FE615FE1E3B00A9C7C1 /* Novecentowide-Bold.otf */,
+				86F25FE715FE1E3B00A9C7C1 /* Novecentowide-Book.otf */,
+				86F25FE815FE1E3B00A9C7C1 /* Novecentowide-DemiBold.otf */,
+				86F25FE915FE1E3B00A9C7C1 /* Novecentowide-Light.otf */,
+				86F25FEA15FE1E3B00A9C7C1 /* Novecentowide-Medium.otf */,
+				86F25FEB15FE1E3B00A9C7C1 /* Novecentowide-Normal.otf */,
+				86F25FDC15FA851E00A9C7C1 /* COTA.png */,
 				863C365115F8EE150015BD7D /* Mobil 1 Fan Guide-Info.plist */,
 				863C365215F8EE150015BD7D /* InfoPlist.strings */,
 				863C365515F8EE150015BD7D /* main.m */,
 				863C365715F8EE150015BD7D /* Mobil 1 Fan Guide-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		863C368F15F907EF0015BD7D /* SBTickerView */ = {
+			isa = PBXGroup;
+			children = (
+				863C368715F907E60015BD7D /* UIView+SBExtras.h */,
+				863C368815F907E60015BD7D /* UIView+SBExtras.m */,
+				863C368915F907E60015BD7D /* SBTickerView.h */,
+				863C368A15F907E60015BD7D /* SBTickerView.m */,
+				863C368B15F907E60015BD7D /* SBDoubleSidedLayer.h */,
+				863C368C15F907E60015BD7D /* SBDoubleSidedLayer.m */,
+				863C368D15F907E60015BD7D /* SBGradientOverlayLayer.h */,
+				863C368E15F907E60015BD7D /* SBGradientOverlayLayer.m */,
+			);
+			name = SBTickerView;
+			sourceTree = "<group>";
+		};
+		86F25FBD15FA447300A9C7C1 /* AMCountdownTicker */ = {
+			isa = PBXGroup;
+			children = (
+				86F25FC115FA449E00A9C7C1 /* Supporting Images */,
+				86F25FCF15FA62D100A9C7C1 /* AMCountdownView.h */,
+				86F25FD015FA62D200A9C7C1 /* AMCountdownView.m */,
+				863C367515F8EF410015BD7D /* AMCountdownModel.h */,
+				863C367615F8EF410015BD7D /* AMCountdownModel.m */,
+				863C368515F907D80015BD7D /* AMNumberView.h */,
+				863C368615F907D80015BD7D /* AMNumberView.m */,
+				863C368F15F907EF0015BD7D /* SBTickerView */,
+			);
+			name = AMCountdownTicker;
+			sourceTree = "<group>";
+		};
+		86F25FC115FA449E00A9C7C1 /* Supporting Images */ = {
+			isa = PBXGroup;
+			children = (
+				86F25FF215FE231500A9C7C1 /* CountdownTitle@2x.png */,
+				86F25FE415FAA3B400A9C7C1 /* TickerGradient@2x.png */,
+				86F25FC415FA4C5B00A9C7C1 /* FlipClock@2x.png */,
+				86F25FC215FA456500A9C7C1 /* TickerBackground@2x.png */,
+				86F25FE215FA92DD00A9C7C1 /* TickerFrame@2x.png */,
+			);
+			name = "Supporting Images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +282,18 @@
 				863C366415F8EE150015BD7D /* first@2x.png in Resources */,
 				863C366915F8EE150015BD7D /* second.png in Resources */,
 				863C366B15F8EE150015BD7D /* second@2x.png in Resources */,
+				86F25FC315FA456500A9C7C1 /* TickerBackground@2x.png in Resources */,
+				86F25FC515FA4C5B00A9C7C1 /* FlipClock@2x.png in Resources */,
+				86F25FDD15FA851E00A9C7C1 /* COTA.png in Resources */,
+				86F25FE315FA92DD00A9C7C1 /* TickerFrame@2x.png in Resources */,
+				86F25FE515FAA3B400A9C7C1 /* TickerGradient@2x.png in Resources */,
+				86F25FEC15FE1EDB00A9C7C1 /* Novecentowide-Bold.otf in Resources */,
+				86F25FED15FE1EDE00A9C7C1 /* Novecentowide-Book.otf in Resources */,
+				86F25FEE15FE1EE000A9C7C1 /* Novecentowide-DemiBold.otf in Resources */,
+				86F25FF015FE1EE500A9C7C1 /* Novecentowide-Medium.otf in Resources */,
+				86F25FEF15FE1EE300A9C7C1 /* Novecentowide-Light.otf in Resources */,
+				86F25FF115FE1EE800A9C7C1 /* Novecentowide-Normal.otf in Resources */,
+				86F25FF315FE231500A9C7C1 /* CountdownTitle@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,10 +304,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				863C369615F90EAB0015BD7D /* UIView+SBExtras.m in Sources */,
+				863C369215F90A030015BD7D /* SBTickerView.m in Sources */,
+				863C369315F90A030015BD7D /* SBDoubleSidedLayer.m in Sources */,
+				863C369415F90A030015BD7D /* SBGradientOverlayLayer.m in Sources */,
+				863C369515F90A030015BD7D /* AMNumberView.m in Sources */,
 				863C365615F8EE150015BD7D /* main.m in Sources */,
 				863C365A15F8EE150015BD7D /* M1AppDelegate.m in Sources */,
 				863C366015F8EE150015BD7D /* M1FirstViewController.m in Sources */,
 				863C366715F8EE150015BD7D /* M1SecondViewController.m in Sources */,
+				863C367715F8EF410015BD7D /* AMCountdownModel.m in Sources */,
+				86F25FCE15FA5AEC00A9C7C1 /* M1CountdownViewController.m in Sources */,
+				86F25FD115FA62D200A9C7C1 /* AMCountdownView.m in Sources */,
+				86F25FDB15FA813A00A9C7C1 /* M1MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +430,7 @@
 				863C367015F8EE150015BD7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AMCountdownModel.h"
 
 @interface M1AppDelegate : UIResponder <UIApplicationDelegate>
 
