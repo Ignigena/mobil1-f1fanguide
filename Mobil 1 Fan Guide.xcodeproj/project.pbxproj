@@ -43,6 +43,15 @@
 		86E4E9541603864300C19AE9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E9531603864300C19AE9 /* Default.png */; };
 		86E4E9561603869200C19AE9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E9551603869200C19AE9 /* Default-568h@2x.png */; };
 		86E4E9581603888400C19AE9 /* Linen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E9571603888400C19AE9 /* Linen@2x.png */; };
+		86E4E95D16039EE000C19AE9 /* M1VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E4E95C16039EE000C19AE9 /* M1VideoViewController.m */; };
+		86E4E95F1603A69100C19AE9 /* VideoCarousel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E95E1603A69100C19AE9 /* VideoCarousel@2x.png */; };
+		86E4E9611603A6DE00C19AE9 /* VideoCarousel.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E9601603A6DE00C19AE9 /* VideoCarousel.png */; };
+		86E4E9661603AF5E00C19AE9 /* VideoLoading-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E9621603AF5E00C19AE9 /* VideoLoading-1@2x.png */; };
+		86E4E9671603AF5E00C19AE9 /* VideoLoading-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E9631603AF5E00C19AE9 /* VideoLoading-2@2x.png */; };
+		86E4E9681603AF5E00C19AE9 /* VideoLoading-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E9641603AF5E00C19AE9 /* VideoLoading-3@2x.png */; };
+		86E4E9691603AF5E00C19AE9 /* VideoLoading-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E9651603AF5E00C19AE9 /* VideoLoading-4@2x.png */; };
+		86E4E96C1603BBD600C19AE9 /* M1VideoLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E4E96B1603BBD600C19AE9 /* M1VideoLoadingView.m */; };
+		86E4E96E1603BCE600C19AE9 /* VideoThumbnailFrame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E96D1603BCE600C19AE9 /* VideoThumbnailFrame@2x.png */; };
 		86F25FC315FA456500A9C7C1 /* TickerBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FC215FA456500A9C7C1 /* TickerBackground@2x.png */; };
 		86F25FCE15FA5AEC00A9C7C1 /* M1CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F25FCD15FA5AEC00A9C7C1 /* M1CountdownViewController.m */; };
 		86F25FD115FA62D200A9C7C1 /* AMCountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F25FD015FA62D200A9C7C1 /* AMCountdownView.m */; };
@@ -123,6 +132,17 @@
 		86E4E9531603864300C19AE9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		86E4E9551603869200C19AE9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		86E4E9571603888400C19AE9 /* Linen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Linen@2x.png"; sourceTree = "<group>"; };
+		86E4E95B16039EE000C19AE9 /* M1VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M1VideoViewController.h; sourceTree = "<group>"; };
+		86E4E95C16039EE000C19AE9 /* M1VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M1VideoViewController.m; sourceTree = "<group>"; };
+		86E4E95E1603A69100C19AE9 /* VideoCarousel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoCarousel@2x.png"; sourceTree = "<group>"; };
+		86E4E9601603A6DE00C19AE9 /* VideoCarousel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VideoCarousel.png; sourceTree = "<group>"; };
+		86E4E9621603AF5E00C19AE9 /* VideoLoading-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoLoading-1@2x.png"; sourceTree = "<group>"; };
+		86E4E9631603AF5E00C19AE9 /* VideoLoading-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoLoading-2@2x.png"; sourceTree = "<group>"; };
+		86E4E9641603AF5E00C19AE9 /* VideoLoading-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoLoading-3@2x.png"; sourceTree = "<group>"; };
+		86E4E9651603AF5E00C19AE9 /* VideoLoading-4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoLoading-4@2x.png"; sourceTree = "<group>"; };
+		86E4E96A1603BBD600C19AE9 /* M1VideoLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M1VideoLoadingView.h; sourceTree = "<group>"; };
+		86E4E96B1603BBD600C19AE9 /* M1VideoLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M1VideoLoadingView.m; sourceTree = "<group>"; };
+		86E4E96D1603BCE600C19AE9 /* VideoThumbnailFrame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoThumbnailFrame@2x.png"; sourceTree = "<group>"; };
 		86F25FC215FA456500A9C7C1 /* TickerBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TickerBackground@2x.png"; path = "Ticker/TickerBackground@2x.png"; sourceTree = "<group>"; };
 		86F25FCC15FA5AEC00A9C7C1 /* M1CountdownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M1CountdownViewController.h; sourceTree = "<group>"; };
 		86F25FCD15FA5AEC00A9C7C1 /* M1CountdownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M1CountdownViewController.m; sourceTree = "<group>"; };
@@ -218,11 +238,22 @@
 		863C364F15F8EE150015BD7D /* Mobil 1 Fan Guide */ = {
 			isa = PBXGroup;
 			children = (
+				863C365B15F8EE150015BD7D /* MainStoryboard.storyboard */,
 				86E4E9571603888400C19AE9 /* Linen@2x.png */,
+				86E4E9601603A6DE00C19AE9 /* VideoCarousel.png */,
+				86E4E95E1603A69100C19AE9 /* VideoCarousel@2x.png */,
+				86E4E96D1603BCE600C19AE9 /* VideoThumbnailFrame@2x.png */,
+				86E4E9621603AF5E00C19AE9 /* VideoLoading-1@2x.png */,
+				86E4E9631603AF5E00C19AE9 /* VideoLoading-2@2x.png */,
+				86E4E9641603AF5E00C19AE9 /* VideoLoading-3@2x.png */,
+				86E4E9651603AF5E00C19AE9 /* VideoLoading-4@2x.png */,
 				86E4E940160380EA00C19AE9 /* Tab Bar Icons */,
 				863C365815F8EE150015BD7D /* M1AppDelegate.h */,
 				863C365915F8EE150015BD7D /* M1AppDelegate.m */,
-				863C365B15F8EE150015BD7D /* MainStoryboard.storyboard */,
+				86E4E95B16039EE000C19AE9 /* M1VideoViewController.h */,
+				86E4E95C16039EE000C19AE9 /* M1VideoViewController.m */,
+				86E4E96A1603BBD600C19AE9 /* M1VideoLoadingView.h */,
+				86E4E96B1603BBD600C19AE9 /* M1VideoLoadingView.m */,
 				86F25FF715FE26EE00A9C7C1 /* NavBar@2x.png */,
 				86F25FF415FE266500A9C7C1 /* M1NavigationBar.h */,
 				86F25FF515FE266600A9C7C1 /* M1NavigationBar.m */,
@@ -428,6 +459,13 @@
 				86E4E9541603864300C19AE9 /* Default.png in Resources */,
 				86E4E9561603869200C19AE9 /* Default-568h@2x.png in Resources */,
 				86E4E9581603888400C19AE9 /* Linen@2x.png in Resources */,
+				86E4E95F1603A69100C19AE9 /* VideoCarousel@2x.png in Resources */,
+				86E4E9611603A6DE00C19AE9 /* VideoCarousel.png in Resources */,
+				86E4E9661603AF5E00C19AE9 /* VideoLoading-1@2x.png in Resources */,
+				86E4E9671603AF5E00C19AE9 /* VideoLoading-2@2x.png in Resources */,
+				86E4E9681603AF5E00C19AE9 /* VideoLoading-3@2x.png in Resources */,
+				86E4E9691603AF5E00C19AE9 /* VideoLoading-4@2x.png in Resources */,
+				86E4E96E1603BCE600C19AE9 /* VideoThumbnailFrame@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +494,8 @@
 				86F2600215FE302B00A9C7C1 /* M1MapOverlayView.m in Sources */,
 				86F2602215FE3D4000A9C7C1 /* UIView+Origami.m in Sources */,
 				86F2602B15FE6BC600A9C7C1 /* M1MapAnnotation.m in Sources */,
+				86E4E95D16039EE000C19AE9 /* M1VideoViewController.m in Sources */,
+				86E4E96C1603BBD600C19AE9 /* M1VideoLoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

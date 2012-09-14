@@ -45,10 +45,31 @@
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:)
                                                  name:UIDeviceOrientationDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playerDidEnterFullscreen:)
+                                                 name:@"UIMoviePlayerControllerDidEnterFullscreenNotification"
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playerDidExitFullscreen:)
+                                                 name:@"UIMoviePlayerControllerDidExitFullscreenNotification"
+                                               object:nil];
+}
+
+- (void)playerDidEnterFullscreen:(NSNotification *)notification
+{
+    _shouldAutoRotateInterface = NO;
+}
+
+- (void)playerDidExitFullscreen:(NSNotification *)notification
+{
+    _shouldAutoRotateInterface = YES;
 }
 
 -(void) orientationChanged:(NSNotification*)notification
 {
+    if (!self.shouldAutoRotateInterface)
+        return;
+    
     UIDeviceOrientation interfaceOrientation = [[UIDevice currentDevice] orientation];
     if(interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
         [self performSegueWithIdentifier:@"map" sender: self];

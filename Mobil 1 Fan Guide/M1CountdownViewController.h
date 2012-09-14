@@ -26,6 +26,8 @@
 @property (nonatomic) CGRect containerFrame;
 @property (nonatomic, assign) id <M1CountdownViewDelegate> delegate;
 
+@property (nonatomic) BOOL shouldAutoRotateInterface;
+
 - (void)showCountdownView;
 - (void)hideCountdownView;
 
