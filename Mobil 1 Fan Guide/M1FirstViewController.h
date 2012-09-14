@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 
-@interface M1FirstViewController : UIViewController
+@interface M1FirstViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 
+@property (strong, nonatomic) IBOutlet UITableView *newsTable;
 
 @end

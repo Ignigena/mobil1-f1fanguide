@@ -22,4 +22,6 @@
 @property (strong, nonatomic) SBTickerView *countdownMinutes;
 @property (strong, nonatomic) SBTickerView *countdownSeconds;
 
+@property (nonatomic) int cachedTabBarSelectedIndex;
+
 @end

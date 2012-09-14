@@ -51,6 +51,10 @@
         [self addSubview:_countdownSeconds];
         
         NSLog(@"%f", frame.size.height);
+        
+        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showFullSchedule:)];
+        [singleTap setNumberOfTapsRequired:1];
+        [self addGestureRecognizer:singleTap];
     }
     return self;
 }
@@ -83,6 +87,18 @@
         [_countdownSeconds tick:SBTickerViewTickDirectionDown animated:YES completion:nil];
     }
     
+}
+
+- (void)showFullSchedule:(id)sender
+{
+    int currentSelectedIndex = [(UITabBarController *)[[UIApplication sharedApplication] delegate].window.rootViewController selectedIndex];
+    
+    if (currentSelectedIndex != 1) {
+        _cachedTabBarSelectedIndex = currentSelectedIndex;
+        [(UITabBarController *)[[UIApplication sharedApplication] delegate].window.rootViewController setSelectedIndex:1];
+    } else {
+        [(UITabBarController *)[[UIApplication sharedApplication] delegate].window.rootViewController setSelectedIndex:self.cachedTabBarSelectedIndex];
+    }
 }
 
 @end
