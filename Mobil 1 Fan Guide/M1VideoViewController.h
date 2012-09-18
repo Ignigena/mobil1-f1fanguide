@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LBYouTubePlayerViewController.h"
 
-@interface M1VideoViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIWebView *heroVideoView;
+@interface M1VideoViewController : UIViewController <LBYouTubePlayerControllerDelegate>
+
+@property (strong, nonatomic) LBYouTubePlayerViewController *heroVideoView;
 @property (strong, nonatomic) IBOutlet UIScrollView *videoScrollView;
+
+- (IBAction)videoThumbnailSelect:(id)sender;
 
 @end

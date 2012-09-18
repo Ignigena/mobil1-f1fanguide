@@ -66,14 +66,6 @@
                                 <rect key="frame" x="0.0" y="44" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <webView opaque="NO" contentMode="scaleToFill" id="TbV-Hr-naV">
-                                <rect key="frame" x="0.0" y="44" width="320" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="delegate" destination="pX8-y0-f3R" id="9Xk-Ht-9gc"/>
-                                </connections>
-                            </webView>
                             <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="dyy-20-JT3" customClass="M1NavigationBar">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -85,70 +77,126 @@
                                 <rect key="frame" x="0.0" y="222" width="320" height="184"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <webView opaque="NO" tag="1" contentMode="scaleToFill" id="dGh-TC-8B2">
-                                        <rect key="frame" x="11" y="14" width="125" height="69"/>
+                                    <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5e6-uj-4cn">
+                                        <rect key="frame" x="11" y="14" width="124" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
-                                            <outlet property="delegate" destination="pX8-y0-f3R" id="m3v-5X-Udw"/>
+                                            <action selector="videoThumbnailSelect:" destination="pX8-y0-f3R" eventType="touchUpInside" id="eOg-7r-V80"/>
                                         </connections>
-                                    </webView>
-                                    <webView opaque="NO" tag="2" contentMode="scaleToFill" id="xsf-9I-5ra">
-                                        <rect key="frame" x="155" y="14" width="125" height="69"/>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iZy-hm-zph">
+                                        <rect key="frame" x="156" y="14" width="124" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
-                                            <outlet property="delegate" destination="pX8-y0-f3R" id="SoO-NB-9yR"/>
+                                            <action selector="videoThumbnailSelect:" destination="pX8-y0-f3R" eventType="touchUpInside" id="mBe-Pb-9yT"/>
                                         </connections>
-                                    </webView>
-                                    <webView opaque="NO" tag="3" contentMode="scaleToFill" id="P7d-W2-GQL">
-                                        <rect key="frame" x="300" y="14" width="125" height="69"/>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fJp-mG-LwR">
+                                        <rect key="frame" x="301" y="14" width="124" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
-                                            <outlet property="delegate" destination="pX8-y0-f3R" id="PZ1-lF-TOX"/>
+                                            <action selector="videoThumbnailSelect:" destination="pX8-y0-f3R" eventType="touchUpInside" id="e4l-CT-Ndr"/>
                                         </connections>
-                                    </webView>
-                                    <webView opaque="NO" tag="4" contentMode="scaleToFill" id="fWa-3u-KjE">
-                                        <rect key="frame" x="445" y="14" width="125" height="69"/>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mXF-wG-9nh">
+                                        <rect key="frame" x="445" y="14" width="124" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
-                                            <outlet property="delegate" destination="pX8-y0-f3R" id="dLh-su-KPx"/>
+                                            <action selector="videoThumbnailSelect:" destination="pX8-y0-f3R" eventType="touchUpInside" id="TFT-68-CtD"/>
                                         </connections>
-                                    </webView>
-                                    <webView opaque="NO" tag="5" contentMode="scaleToFill" id="hXG-Fs-yBi">
-                                        <rect key="frame" x="11" y="104" width="125" height="69"/>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="osV-hf-mwx">
+                                        <rect key="frame" x="11" y="104" width="124" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
-                                            <outlet property="delegate" destination="pX8-y0-f3R" id="x3W-Kw-jAP"/>
+                                            <action selector="videoThumbnailSelect:" destination="pX8-y0-f3R" eventType="touchUpInside" id="Jdc-fI-foB"/>
                                         </connections>
-                                    </webView>
-                                    <webView opaque="NO" tag="6" contentMode="scaleToFill" id="b4z-Ph-sPw">
-                                        <rect key="frame" x="155" y="104" width="125" height="69"/>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9Fk-ex-8jY">
+                                        <rect key="frame" x="156" y="104" width="124" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
-                                            <outlet property="delegate" destination="pX8-y0-f3R" id="oNb-4C-bP1"/>
+                                            <action selector="videoThumbnailSelect:" destination="pX8-y0-f3R" eventType="touchUpInside" id="cC2-Xm-jP3"/>
                                         </connections>
-                                    </webView>
-                                    <webView opaque="NO" tag="7" contentMode="scaleToFill" id="que-sl-NsY">
-                                        <rect key="frame" x="300" y="104" width="125" height="69"/>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EUg-jt-Tok">
+                                        <rect key="frame" x="301" y="104" width="124" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
-                                            <outlet property="delegate" destination="pX8-y0-f3R" id="Tfj-wp-sOU"/>
+                                            <action selector="videoThumbnailSelect:" destination="pX8-y0-f3R" eventType="touchUpInside" id="ozC-T6-Vp2"/>
                                         </connections>
-                                    </webView>
-                                    <webView opaque="NO" tag="8" contentMode="scaleToFill" id="CL8-Qe-uuL">
-                                        <rect key="frame" x="445" y="104" width="125" height="69"/>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8lp-cd-ENL">
+                                        <rect key="frame" x="446" y="104" width="124" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
-                                            <outlet property="delegate" destination="pX8-y0-f3R" id="tfs-cd-iwf"/>
+                                            <action selector="videoThumbnailSelect:" destination="pX8-y0-f3R" eventType="touchUpInside" id="C5K-2w-NaG"/>
                                         </connections>
-                                    </webView>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -156,7 +204,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Videos" image="70-tv.png" id="v1E-RW-sO5"/>
                     <connections>
-                        <outlet property="heroVideoView" destination="TbV-Hr-naV" id="b4K-Ab-pja"/>
                         <outlet property="videoScrollView" destination="LqF-FY-fzi" id="SOi-yE-i8P"/>
                     </connections>
                 </viewController>
@@ -355,7 +402,7 @@ Circuit of The Americas is ideally situated on a 1000-acre site in southeast Aus
         <class className="M1VideoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/M1VideoViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="heroVideoView" candidateClass="UIWebView"/>
+                <relationship kind="action" name="videoThumbnailSelect:"/>
                 <relationship kind="outlet" name="videoScrollView" candidateClass="UIScrollView"/>
             </relationships>
         </class>

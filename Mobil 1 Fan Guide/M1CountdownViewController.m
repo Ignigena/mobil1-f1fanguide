@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _shouldAutoRotateInterface = YES;
 	self.countdownView = [[AMCountdownView alloc] initWithFrame:CGRectMake(0, 0, 320, 94)];
 	self.countdownFrame = countdownView.frame;
     
@@ -47,26 +48,29 @@
                                                  name:UIDeviceOrientationDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(playerDidEnterFullscreen:)
-                                                 name:@"UIMoviePlayerControllerDidEnterFullscreenNotification"
+                                                 name:@"MPMoviePlayerDidEnterFullscreenNotification"
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(playerDidExitFullscreen:)
-                                                 name:@"UIMoviePlayerControllerDidExitFullscreenNotification"
+                                                 name:@"MPMoviePlayerDidExitFullscreenNotification"
                                                object:nil];
 }
 
 - (void)playerDidEnterFullscreen:(NSNotification *)notification
 {
+    NSLog(@"playerDidEnterFullscreen");
     _shouldAutoRotateInterface = NO;
 }
 
 - (void)playerDidExitFullscreen:(NSNotification *)notification
 {
+    NSLog(@"playerDidExitFullscreen");
     _shouldAutoRotateInterface = YES;
 }
 
 -(void) orientationChanged:(NSNotification*)notification
 {
+    NSLog(@"orientationChanged shouldAutoRotateInterface: %c", self.shouldAutoRotateInterface);
     if (!self.shouldAutoRotateInterface)
         return;
     

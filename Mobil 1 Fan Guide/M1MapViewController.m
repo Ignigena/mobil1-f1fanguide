@@ -25,7 +25,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        NSLog(@"i just inited!");
     }
     return self;
 }
@@ -35,9 +35,6 @@
     [super viewDidLoad];
 	
     _mapScrollView.contentSize = _mapCanvas.frame.size;
-    
-    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
-    [doubleTap setNumberOfTapsRequired:2];
     
     float minimumZoomScale = 480  / _mapCanvas.frame.size.width;
     _mapScrollView.minimumZoomScale = minimumZoomScale;
@@ -99,6 +96,8 @@
         }
         return pinView;
     }
+    
+    return nil;
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {

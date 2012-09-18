@@ -8,12 +8,16 @@
 
 #import "M1VideoViewController.h"
 #import "M1VideoLoadingView.h"
+#import "LBYouTubePlayerViewController.h"
+#import "LBYouTubePlayerController.h"
 
 @interface M1VideoViewController ()
 
 @end
 
 @implementation M1VideoViewController
+
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,36 +32,45 @@
 {
     [super viewDidLoad];
     
-    _videoScrollView.contentSize = CGSizeMake(582, 184);
     _videoScrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
     _videoScrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"VideoThumbnailFrame"]];
     
-    [_heroVideoView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/hero"]]];
-    [_heroVideoView addSubview:[[M1VideoLoadingView alloc] initWithFrame:CGRectMake(145, 80, 30, 19)]];
+    self.heroVideoView = [[LBYouTubePlayerViewController alloc] initWithYouTubeURL:[NSURL URLWithString:@"http://www.ilovetheory.com/apps/mobil1/f1/iphone/video/hero"]];
+    self.heroVideoView.delegate = self;
+    self.heroVideoView.quality = LBYouTubePlayerQualityLarge;
+    self.heroVideoView.view.frame = CGRectMake(0.0f, 44.0f, 320.0f, 180.0f);
+    [self.view addSubview:self.heroVideoView.view];
     
-    [(UIWebView *)[_videoScrollView viewWithTag:1]  loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/1"]]];
-    [[_videoScrollView viewWithTag:1]  addSubview:[[M1VideoLoadingView alloc] initWithFrame:CGRectMake(47, 25, 30, 19)]];
+    [[(UIButton *)[_videoScrollView viewWithTag:1] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+    [(UIButton *)[_videoScrollView viewWithTag:1] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/1/thumbnail"]]] forState:UIControlStateNormal];
     
-    [(UIWebView *)[_videoScrollView viewWithTag:2] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/2"]]];
-    [[_videoScrollView viewWithTag:2] addSubview:[[M1VideoLoadingView alloc] initWithFrame:CGRectMake(47, 25, 30, 19)]];
+    [[(UIButton *)[_videoScrollView viewWithTag:2] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+    [(UIButton *)[_videoScrollView viewWithTag:2] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/2/thumbnail"]]] forState:UIControlStateNormal];
+
+    [[(UIButton *)[_videoScrollView viewWithTag:3] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+    [(UIButton *)[_videoScrollView viewWithTag:3] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/3/thumbnail"]]] forState:UIControlStateNormal];
     
-    [(UIWebView *)[_videoScrollView viewWithTag:3] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/3"]]];
-    [[_videoScrollView viewWithTag:3] addSubview:[[M1VideoLoadingView alloc] initWithFrame:CGRectMake(47, 25, 30, 19)]];
+    [[(UIButton *)[_videoScrollView viewWithTag:4] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+    [(UIButton *)[_videoScrollView viewWithTag:4] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/4/thumbnail"]]] forState:UIControlStateNormal];
     
-    [(UIWebView *)[_videoScrollView viewWithTag:4] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/4"]]];
-    [[_videoScrollView viewWithTag:4] addSubview:[[M1VideoLoadingView alloc] initWithFrame:CGRectMake(47, 25, 30, 19)]];
-    
-    [(UIWebView *)[_videoScrollView viewWithTag:5] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/5"]]];
-    [[_videoScrollView viewWithTag:5] addSubview:[[M1VideoLoadingView alloc] initWithFrame:CGRectMake(47, 25, 30, 19)]];
-    
-    [(UIWebView *)[_videoScrollView viewWithTag:6] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/6"]]];
-    [[_videoScrollView viewWithTag:6] addSubview:[[M1VideoLoadingView alloc] initWithFrame:CGRectMake(47, 25, 30, 19)]];
-    
-    [(UIWebView *)[_videoScrollView viewWithTag:7] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/7"]]];
-    [[_videoScrollView viewWithTag:7] addSubview:[[M1VideoLoadingView alloc] initWithFrame:CGRectMake(47, 25, 30, 19)]];
-    
-    [(UIWebView *)[_videoScrollView viewWithTag:8] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/8"]]];
-    [[_videoScrollView viewWithTag:8] addSubview:[[M1VideoLoadingView alloc] initWithFrame:CGRectMake(47, 25, 30, 19)]];
+    if (!IS_IPHONE_5) {
+        _videoScrollView.frame = CGRectMake(_videoScrollView.frame.origin.x, _videoScrollView.frame.origin.y, _videoScrollView.frame.size.width, 95);
+        _videoScrollView.contentSize = CGSizeMake(582, 95);
+    } else {
+        _videoScrollView.contentSize = CGSizeMake(582, 184);
+        
+        [[(UIButton *)[_videoScrollView viewWithTag:5] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+        [(UIButton *)[_videoScrollView viewWithTag:5] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/5/thumbnail"]]] forState:UIControlStateNormal];
+        
+        [[(UIButton *)[_videoScrollView viewWithTag:6] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+        [(UIButton *)[_videoScrollView viewWithTag:6] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/6/thumbnail"]]] forState:UIControlStateNormal];
+        
+        [[(UIButton *)[_videoScrollView viewWithTag:7] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+        [(UIButton *)[_videoScrollView viewWithTag:7] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/7/thumbnail"]]] forState:UIControlStateNormal];
+        
+        [[(UIButton *)[_videoScrollView viewWithTag:8] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+        [(UIButton *)[_videoScrollView viewWithTag:8] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/8/thumbnail"]]] forState:UIControlStateNormal];
+    }
     
     [_videoScrollView flashScrollIndicators];
 }
@@ -71,6 +84,25 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)youTubePlayerViewController:(LBYouTubePlayerViewController *)controller didSuccessfullyExtractYouTubeURL:(NSURL *)videoURL {
+    NSLog(@"Did extract video source:%@", videoURL);
+}
+
+-(void)youTubePlayerViewController:(LBYouTubePlayerViewController *)controller failedExtractingYouTubeURLWithError:(NSError *)error {
+    NSLog(@"Failed loading %@ due to error:%@", controller.youTubeURL, error);
+}
+
+- (IBAction)videoThumbnailSelect:(id)sender {
+    [self.heroVideoView.view removeFromSuperview];
+    
+    self.heroVideoView = [[LBYouTubePlayerViewController alloc] initWithYouTubeURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.ilovetheory.com/apps/mobil1/f1/iphone/video/%i", [sender tag]]]];
+    self.heroVideoView.delegate = self;
+    self.heroVideoView.quality = LBYouTubePlayerQualityLarge;
+    self.heroVideoView.view.autoplayOnLoad = YES;
+    self.heroVideoView.view.frame = CGRectMake(0.0f, 44.0f, 320.0f, 180.0f);
+    [self.view addSubview:self.heroVideoView.view];
 }
 
 @end
