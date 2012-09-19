@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class M1MapViewController;
+
 @protocol M1CountdownViewDelegate <UITabBarControllerDelegate>
 - (UIView *)getCountdownView;
 @end

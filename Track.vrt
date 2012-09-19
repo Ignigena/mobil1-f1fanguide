@@ -1,0 +1,56 @@
+<VRTDataset rasterXSize="20000" rasterYSize="20000">
+  <Metadata />
+  <Metadata domain="IMAGE_STRUCTURE">
+    <MDI key="INTERLEAVE">PIXEL</MDI>
+  </Metadata>
+  <GCPList Projection="GEOGCS[&quot;WGS 84&quot;,DATUM[&quot;WGS_1984&quot;,SPHEROID[&quot;WGS 84&quot;,6378137,298.257223563,AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]],PRIMEM[&quot;Greenwich&quot;,0,AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]],UNIT[&quot;degree&quot;,0.0174532925199433,AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]">
+    <GCP Id="" Pixel="0.0000" Line="0.0000" X="-9.764801818718E+01" Y="3.014956172214E+01" />
+    <GCP Id="" Pixel="20000.0000" Line="0.0000" X="-9.761571489872E+01" Y="3.014956172214E+01" />
+    <GCP Id="" Pixel="20000.0000" Line="20000.0000" X="-9.761571489872E+01" Y="3.012171251328E+01" />
+    <GCP Id="" Pixel="0.0000" Line="20000.0000" X="-9.764801944444E+01" Y="3.012171388889E+01" />
+  </GCPList>
+  <VRTRasterBand dataType="Byte" band="1">
+    <Metadata />
+    <ColorInterp>Red</ColorInterp>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">Track.png</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="20000" RasterYSize="20000" DataType="Byte" BlockXSize="20000" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="20000" ySize="20000" />
+      <DstRect xOff="0" yOff="0" xSize="20000" ySize="20000" />
+    </SimpleSource>
+  </VRTRasterBand>
+  <VRTRasterBand dataType="Byte" band="2">
+    <Metadata />
+    <ColorInterp>Green</ColorInterp>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">Track.png</SourceFilename>
+      <SourceBand>2</SourceBand>
+      <SourceProperties RasterXSize="20000" RasterYSize="20000" DataType="Byte" BlockXSize="20000" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="20000" ySize="20000" />
+      <DstRect xOff="0" yOff="0" xSize="20000" ySize="20000" />
+    </SimpleSource>
+  </VRTRasterBand>
+  <VRTRasterBand dataType="Byte" band="3">
+    <Metadata />
+    <ColorInterp>Blue</ColorInterp>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">Track.png</SourceFilename>
+      <SourceBand>3</SourceBand>
+      <SourceProperties RasterXSize="20000" RasterYSize="20000" DataType="Byte" BlockXSize="20000" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="20000" ySize="20000" />
+      <DstRect xOff="0" yOff="0" xSize="20000" ySize="20000" />
+    </SimpleSource>
+  </VRTRasterBand>
+  <VRTRasterBand dataType="Byte" band="4">
+    <Metadata />
+    <ColorInterp>Alpha</ColorInterp>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">Track.png</SourceFilename>
+      <SourceBand>4</SourceBand>
+      <SourceProperties RasterXSize="20000" RasterYSize="20000" DataType="Byte" BlockXSize="20000" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="20000" ySize="20000" />
+      <DstRect xOff="0" yOff="0" xSize="20000" ySize="20000" />
+    </SimpleSource>
+  </VRTRasterBand>
+</VRTDataset>

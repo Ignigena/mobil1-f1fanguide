@@ -10,6 +10,7 @@
 #import "M1CountdownViewController.h"
 #import "AMCountdownView.h"
 #import "AMCountdownModel.h"
+#import "M1MapViewController.h"
 
 @implementation M1CountdownViewController
 
@@ -76,9 +77,19 @@
     
     UIDeviceOrientation interfaceOrientation = [[UIDevice currentDevice] orientation];
     if(interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+        if ([[UIApplication sharedApplication]
+             respondsToSelector:@selector(setStatusBarHidden:withAnimation:)])
+            [[UIApplication sharedApplication] setStatusBarHidden:YES
+                                                    withAnimation:(UIStatusBarAnimationFade)];
+        
         [self performSegueWithIdentifier:@"map" sender: self];
     } else {
         [self dismissViewControllerAnimated:YES completion:nil];
+        
+        if ([[UIApplication sharedApplication]
+             respondsToSelector:@selector(setStatusBarHidden:withAnimation:)])
+            [[UIApplication sharedApplication] setStatusBarHidden:NO
+                                                    withAnimation:(UIStatusBarAnimationFade)];
     }
     
 }

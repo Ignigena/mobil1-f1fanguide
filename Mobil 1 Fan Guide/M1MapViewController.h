@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
+@class TileOverlay;
+
 @interface M1MapViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIScrollView *mapScrollView;
 @property (strong, nonatomic) IBOutlet UIImageView *mapCanvas;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
+
+@property (strong, nonatomic) TileOverlay *overlay;
 
 @property (strong, nonatomic) IBOutlet UIView *containerView;
 @property (strong, nonatomic) IBOutlet UIView *infoView;

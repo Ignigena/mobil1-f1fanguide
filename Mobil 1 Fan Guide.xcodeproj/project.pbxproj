@@ -57,6 +57,10 @@
 		86E4E9801603E21100C19AE9 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E4E97F1603E21100C19AE9 /* MediaPlayer.framework */; };
 		86E4E9871607832B00C19AE9 /* LBYouTubeMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E4E9861607832B00C19AE9 /* LBYouTubeMoviePlayerController.m */; };
 		86E4E9891607B22500C19AE9 /* VideoPlayButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E9881607B22400C19AE9 /* VideoPlayButton@2x.png */; };
+		86E4EBA91609FE0200C19AE9 /* Tiles in Resources */ = {isa = PBXBuildFile; fileRef = 86E4EBA81609FDF900C19AE9 /* Tiles */; };
+		86E4EBAE1609FE3900C19AE9 /* TileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E4EBAB1609FE3200C19AE9 /* TileOverlay.m */; };
+		86E4EBAF1609FE3900C19AE9 /* TileOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E4EBAD1609FE3800C19AE9 /* TileOverlayView.m */; };
+		86E4EBBA160A168000C19AE9 /* Pins in Resources */ = {isa = PBXBuildFile; fileRef = 86E4EBB9160A168000C19AE9 /* Pins */; };
 		86F25FC315FA456500A9C7C1 /* TickerBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FC215FA456500A9C7C1 /* TickerBackground@2x.png */; };
 		86F25FCE15FA5AEC00A9C7C1 /* M1CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F25FCD15FA5AEC00A9C7C1 /* M1CountdownViewController.m */; };
 		86F25FD115FA62D200A9C7C1 /* AMCountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F25FD015FA62D200A9C7C1 /* AMCountdownView.m */; };
@@ -74,8 +78,6 @@
 		86F25FF815FE26EF00A9C7C1 /* NavBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FF715FE26EE00A9C7C1 /* NavBar@2x.png */; };
 		86F25FFA15FE291500A9C7C1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F25FF915FE291500A9C7C1 /* MapKit.framework */; };
 		86F25FFC15FE2BA200A9C7C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F25FFB15FE2BA200A9C7C1 /* CoreLocation.framework */; };
-		86F25FFF15FE2EAC00A9C7C1 /* M1MapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F25FFE15FE2EAC00A9C7C1 /* M1MapOverlay.m */; };
-		86F2600215FE302B00A9C7C1 /* M1MapOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F2600115FE302B00A9C7C1 /* M1MapOverlayView.m */; };
 		86F2600415FE344800A9C7C1 /* TrackOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F2600315FE344800A9C7C1 /* TrackOverlay@2x.png */; };
 		86F2601315FE38DB00A9C7C1 /* 11-map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F2601215FE38DB00A9C7C1 /* 11-map-marker.png */; };
 		86F2601515FE38FD00A9C7C1 /* 12-map-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F2601415FE38FD00A9C7C1 /* 12-map-pin.png */; };
@@ -158,6 +160,12 @@
 		86E4E9851607832B00C19AE9 /* LBYouTubeMoviePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBYouTubeMoviePlayerController.h; sourceTree = "<group>"; };
 		86E4E9861607832B00C19AE9 /* LBYouTubeMoviePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBYouTubeMoviePlayerController.m; sourceTree = "<group>"; };
 		86E4E9881607B22400C19AE9 /* VideoPlayButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoPlayButton@2x.png"; sourceTree = "<group>"; };
+		86E4EBA81609FDF900C19AE9 /* Tiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tiles; sourceTree = SOURCE_ROOT; };
+		86E4EBAA1609FE2800C19AE9 /* TileOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TileOverlay.h; path = ../TileOverlay.h; sourceTree = "<group>"; };
+		86E4EBAB1609FE3200C19AE9 /* TileOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TileOverlay.m; path = ../TileOverlay.m; sourceTree = "<group>"; };
+		86E4EBAC1609FE3500C19AE9 /* TileOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TileOverlayView.h; path = ../TileOverlayView.h; sourceTree = "<group>"; };
+		86E4EBAD1609FE3800C19AE9 /* TileOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TileOverlayView.m; path = ../TileOverlayView.m; sourceTree = "<group>"; };
+		86E4EBB9160A168000C19AE9 /* Pins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pins; sourceTree = "<group>"; };
 		86F25FC215FA456500A9C7C1 /* TickerBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TickerBackground@2x.png"; path = "Ticker/TickerBackground@2x.png"; sourceTree = "<group>"; };
 		86F25FCC15FA5AEC00A9C7C1 /* M1CountdownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M1CountdownViewController.h; sourceTree = "<group>"; };
 		86F25FCD15FA5AEC00A9C7C1 /* M1CountdownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M1CountdownViewController.m; sourceTree = "<group>"; };
@@ -179,10 +187,6 @@
 		86F25FF715FE26EE00A9C7C1 /* NavBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBar@2x.png"; sourceTree = "<group>"; };
 		86F25FF915FE291500A9C7C1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		86F25FFB15FE2BA200A9C7C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		86F25FFD15FE2EAB00A9C7C1 /* M1MapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M1MapOverlay.h; sourceTree = "<group>"; };
-		86F25FFE15FE2EAC00A9C7C1 /* M1MapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M1MapOverlay.m; sourceTree = "<group>"; };
-		86F2600015FE302A00A9C7C1 /* M1MapOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M1MapOverlayView.h; sourceTree = "<group>"; };
-		86F2600115FE302B00A9C7C1 /* M1MapOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M1MapOverlayView.m; sourceTree = "<group>"; };
 		86F2600315FE344800A9C7C1 /* TrackOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TrackOverlay@2x.png"; sourceTree = "<group>"; };
 		86F2601215FE38DB00A9C7C1 /* 11-map-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "11-map-marker.png"; sourceTree = "<group>"; };
 		86F2601415FE38FD00A9C7C1 /* 12-map-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "12-map-pin.png"; sourceTree = "<group>"; };
@@ -223,7 +227,6 @@
 				86E4E9511603863900C19AE9 /* Default@2x.png */,
 				86E4E93316036A4D00C19AE9 /* AppIcon@2x.png */,
 				86E4E93116036A4A00C19AE9 /* AppIcon.png */,
-				86E4E9761603E0E000C19AE9 /* LBYouTubePlayer */,
 				86F25FBD15FA447300A9C7C1 /* AMCountdownTicker */,
 				863C364F15F8EE150015BD7D /* Mobil 1 Fan Guide */,
 				863C364815F8EE150015BD7D /* Frameworks */,
@@ -257,25 +260,12 @@
 			isa = PBXGroup;
 			children = (
 				863C365B15F8EE150015BD7D /* MainStoryboard.storyboard */,
+				86E4E98E1608CB0A00C19AE9 /* Video Tab */,
+				86E4EBB0160A028000C19AE9 /* Map View */,
+				86E4E98F1608CB7100C19AE9 /* User Interface */,
 				86E4E9571603888400C19AE9 /* Linen@2x.png */,
-				86E4E9601603A6DE00C19AE9 /* VideoCarousel.png */,
-				86E4E95E1603A69100C19AE9 /* VideoCarousel@2x.png */,
-				86E4E96D1603BCE600C19AE9 /* VideoThumbnailFrame@2x.png */,
-				86E4E9621603AF5E00C19AE9 /* VideoLoading-1@2x.png */,
-				86E4E9631603AF5E00C19AE9 /* VideoLoading-2@2x.png */,
-				86E4E9641603AF5E00C19AE9 /* VideoLoading-3@2x.png */,
-				86E4E9651603AF5E00C19AE9 /* VideoLoading-4@2x.png */,
-				86E4E9881607B22400C19AE9 /* VideoPlayButton@2x.png */,
-				86E4E940160380EA00C19AE9 /* Tab Bar Icons */,
 				863C365815F8EE150015BD7D /* M1AppDelegate.h */,
 				863C365915F8EE150015BD7D /* M1AppDelegate.m */,
-				86E4E95B16039EE000C19AE9 /* M1VideoViewController.h */,
-				86E4E95C16039EE000C19AE9 /* M1VideoViewController.m */,
-				86E4E96A1603BBD600C19AE9 /* M1VideoLoadingView.h */,
-				86E4E96B1603BBD600C19AE9 /* M1VideoLoadingView.m */,
-				86F25FF715FE26EE00A9C7C1 /* NavBar@2x.png */,
-				86F25FF415FE266500A9C7C1 /* M1NavigationBar.h */,
-				86F25FF515FE266600A9C7C1 /* M1NavigationBar.m */,
 				86F25FCC15FA5AEC00A9C7C1 /* M1CountdownViewController.h */,
 				86F25FCD15FA5AEC00A9C7C1 /* M1CountdownViewController.m */,
 				863C365E15F8EE150015BD7D /* M1FirstViewController.h */,
@@ -283,14 +273,6 @@
 				86E4E93816036E9F00C19AE9 /* TableGradient@2x.png */,
 				86F2602715FE485000A9C7C1 /* InfoDivider@2x.png */,
 				86F2602C15FE6F7D00A9C7C1 /* Render.jpg */,
-				86F25FFD15FE2EAB00A9C7C1 /* M1MapOverlay.h */,
-				86F25FFE15FE2EAC00A9C7C1 /* M1MapOverlay.m */,
-				86F2600015FE302A00A9C7C1 /* M1MapOverlayView.h */,
-				86F2600115FE302B00A9C7C1 /* M1MapOverlayView.m */,
-				86F25FD915FA813A00A9C7C1 /* M1MapViewController.h */,
-				86F25FDA15FA813A00A9C7C1 /* M1MapViewController.m */,
-				86F2602915FE6BC400A9C7C1 /* M1MapAnnotation.h */,
-				86F2602A15FE6BC500A9C7C1 /* M1MapAnnotation.m */,
 				86F2602015FE3D3E00A9C7C1 /* UIView+Origami.h */,
 				86F2602115FE3D3F00A9C7C1 /* UIView+Origami.m */,
 				86F2602315FE404800A9C7C1 /* InfoPane@2x.png */,
@@ -313,6 +295,8 @@
 		863C365015F8EE150015BD7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				86E4EBA81609FDF900C19AE9 /* Tiles */,
+				86E4E940160380EA00C19AE9 /* Tab Bar Icons */,
 				86F25FE615FE1E3B00A9C7C1 /* Novecentowide-Bold.otf */,
 				86F25FE715FE1E3B00A9C7C1 /* Novecentowide-Book.otf */,
 				86F25FE815FE1E3B00A9C7C1 /* Novecentowide-DemiBold.otf */,
@@ -370,6 +354,53 @@
 				86E4E9861607832B00C19AE9 /* LBYouTubeMoviePlayerController.m */,
 			);
 			name = LBYouTubePlayer;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		86E4E98E1608CB0A00C19AE9 /* Video Tab */ = {
+			isa = PBXGroup;
+			children = (
+				86E4E95B16039EE000C19AE9 /* M1VideoViewController.h */,
+				86E4E95C16039EE000C19AE9 /* M1VideoViewController.m */,
+				86E4E96A1603BBD600C19AE9 /* M1VideoLoadingView.h */,
+				86E4E96B1603BBD600C19AE9 /* M1VideoLoadingView.m */,
+				86E4E9881607B22400C19AE9 /* VideoPlayButton@2x.png */,
+				86E4E96D1603BCE600C19AE9 /* VideoThumbnailFrame@2x.png */,
+				86E4E95E1603A69100C19AE9 /* VideoCarousel@2x.png */,
+				86E4E9601603A6DE00C19AE9 /* VideoCarousel.png */,
+				86E4E9621603AF5E00C19AE9 /* VideoLoading-1@2x.png */,
+				86E4E9631603AF5E00C19AE9 /* VideoLoading-2@2x.png */,
+				86E4E9641603AF5E00C19AE9 /* VideoLoading-3@2x.png */,
+				86E4E9651603AF5E00C19AE9 /* VideoLoading-4@2x.png */,
+				86E4E9761603E0E000C19AE9 /* LBYouTubePlayer */,
+			);
+			name = "Video Tab";
+			sourceTree = "<group>";
+		};
+		86E4E98F1608CB7100C19AE9 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				86F25FF415FE266500A9C7C1 /* M1NavigationBar.h */,
+				86F25FF515FE266600A9C7C1 /* M1NavigationBar.m */,
+				86F25FF715FE26EE00A9C7C1 /* NavBar@2x.png */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		86E4EBB0160A028000C19AE9 /* Map View */ = {
+			isa = PBXGroup;
+			children = (
+				86F25FD915FA813A00A9C7C1 /* M1MapViewController.h */,
+				86F25FDA15FA813A00A9C7C1 /* M1MapViewController.m */,
+				86E4EBAA1609FE2800C19AE9 /* TileOverlay.h */,
+				86E4EBAB1609FE3200C19AE9 /* TileOverlay.m */,
+				86E4EBAC1609FE3500C19AE9 /* TileOverlayView.h */,
+				86E4EBAD1609FE3800C19AE9 /* TileOverlayView.m */,
+				86F2602915FE6BC400A9C7C1 /* M1MapAnnotation.h */,
+				86F2602A15FE6BC500A9C7C1 /* M1MapAnnotation.m */,
+				86E4EBB9160A168000C19AE9 /* Pins */,
+			);
+			name = "Map View";
 			sourceTree = "<group>";
 		};
 		86F25FBD15FA447300A9C7C1 /* AMCountdownTicker */ = {
@@ -501,6 +532,8 @@
 				86E4E9691603AF5E00C19AE9 /* VideoLoading-4@2x.png in Resources */,
 				86E4E96E1603BCE600C19AE9 /* VideoThumbnailFrame@2x.png in Resources */,
 				86E4E9891607B22500C19AE9 /* VideoPlayButton@2x.png in Resources */,
+				86E4EBA91609FE0200C19AE9 /* Tiles in Resources */,
+				86E4EBBA160A168000C19AE9 /* Pins in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,8 +558,6 @@
 				86F25FD115FA62D200A9C7C1 /* AMCountdownView.m in Sources */,
 				86F25FDB15FA813A00A9C7C1 /* M1MapViewController.m in Sources */,
 				86F25FF615FE266600A9C7C1 /* M1NavigationBar.m in Sources */,
-				86F25FFF15FE2EAC00A9C7C1 /* M1MapOverlay.m in Sources */,
-				86F2600215FE302B00A9C7C1 /* M1MapOverlayView.m in Sources */,
 				86F2602215FE3D4000A9C7C1 /* UIView+Origami.m in Sources */,
 				86F2602B15FE6BC600A9C7C1 /* M1MapAnnotation.m in Sources */,
 				86E4E95D16039EE000C19AE9 /* M1VideoViewController.m in Sources */,
@@ -534,6 +565,8 @@
 				86E4E97B1603E10C00C19AE9 /* LBYouTubePlayerController.m in Sources */,
 				86E4E97C1603E10C00C19AE9 /* LBYouTubePlayerViewController.m in Sources */,
 				86E4E9871607832B00C19AE9 /* LBYouTubeMoviePlayerController.m in Sources */,
+				86E4EBAE1609FE3900C19AE9 /* TileOverlay.m in Sources */,
+				86E4EBAF1609FE3900C19AE9 /* TileOverlayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,11 +6,11 @@
 //  Copyright (c) 2012 Albert Martin. All rights reserved.
 //
 
-#import "M1MapOverlay.h"
-#import "M1MapOverlayView.h"
 #import "M1MapViewController.h"
 #import "M1MapAnnotation.h"
 #import "UIView+Origami.h"
+#import "TileOverlay.h"
+#import "TileOverlayView.h"
 
 @interface M1MapViewController ()
 
@@ -21,29 +21,27 @@
 @synthesize mapView = _mapView;
 @synthesize containerView = _containerView;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (void)viewDidAppear:(BOOL)animated
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        NSLog(@"i just inited!");
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	
-    _mapScrollView.contentSize = _mapCanvas.frame.size;
+    [super viewDidAppear:animated];
     
-    float minimumZoomScale = 480  / _mapCanvas.frame.size.width;
-    _mapScrollView.minimumZoomScale = minimumZoomScale;
-    [_mapScrollView setZoomScale: minimumZoomScale];
+    // Initialize the TileOverlay with tiles in the application's bundle's resource directory.
+    // Any valid tiled image directory structure in there will do.
+    _overlay = [[TileOverlay alloc] initWithTileDirectory:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Tiles"]];
+    [_mapView addOverlay:self.overlay];
     
-    [_mapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake(30.135,-97.63), MKCoordinateSpanMake(0.02,0.04)) animated:NO];
-    M1MapOverlay *mapOverlay = [[M1MapOverlay alloc] init];
-    [_mapView addOverlay:mapOverlay];
-    _mapView.showsUserLocation = YES;
+    // zoom in by a factor of two from the rect that contains the bounds
+    // because MapKit always backs up to get to an integral zoom level so
+    // we need to go in one so that we don't end up backed out beyond the
+    // range of the TileOverlay.
+    MKMapRect visibleRect = [_mapView mapRectThatFits:self.overlay.boundingMapRect];
+    visibleRect.size.width /= 2;
+    visibleRect.size.height /= 2;
+    visibleRect.origin.x += visibleRect.size.width / 2;
+    visibleRect.origin.y += visibleRect.size.height / 2;
+    _mapView.visibleMapRect = visibleRect;
+    
+    NSLog(@"mapView visibleMapRect: %f %f %f %f", visibleRect.origin.x,visibleRect.origin.y, visibleRect.size.width,visibleRect.size.height);
     
     [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13,-97.63) title:@"Mobil 1 Performance Zone" subtitle:@"Awesome Mobil 1 stuff!"]];
     [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.14,-97.64) title:@"Render" subtitle:@"Sick!" image:[UIImage imageNamed:@"Render"]]];
@@ -83,6 +81,7 @@
             customPinView.pinColor = MKPinAnnotationColorPurple;
             customPinView.animatesDrop = YES;
             customPinView.canShowCallout = YES;
+            customPinView.image = [UIImage imageNamed:@"Turn1@2x.png"];
             
             UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
             [rightButton addTarget:self action:@selector(toggleInfoDrawer:) forControlEvents:UIControlEventTouchUpInside];
@@ -100,12 +99,18 @@
     return nil;
 }
 
-- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
+/*- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
     
     M1MapOverlay *mapOverlay = (M1MapOverlay *)overlay;
     M1MapOverlayView *mapOverlayView = [[M1MapOverlayView alloc] initWithOverlay:mapOverlay];
     
     return mapOverlayView;
+} */
+
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
+    TileOverlayView *view = [[TileOverlayView alloc] initWithOverlay:overlay];
+    view.tileAlpha = 0.6;
+    return view;
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
