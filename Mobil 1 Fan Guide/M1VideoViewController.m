@@ -41,36 +41,7 @@
     self.heroVideoView.view.frame = CGRectMake(0.0f, 44.0f, 320.0f, 180.0f);
     [self.view addSubview:self.heroVideoView.view];
     
-    [[(UIButton *)[_videoScrollView viewWithTag:1] imageView] setContentMode:UIViewContentModeScaleAspectFill];
-    [(UIButton *)[_videoScrollView viewWithTag:1] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/1/thumbnail"]]] forState:UIControlStateNormal];
-    
-    [[(UIButton *)[_videoScrollView viewWithTag:2] imageView] setContentMode:UIViewContentModeScaleAspectFill];
-    [(UIButton *)[_videoScrollView viewWithTag:2] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/2/thumbnail"]]] forState:UIControlStateNormal];
-
-    [[(UIButton *)[_videoScrollView viewWithTag:3] imageView] setContentMode:UIViewContentModeScaleAspectFill];
-    [(UIButton *)[_videoScrollView viewWithTag:3] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/3/thumbnail"]]] forState:UIControlStateNormal];
-    
-    [[(UIButton *)[_videoScrollView viewWithTag:4] imageView] setContentMode:UIViewContentModeScaleAspectFill];
-    [(UIButton *)[_videoScrollView viewWithTag:4] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/4/thumbnail"]]] forState:UIControlStateNormal];
-    
-    if (!IS_IPHONE_5) {
-        _videoScrollView.frame = CGRectMake(_videoScrollView.frame.origin.x, _videoScrollView.frame.origin.y, _videoScrollView.frame.size.width, 95);
-        _videoScrollView.contentSize = CGSizeMake(582, 95);
-    } else {
-        _videoScrollView.contentSize = CGSizeMake(582, 184);
-        
-        [[(UIButton *)[_videoScrollView viewWithTag:5] imageView] setContentMode:UIViewContentModeScaleAspectFill];
-        [(UIButton *)[_videoScrollView viewWithTag:5] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/5/thumbnail"]]] forState:UIControlStateNormal];
-        
-        [[(UIButton *)[_videoScrollView viewWithTag:6] imageView] setContentMode:UIViewContentModeScaleAspectFill];
-        [(UIButton *)[_videoScrollView viewWithTag:6] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/6/thumbnail"]]] forState:UIControlStateNormal];
-        
-        [[(UIButton *)[_videoScrollView viewWithTag:7] imageView] setContentMode:UIViewContentModeScaleAspectFill];
-        [(UIButton *)[_videoScrollView viewWithTag:7] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/7/thumbnail"]]] forState:UIControlStateNormal];
-        
-        [[(UIButton *)[_videoScrollView viewWithTag:8] imageView] setContentMode:UIViewContentModeScaleAspectFill];
-        [(UIButton *)[_videoScrollView viewWithTag:8] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/8/thumbnail"]]] forState:UIControlStateNormal];
-    }
+    [self loadYouTubeThumbnails];
     
     [_videoScrollView flashScrollIndicators];
 }
@@ -103,6 +74,67 @@
     self.heroVideoView.view.autoplayOnLoad = YES;
     self.heroVideoView.view.frame = CGRectMake(0.0f, 44.0f, 320.0f, 180.0f);
     [self.view addSubview:self.heroVideoView.view];
+}
+
+- (void)loadYouTubeThumbnails {
+    [[(UIButton *)[_videoScrollView viewWithTag:1] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+    [[(UIButton *)[_videoScrollView viewWithTag:2] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+    [[(UIButton *)[_videoScrollView viewWithTag:3] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+    [[(UIButton *)[_videoScrollView viewWithTag:4] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+    [[(UIButton *)[_videoScrollView viewWithTag:5] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+    [[(UIButton *)[_videoScrollView viewWithTag:6] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+    [[(UIButton *)[_videoScrollView viewWithTag:7] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+    [[(UIButton *)[_videoScrollView viewWithTag:8] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+    
+    MKNetworkEngine *engine = [[MKNetworkEngine alloc] init];
+    
+    MKNetworkOperation *thumb1 = [engine operationWithURLString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/1/thumbnail" params:nil httpMethod:@"GET"];
+    
+    [thumb1 onCompletion:^(MKNetworkOperation *completedOperation) {
+        [(UIButton *)[_videoScrollView viewWithTag:1] setImage:[UIImage imageWithData: [completedOperation responseData]] forState:UIControlStateNormal];
+    } onError:^(NSError *error) {}];
+    
+    MKNetworkOperation *thumb2 = [engine operationWithURLString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/2/thumbnail" params:nil httpMethod:@"GET"];
+    
+    [thumb2 onCompletion:^(MKNetworkOperation *completedOperation) {
+        [(UIButton *)[_videoScrollView viewWithTag:2] setImage:[UIImage imageWithData: [completedOperation responseData]] forState:UIControlStateNormal];
+    } onError:^(NSError *error) {}];
+    
+    MKNetworkOperation *thumb3 = [engine operationWithURLString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/3/thumbnail" params:nil httpMethod:@"GET"];
+    
+    [thumb3 onCompletion:^(MKNetworkOperation *completedOperation) {
+        [(UIButton *)[_videoScrollView viewWithTag:3] setImage:[UIImage imageWithData: [completedOperation responseData]] forState:UIControlStateNormal];
+    } onError:^(NSError *error) {}];
+    
+    MKNetworkOperation *thumb4 = [engine operationWithURLString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/4/thumbnail" params:nil httpMethod:@"GET"];
+    
+    [thumb4 onCompletion:^(MKNetworkOperation *completedOperation) {
+        [(UIButton *)[_videoScrollView viewWithTag:4] setImage:[UIImage imageWithData: [completedOperation responseData]] forState:UIControlStateNormal];
+    } onError:^(NSError *error) {}];
+    
+    [engine enqueueOperation:thumb1];
+    [engine enqueueOperation:thumb2];
+    [engine enqueueOperation:thumb3];
+    [engine enqueueOperation:thumb4];
+    
+    if (!IS_IPHONE_5) {
+        _videoScrollView.frame = CGRectMake(_videoScrollView.frame.origin.x, _videoScrollView.frame.origin.y, _videoScrollView.frame.size.width, 95);
+        _videoScrollView.contentSize = CGSizeMake(582, 95);
+    } else {
+        _videoScrollView.contentSize = CGSizeMake(582, 184);
+        
+        [[(UIButton *)[_videoScrollView viewWithTag:5] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+        [(UIButton *)[_videoScrollView viewWithTag:5] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/5/thumbnail"]]] forState:UIControlStateNormal];
+        
+        [[(UIButton *)[_videoScrollView viewWithTag:6] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+        [(UIButton *)[_videoScrollView viewWithTag:6] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/6/thumbnail"]]] forState:UIControlStateNormal];
+        
+        [[(UIButton *)[_videoScrollView viewWithTag:7] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+        [(UIButton *)[_videoScrollView viewWithTag:7] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/7/thumbnail"]]] forState:UIControlStateNormal];
+        
+        [[(UIButton *)[_videoScrollView viewWithTag:8] imageView] setContentMode:UIViewContentModeScaleAspectFill];
+        [(UIButton *)[_videoScrollView viewWithTag:8] setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ilovetheory.com/apps/mobil1/f1/iphone/video/8/thumbnail"]]] forState:UIControlStateNormal];
+    }
 }
 
 @end
