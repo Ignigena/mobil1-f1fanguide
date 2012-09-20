@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 Albert Martin. All rights reserved.
 //
 
-#import "M1SecondViewController.h"
+#import "M1ScheduleViewController.h"
 
-@interface M1SecondViewController ()
+@interface M1ScheduleViewController ()
 
 @end
 
-@implementation M1SecondViewController
+@implementation M1ScheduleViewController
 
 - (void)viewDidLoad
 {

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface M1SecondViewController : UIViewController
+@interface M1ScheduleViewController : UIViewController
 
 @end

@@ -21,6 +21,26 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"d-M-yyy H:m"];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
+    
+    NSDate *today = [NSDate date];
+    NSDate *raceDate = [dateFormatter dateFromString:@"16-11-2012 18:00"];
+    NSDate *raceFinishedDate = [dateFormatter dateFromString:@"16-11-2012 20:00"];
+    
+    // If the current time is during the race window (2hrs) change to Live Now
+    if ([today compare:raceDate]==NSOrderedSame && [today compare:raceFinishedDate]==NSOrderedAscending) {
+        UITabBarItem *scheduleTabBar = [self.tabBar.items objectAtIndex:1];
+        scheduleTabBar.title = @"Live Now!";
+    }
+    
+    // If the current time is after the race change to Results
+    if ([today compare:raceFinishedDate]==NSOrderedDescending) {
+        UITabBarItem *scheduleTabBar = [self.tabBar.items objectAtIndex:1];
+        scheduleTabBar.title = @"Results";
+    }
+    
     [super viewDidLoad];
     
     _shouldAutoRotateInterface = YES;
@@ -36,11 +56,7 @@
 		}
 	}
     
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"d-M-yyy H:m"];
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
-    
-    AMCountdownModel *countdown = [[AMCountdownModel alloc] initWithTargetDate:[dateFormatter dateFromString:@"16-11-2012 18:00"]];
+    AMCountdownModel *countdown = [[AMCountdownModel alloc] initWithTargetDate:raceDate];
     [countdown run];
     
     [self showCountdownView];
