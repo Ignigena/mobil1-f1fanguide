@@ -62,6 +62,7 @@
 		864A6EFA160B913C005A86E2 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 864A6EF9160B913C005A86E2 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		86A6F9FE160A64CC00780A2E /* Turn1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86A6F9FD160A64CC00780A2E /* Turn1@2x.png */; };
 		86A6FA00160A657F00780A2E /* Turn2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86A6F9FF160A657F00780A2E /* Turn2@2x.png */; };
+		86DC1AB2160BA9AD008531D5 /* Schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 86DC1AB1160BA9AD008531D5 /* Schedule.json */; };
 		86E4E93216036A4A00C19AE9 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E93116036A4A00C19AE9 /* AppIcon.png */; };
 		86E4E93416036A4D00C19AE9 /* AppIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E93316036A4D00C19AE9 /* AppIcon@2x.png */; };
 		86E4E93916036E9F00C19AE9 /* TableGradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E93816036E9F00C19AE9 /* TableGradient@2x.png */; };
@@ -202,6 +203,7 @@
 		864A6EF9160B913C005A86E2 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = JSONKit/JSONKit.m; sourceTree = SOURCE_ROOT; };
 		86A6F9FD160A64CC00780A2E /* Turn1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Turn1@2x.png"; path = "Pins/Turn1@2x.png"; sourceTree = "<group>"; };
 		86A6F9FF160A657F00780A2E /* Turn2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Turn2@2x.png"; path = "Pins/Turn2@2x.png"; sourceTree = "<group>"; };
+		86DC1AB1160BA9AD008531D5 /* Schedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Schedule.json; sourceTree = "<group>"; };
 		86E4E93116036A4A00C19AE9 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		86E4E93316036A4D00C19AE9 /* AppIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@2x.png"; sourceTree = "<group>"; };
 		86E4E93816036E9F00C19AE9 /* TableGradient@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableGradient@2x.png"; sourceTree = "<group>"; };
@@ -300,10 +302,9 @@
 				86E4E9511603863900C19AE9 /* Default@2x.png */,
 				86E4E93316036A4D00C19AE9 /* AppIcon@2x.png */,
 				86E4E93116036A4A00C19AE9 /* AppIcon.png */,
-				86F25FBD15FA447300A9C7C1 /* AMCountdownTicker */,
 				863C364F15F8EE150015BD7D /* Mobil 1 Fan Guide */,
+				86DC1AB0160BA012008531D5 /* Supporting Libraries */,
 				863C364815F8EE150015BD7D /* Frameworks */,
-				864A6EB0160B7050005A86E2 /* MKNetworkKit */,
 				863C364615F8EE150015BD7D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -337,17 +338,15 @@
 			isa = PBXGroup;
 			children = (
 				863C365B15F8EE150015BD7D /* MainStoryboard.storyboard */,
-				864A6EF8160B913C005A86E2 /* JSONKit.h */,
-				864A6EF9160B913C005A86E2 /* JSONKit.m */,
+				863C365815F8EE150015BD7D /* M1AppDelegate.h */,
+				863C365915F8EE150015BD7D /* M1AppDelegate.m */,
+				86F25FCC15FA5AEC00A9C7C1 /* M1CountdownViewController.h */,
+				86F25FCD15FA5AEC00A9C7C1 /* M1CountdownViewController.m */,
 				86DC1AAA160B969D008531D5 /* Schedule Tab */,
 				86E4E98E1608CB0A00C19AE9 /* Video Tab */,
 				86E4EBB0160A028000C19AE9 /* Map View */,
 				86E4E98F1608CB7100C19AE9 /* User Interface */,
 				86E4E9571603888400C19AE9 /* Linen@2x.png */,
-				863C365815F8EE150015BD7D /* M1AppDelegate.h */,
-				863C365915F8EE150015BD7D /* M1AppDelegate.m */,
-				86F25FCC15FA5AEC00A9C7C1 /* M1CountdownViewController.h */,
-				86F25FCD15FA5AEC00A9C7C1 /* M1CountdownViewController.m */,
 				863C365E15F8EE150015BD7D /* M1FirstViewController.h */,
 				863C365F15F8EE150015BD7D /* M1FirstViewController.m */,
 				86E4E93816036E9F00C19AE9 /* TableGradient@2x.png */,
@@ -475,8 +474,21 @@
 			children = (
 				863C366515F8EE150015BD7D /* M1ScheduleViewController.h */,
 				863C366615F8EE150015BD7D /* M1ScheduleViewController.m */,
+				86DC1AB1160BA9AD008531D5 /* Schedule.json */,
 			);
 			name = "Schedule Tab";
+			sourceTree = "<group>";
+		};
+		86DC1AB0160BA012008531D5 /* Supporting Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				864A6EF8160B913C005A86E2 /* JSONKit.h */,
+				864A6EF9160B913C005A86E2 /* JSONKit.m */,
+				86F25FBD15FA447300A9C7C1 /* AMCountdownTicker */,
+				86E4E9761603E0E000C19AE9 /* LBYouTubePlayer */,
+				864A6EB0160B7050005A86E2 /* MKNetworkKit */,
+			);
+			name = "Supporting Libraries";
 			sourceTree = "<group>";
 		};
 		86E4E940160380EA00C19AE9 /* Tab Bar Icons */ = {
@@ -505,7 +517,6 @@
 				864A6EF4160B912E005A86E2 /* LBYouTubePlayerViewController.m */,
 			);
 			name = LBYouTubePlayer;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		86E4E98E1608CB0A00C19AE9 /* Video Tab */ = {
@@ -523,7 +534,6 @@
 				86E4E9631603AF5E00C19AE9 /* VideoLoading-2@2x.png */,
 				86E4E9641603AF5E00C19AE9 /* VideoLoading-3@2x.png */,
 				86E4E9651603AF5E00C19AE9 /* VideoLoading-4@2x.png */,
-				86E4E9761603E0E000C19AE9 /* LBYouTubePlayer */,
 			);
 			name = "Video Tab";
 			sourceTree = "<group>";
@@ -705,6 +715,7 @@
 				864A6EA3160B4EC0005A86E2 /* Turn18@2x.png in Resources */,
 				864A6EA4160B4EC0005A86E2 /* Turn19@2x.png in Resources */,
 				864A6EA5160B4EC0005A86E2 /* Turn20@2x.png in Resources */,
+				86DC1AB2160BA9AD008531D5 /* Schedule.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

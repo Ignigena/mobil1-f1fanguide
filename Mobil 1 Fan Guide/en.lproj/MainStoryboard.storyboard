@@ -48,7 +48,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FKK-pI-NFK">
                                 <rect key="frame" x="0.0" y="44" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="T74-sI-WBg" detailTextLabel="UbW-fC-11g" style="IBUITableViewCellStyleValue1" id="EBy-jg-Chu">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -101,11 +101,19 @@
                                         </view>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3" id="dUm-lI-VJC"/>
+                                    <outlet property="delegate" destination="3" id="mea-YI-dGK"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.10588236153125763" green="0.10588236153125763" blue="0.10588236153125763" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Schedule" image="139-flags.png" id="6"/>
+                    <connections>
+                        <outlet property="scheduleTabTable" destination="FKK-pI-NFK" id="OIb-6R-4Gf"/>
+                        <outlet property="scheduleTabTitle" destination="22" id="yeL-5m-IOS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
@@ -468,6 +476,10 @@ Circuit of The Americas is ideally situated on a 1000-acre site in southeast Aus
         </class>
         <class className="M1ScheduleViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/M1ScheduleViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scheduleTabTable" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="scheduleTabTitle" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="M1VideoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/M1VideoViewController.h"/>

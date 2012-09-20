@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface M1ScheduleViewController : UIViewController
+@interface M1ScheduleViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) NSArray *schedule;
+
+@property (strong, nonatomic) IBOutlet UILabel *scheduleTabTitle;
+@property (strong, nonatomic) IBOutlet UITableView *scheduleTabTable;
 
 @end

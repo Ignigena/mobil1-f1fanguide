@@ -18,43 +18,60 @@
 {
     [super viewDidLoad];
     
-    NSInteger ordinalDay = 37;
-    NSInteger year = 2010;
-	
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-	
-    [components setDay:ordinalDay];
-    [components setYear:year];
-	
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    //NSDate *date = [gregorian dateFromComponents:components];
-    NSDate *date = [NSDate date];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	
-    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
-    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"d-M-yyy H:m"];
     [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
-	
-    // You could keep the formatter and calendar around in an ivar/property
-    // if you're doing this a lot.
-	
-    NSString *formattedDateString = [dateFormatter stringFromDate:date];
-	
-    NSLog(@"formattedDateString for locale %@: %@",
-		  [[dateFormatter locale] localeIdentifier], formattedDateString);
     
-    // output is 'formattedDateString for locale en_US: 2/6/10'
+    NSDate *today = [NSDate date];
+    NSDate *raceDate = [dateFormatter dateFromString:@"16-11-2012 18:00"];
+    NSDate *raceFinishedDate = [dateFormatter dateFromString:@"16-11-2012 20:00"];
     
-    //if  ([[Na] timeIntervalSinceNow] <= 0) {
-    //    NSLog(@"Before Race!");
-    //}
-	// Do any additional setup after loading the view, typically from a nib.
+    // If the current time is during the race window (2hrs) change to Live Now
+    if ([today compare:raceDate]==NSOrderedSame && [today compare:raceFinishedDate]==NSOrderedAscending) {
+        self.scheduleTabTitle.hidden = YES;
+    }
+    
+    // If the current time is after the race change to Results
+    if ([today compare:raceFinishedDate]==NSOrderedDescending) {
+        self.scheduleTabTitle.text = @"Race Results";
+    }
+
+    self.schedule = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Schedule.json"]] options:kNilOptions error:nil];
+    NSLog(@"%@", [self.schedule objectAtIndex:0]);
+
+    [self.scheduleTabTable reloadData];
 }
 
-- (void)didReceiveMemoryWarning
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [self.schedule count];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSDictionary *dictionary = [self.schedule objectAtIndex:section];
+    NSArray *array = [dictionary objectForKey:@"section"];
+    return [array count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [[self.schedule objectAtIndex:section] objectForKey:@"title"];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    static NSString *CellIdentifier = @"ScheduleCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+    }
+    
+    NSDictionary *selectedSection = [self.schedule objectAtIndex:indexPath.section];
+    NSArray *selectedRow = [selectedSection objectForKey:@"section"];
+    NSDictionary *cellValue = [selectedRow objectAtIndex:indexPath.row];
+    cell.textLabel.text = [cellValue objectForKey:@"title"];
+    cell.detailTextLabel.text = [cellValue objectForKey:@"date"];
+    
+    return cell;
 }
 
 @end

@@ -1,0 +1,47 @@
+[
+ {
+ "title" : "Race Events",
+ "section": [
+             {
+             "title": "Practice 1",
+             "date": "16 November",
+             "time": "11:00"
+             },
+             {
+             "title": "Practice 2",
+             "date": "16 November",
+             "time": "15:00"
+             },
+             {
+             "title": "Practice 3",
+             "date": "17 November",
+             "time": "15:00"
+             },
+             {
+             "title": "Qualifying",
+             "date": "17 November",
+             "time": "14:00"
+             },
+             {
+             "title": "Race",
+             "date": "17 November",
+             "time": "14:00"
+             },
+             ],
+ },
+ {
+ "title" : "Mobil 1 Performance Zone",
+ "section": [
+             {
+             "title": "Event 1",
+             "date": "10 October",
+             "time": "1:00PM"
+             },
+             {
+             "title": "Event 2",
+             "date": "10 November",
+             "time": "1:00PM"
+             },
+             ]
+ }
+]
