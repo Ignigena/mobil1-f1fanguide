@@ -301,6 +301,9 @@
                                             <segment title="Fan Fest"/>
                                         </segments>
                                         <color key="tintColor" red="0.095935980765310722" green="0.2741027910273019" blue="0.43171190693430656" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="toggleMapView:" destination="ErH-1g-Laj" eventType="valueChanged" id="8c6-RS-dlD"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

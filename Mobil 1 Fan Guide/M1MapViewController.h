@@ -24,4 +24,6 @@
 
 @property (nonatomic) BOOL infoDrawerOpen;
 
+- (IBAction)toggleMapView:(UISegmentedControl *)sender;
+
 @end

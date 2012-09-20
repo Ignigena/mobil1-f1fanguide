@@ -21,6 +21,8 @@
 @synthesize mapView = _mapView;
 @synthesize containerView = _containerView;
 
+#define TRACK_RECT MKMapRectMake(61407232.000000, 110626923.789474, 20480.000000, 13653.333333)
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -30,18 +32,11 @@
     _overlay = [[TileOverlay alloc] initWithTileDirectory:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Tiles"]];
     [_mapView addOverlay:self.overlay];
     
-    // zoom in by a factor of two from the rect that contains the bounds
-    // because MapKit always backs up to get to an integral zoom level so
-    // we need to go in one so that we don't end up backed out beyond the
-    // range of the TileOverlay.
-    MKMapRect visibleRect = [_mapView mapRectThatFits:self.overlay.boundingMapRect];
-    visibleRect.origin.x += visibleRect.size.width / 2;
-    visibleRect.origin.y += visibleRect.size.height / 1.9;
-    visibleRect.size.width /= 6;
-    visibleRect.size.height /= 6;
-    _mapView.visibleMapRect = visibleRect;
+    // Show the user location
+    _mapView.showsUserLocation = YES;
     
-    NSLog(@"mapView visibleMapRect: %f %f %f %f", visibleRect.origin.x,visibleRect.origin.y, visibleRect.size.width,visibleRect.size.height);
+    // Zoom into the track by default
+    _mapView.visibleMapRect = TRACK_RECT;
     
     [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.12977222222222,-97.63660833333336) title:@"Special" subtitle:@"Turn1"]];
     [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13233573484781,-97.63761198869007) title:@"Special" subtitle:@"Turn2"]];
@@ -96,21 +91,21 @@
         if (!pinView) {
             // if an existing pin view was not available, create one
             MKPinAnnotationView* customPinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:M1AnnotationIdentifier];
-            //customPinView.pinColor = MKPinAnnotationColorPurple;
-            //customPinView.animatesDrop = YES;
-            //customPinView.canShowCallout = YES;
+            
             if (annotation.title == @"Special") {
                 customPinView.image = [UIImage imageNamed:annotation.subtitle];
+            } else {
+                customPinView.pinColor = MKPinAnnotationColorPurple;
+                customPinView.animatesDrop = YES;
+                customPinView.canShowCallout = YES;
+                
+                UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+                [rightButton addTarget:self action:@selector(toggleInfoDrawer:) forControlEvents:UIControlEventTouchUpInside];
+                customPinView.rightCalloutAccessoryView = rightButton;
             }
             
-            UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-            [rightButton addTarget:self action:@selector(toggleInfoDrawer:) forControlEvents:UIControlEventTouchUpInside];
-            customPinView.rightCalloutAccessoryView = rightButton;
-            
             return customPinView;
-        }
-        else
-        {
+        } else {
             pinView.annotation = annotation;
         }
         return pinView;
@@ -118,14 +113,6 @@
     
     return nil;
 }
-
-/*- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
-    
-    M1MapOverlay *mapOverlay = (M1MapOverlay *)overlay;
-    M1MapOverlayView *mapOverlayView = [[M1MapOverlayView alloc] initWithOverlay:mapOverlay];
-    
-    return mapOverlayView;
-} */
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay {
     TileOverlayView *view = [[TileOverlayView alloc] initWithOverlay:overlay];
@@ -137,37 +124,19 @@
     return _mapCanvas;
 }
 
-- (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center {
-    CGRect zoomRect;
-    
-    // the zoom rect is in the content view's coordinates.
-    //    At a zoom scale of 1.0, it would be the size of the imageScrollView's bounds.
-    //    As the zoom scale decreases, so more content is visible, the size of the rect grows.
-    zoomRect.size.height = _mapScrollView.frame.size.height / scale;
-    zoomRect.size.width  = _mapScrollView.frame.size.width / scale;
-    
-    // choose an origin so as to get the right center.
-    zoomRect.origin.x    = center.x - (zoomRect.size.width  / 2.0);
-    zoomRect.origin.y    = center.y - (zoomRect.size.height / 2.0);
-    
-    return zoomRect;
-}
-
-- (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer {
-    if (_mapScrollView.zoomScale > _mapScrollView.minimumZoomScale) {
-        CGRect zoomRect = [self zoomRectForScale:_mapScrollView.minimumZoomScale withCenter:CGPointMake(0, 0)];
-        [_mapScrollView zoomToRect:zoomRect animated:YES];
-    } else {
-        float newScale = [_mapScrollView zoomScale] * 2.5;
-        CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gestureRecognizer locationInView:gestureRecognizer.view]];
-        [_mapScrollView zoomToRect:zoomRect animated:YES];
-    }
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)toggleMapView:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex == 0) {
+        // User selected "Track"
+        [_mapView setVisibleMapRect:TRACK_RECT animated:YES];
+    } else {
+        // User selected "Fan Fest"
+    }
 }
 
 @end
