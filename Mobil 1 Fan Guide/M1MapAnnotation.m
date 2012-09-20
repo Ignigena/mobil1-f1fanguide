@@ -11,7 +11,6 @@
 @implementation M1MapAnnotation
 
 @synthesize coordinate = _coordinate;
-@synthesize image = _image;
 @synthesize title = _title;
 @synthesize subtitle = _subtitle;
 
@@ -35,15 +34,6 @@
 	return annotation;
 }
 
-+ (M1MapAnnotation *)mapAnnotationWithCoordinate:(CLLocationCoordinate2D)aCoordinate title:(NSString *)aTitle subtitle:(NSString *)aSubtitle image:(UIImage *)anImage {
-	M1MapAnnotation *annotation = [[self alloc] init];
-	annotation.coordinate = aCoordinate;
-	annotation.title = aTitle;
-	annotation.subtitle = aSubtitle;
-    annotation.image = anImage;
-	return annotation;
-}
-
 #pragma mark - Initializers
 
 - (M1MapAnnotation *)initWithCoordinate:(CLLocationCoordinate2D)aCoordinate {
@@ -61,16 +51,6 @@
 		self.coordinate = aCoordinate;
 		self.title = aTitle;
 		self.subtitle = aSubtitle;
-	}
-	return self;
-}
-
-- (M1MapAnnotation *)initWithCoordinate:(CLLocationCoordinate2D)aCoordinate title:(NSString *)aTitle subtitle:(NSString *)aSubtitle image:(UIImage *)anImage {
-	if ((self = [super init])) {
-		self.coordinate = aCoordinate;
-		self.title = aTitle;
-		self.subtitle = aSubtitle;
-        self.image = anImage;
 	}
 	return self;
 }

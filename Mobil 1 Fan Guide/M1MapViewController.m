@@ -35,16 +35,34 @@
     // we need to go in one so that we don't end up backed out beyond the
     // range of the TileOverlay.
     MKMapRect visibleRect = [_mapView mapRectThatFits:self.overlay.boundingMapRect];
-    visibleRect.size.width /= 2;
-    visibleRect.size.height /= 2;
     visibleRect.origin.x += visibleRect.size.width / 2;
-    visibleRect.origin.y += visibleRect.size.height / 2;
+    visibleRect.origin.y += visibleRect.size.height / 1.9;
+    visibleRect.size.width /= 6;
+    visibleRect.size.height /= 6;
     _mapView.visibleMapRect = visibleRect;
     
     NSLog(@"mapView visibleMapRect: %f %f %f %f", visibleRect.origin.x,visibleRect.origin.y, visibleRect.size.width,visibleRect.size.height);
     
-    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13,-97.63) title:@"Mobil 1 Performance Zone" subtitle:@"Awesome Mobil 1 stuff!"]];
-    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.14,-97.64) title:@"Render" subtitle:@"Sick!" image:[UIImage imageNamed:@"Render"]]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.12977222222222,-97.63660833333336) title:@"Special" subtitle:@"Turn1"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13233573484781,-97.63761198869007) title:@"Special" subtitle:@"Turn2"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13356361461617,-97.6346674131745) title:@"Special" subtitle:@"Turn3"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13458838215721,-97.63490238090559) title:@"Special" subtitle:@"Turn4"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13467911184228,-97.63346055516335) title:@"Special" subtitle:@"Turn5"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13638394840469,-97.63310829826139) title:@"Special" subtitle:@"Turn6"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13547267446125,-97.63101198623896) title:@"Special" subtitle:@"Turn7"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13691570806554,-97.62978529588254) title:@"Special" subtitle:@"Turn8"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13596881217982,-97.62911229372683) title:@"Special" subtitle:@"Turn9"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.1363268456492,-97.62680851763956) title:@"Special" subtitle:@"Turn10"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.1395776645105,-97.62412635515734) title:@"Special" subtitle:@"Turn11"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13744980455283,-97.63704347396823) title:@"Special" subtitle:@"Turn12"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13551483703974,-97.63518258892344) title:@"Special" subtitle:@"Turn13"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13534723393265,-97.63655008510861) title:@"Special" subtitle:@"Turn14"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13682357038325,-97.63772219896754) title:@"Special" subtitle:@"Turn15"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13441318061477,-97.63658127921968) title:@"Special" subtitle:@"Turn16"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13400909497561,-97.63767320660379) title:@"Special" subtitle:@"Turn17"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13343838057951,-97.638699153847) title:@"Special" subtitle:@"Turn18"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13573458257057,-97.64067696007579) title:@"Special" subtitle:@"Turn19"]];
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13445816227009,-97.6439224122243) title:@"Special" subtitle:@"Turn20"]];
 }
 
 - (IBAction)toggleInfoDrawer:(id)sender {
@@ -78,10 +96,12 @@
         if (!pinView) {
             // if an existing pin view was not available, create one
             MKPinAnnotationView* customPinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:M1AnnotationIdentifier];
-            customPinView.pinColor = MKPinAnnotationColorPurple;
-            customPinView.animatesDrop = YES;
-            customPinView.canShowCallout = YES;
-            customPinView.image = [UIImage imageNamed:@"Turn1@2x.png"];
+            //customPinView.pinColor = MKPinAnnotationColorPurple;
+            //customPinView.animatesDrop = YES;
+            //customPinView.canShowCallout = YES;
+            if (annotation.title == @"Special") {
+                customPinView.image = [UIImage imageNamed:annotation.subtitle];
+            }
             
             UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
             [rightButton addTarget:self action:@selector(toggleInfoDrawer:) forControlEvents:UIControlEventTouchUpInside];

@@ -12,18 +12,15 @@
 @interface M1MapAnnotation : NSObject <MKAnnotation>
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
-@property (nonatomic, copy) UIImage *image;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *subtitle;
 
 + (M1MapAnnotation *)mapAnnotationWithCoordinate:(CLLocationCoordinate2D)aCoordinate;
 + (M1MapAnnotation *)mapAnnotationWithCoordinate:(CLLocationCoordinate2D)aCoordinate title:(NSString *)aTitle;
 + (M1MapAnnotation *)mapAnnotationWithCoordinate:(CLLocationCoordinate2D)aCoordinate title:(NSString *)aTitle subtitle:(NSString *)aSubtitle;
-+ (M1MapAnnotation *)mapAnnotationWithCoordinate:(CLLocationCoordinate2D)aCoordinate title:(NSString *)aTitle subtitle:(NSString *)aSubtitle image:(UIImage *)anImage;
 
 - (M1MapAnnotation *)initWithCoordinate:(CLLocationCoordinate2D)aCoordinate;
 - (M1MapAnnotation *)initWithCoordinate:(CLLocationCoordinate2D)aCoordinate title:(NSString *)aTitle;
 - (M1MapAnnotation *)initWithCoordinate:(CLLocationCoordinate2D)aCoordinate title:(NSString *)aTitle subtitle:(NSString *)aSubtitle;
-- (M1MapAnnotation *)initWithCoordinate:(CLLocationCoordinate2D)aCoordinate title:(NSString *)aTitle subtitle:(NSString *)aSubtitle image:(UIImage *)anImage;
 
 @end
