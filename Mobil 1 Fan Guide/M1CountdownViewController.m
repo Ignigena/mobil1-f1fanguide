@@ -37,9 +37,10 @@
 	}
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"d-M-yyy"];
+    [dateFormatter setDateFormat:@"d-M-yyy H:m"];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
     
-    AMCountdownModel *countdown = [[AMCountdownModel alloc] initWithTargetDate:[dateFormatter dateFromString:@"22-9-2012"]];
+    AMCountdownModel *countdown = [[AMCountdownModel alloc] initWithTargetDate:[dateFormatter dateFromString:@"16-11-2012 18:00"]];
     [countdown run];
     
     [self showCountdownView];
@@ -59,19 +60,16 @@
 
 - (void)playerDidEnterFullscreen:(NSNotification *)notification
 {
-    NSLog(@"playerDidEnterFullscreen");
     _shouldAutoRotateInterface = NO;
 }
 
 - (void)playerDidExitFullscreen:(NSNotification *)notification
 {
-    NSLog(@"playerDidExitFullscreen");
     _shouldAutoRotateInterface = YES;
 }
 
 -(void) orientationChanged:(NSNotification*)notification
 {
-    NSLog(@"orientationChanged shouldAutoRotateInterface: %c", self.shouldAutoRotateInterface);
     if (!self.shouldAutoRotateInterface)
         return;
     
