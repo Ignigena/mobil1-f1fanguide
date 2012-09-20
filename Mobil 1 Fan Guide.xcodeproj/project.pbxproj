@@ -371,7 +371,6 @@
 		863C365015F8EE150015BD7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				86E4EBA81609FDF900C19AE9 /* Tiles */,
 				86E4E940160380EA00C19AE9 /* Tab Bar Icons */,
 				86F25FE615FE1E3B00A9C7C1 /* Novecentowide-Bold.otf */,
 				86F25FE715FE1E3B00A9C7C1 /* Novecentowide-Book.otf */,
@@ -542,6 +541,7 @@
 				86F2602915FE6BC400A9C7C1 /* M1MapAnnotation.h */,
 				86F2602A15FE6BC500A9C7C1 /* M1MapAnnotation.m */,
 				864A6E80160B4EB2005A86E2 /* Pins */,
+				86E4EBA81609FDF900C19AE9 /* Tiles */,
 			);
 			name = "Map View";
 			sourceTree = "<group>";
