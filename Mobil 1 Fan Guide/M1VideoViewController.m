@@ -77,7 +77,7 @@
 }
 
 - (void)loadYouTubeThumbnails {
-    int i; int m = IS_IPHONE_5 ? 5 : 9;
+    int i; int m = IS_IPHONE_5 ? 9 : 5;
     
     for (i = 1; i < m; i++) {
         [[(UIButton *)[_videoScrollView viewWithTag:i] imageView] setContentMode:UIViewContentModeScaleAspectFill];
