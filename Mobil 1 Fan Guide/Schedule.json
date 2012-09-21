@@ -4,42 +4,81 @@
  "section": [
              {
              "title": "Practice 1",
-             "date": "16 November",
-             "time": "11:00"
+             "date": "16-11-2012 11:00",
              },
              {
              "title": "Practice 2",
-             "date": "16 November",
-             "time": "15:00"
+             "date": "16-11-2012 15:00",
              },
              {
              "title": "Practice 3",
-             "date": "17 November",
+             "date": "17-11-2012 15:00",
              "time": "15:00"
              },
              {
              "title": "Qualifying",
-             "date": "17 November",
+             "date": "17-11-2012 14:00",
              "time": "14:00"
              },
              {
              "title": "Race",
-             "date": "17 November",
+             "date": "18-11-2012 14:00",
              "time": "14:00"
              },
              ],
  },
  {
- "title" : "Performance Zone",
+ "title" : "Austin Fan Fest",
+ "section": [
+             {
+             "title": "Fan Fest",
+             "date": "16-11-2012 18:00",
+             },
+             {
+             "title": "Aerosmith",
+             "date": "16-11-2012 20:00",
+             },
+             {
+             "title": "Flo Rida",
+             "date": "16-11-2012 20:00",
+             },
+             {
+             "title": "Juanes",
+             "date": "16-11-2012 21:00",
+             },
+             {
+             "title": "Fan Fest",
+             "date": "17-11-2012 10:00",
+             },
+             {
+             "title": "Enrique Iglesias",
+             "date": "17-11-2012 20:00",
+             },
+             {
+             "title": "Lupe Fiasco",
+             "date": "17-11-2012 21:00",
+             },
+             {
+             "title": "Fan Fest",
+             "date": "18-11-2012 10:00",
+             },
+             {
+             "title": "The Wallflowers",
+             "date": "18-11-2012 21:00",
+             },
+             ]
+ },
+ {
+ "title" : "Performance Zone Road Tour",
  "section": [
              {
              "title": "Event 1",
-             "date": "10 October",
+             "date": "16-11-2012 11:00",
              "time": "1:00PM"
              },
              {
              "title": "Event 2",
-             "date": "10 November",
+             "date": "16-11-2012 11:00",
              "time": "1:00PM"
              },
              ]

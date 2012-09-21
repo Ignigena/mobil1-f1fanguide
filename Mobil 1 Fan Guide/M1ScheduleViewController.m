@@ -7,6 +7,8 @@
 //
 
 #import "M1ScheduleViewController.h"
+#import "NSString+RelativeDate.h"
+#import "JHWebBrowser.h"
 
 @interface M1ScheduleViewController ()
 
@@ -18,13 +20,13 @@
 {
     [super viewDidLoad];
     
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"d-M-yyy H:m"];
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
+    _dateFormatter = [[NSDateFormatter alloc]init];
+    [_dateFormatter setDateFormat:@"d-M-yyy H:m"];
+    [_dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
     
     NSDate *today = [NSDate date];
-    NSDate *raceDate = [dateFormatter dateFromString:@"16-11-2012 18:00"];
-    NSDate *raceFinishedDate = [dateFormatter dateFromString:@"16-11-2012 20:00"];
+    NSDate *raceDate = [self.dateFormatter dateFromString:@"16-11-2012 18:00"];
+    NSDate *raceFinishedDate = [self.dateFormatter dateFromString:@"16-11-2012 20:00"];
     
     // If the current time is during the race window (2hrs) change to Live Now
     if ([today compare:raceDate]==NSOrderedSame && [today compare:raceFinishedDate]==NSOrderedAscending) {
@@ -38,7 +40,8 @@
 
     self.schedule = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Schedule.json"]] options:kNilOptions error:nil];
     NSLog(@"%@", [self.schedule objectAtIndex:0]);
-
+    
+    self.scheduleTabTable.separatorColor = [UIColor blackColor];
     [self.scheduleTabTable reloadData];
 }
 
@@ -59,7 +62,7 @@
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectZero];
     headerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ScheduleHeader"]];
     
-    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 3, width, 20)];
+    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 2, width, 20)];
     headerLabel.text = [self tableView:tableView titleForHeaderInSection:section];
     headerLabel.backgroundColor = [UIColor clearColor];
     headerLabel.font = [UIFont boldSystemFontOfSize:19];
@@ -69,7 +72,28 @@
     
     [headerView addSubview:headerLabel];
     
+    if (section != 0) {
+        UIButton *whatsThisButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+        whatsThisButton.frame = CGRectMake(290, 4, 15, 15);
+        whatsThisButton.tag = section;
+        [whatsThisButton addTarget:self action:@selector(whatsThisButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+        [headerView addSubview:whatsThisButton];
+    }
+    
     return headerView;
+}
+
+- (IBAction)whatsThisButtonClicked:(id)sender
+{
+    NSString *infoURL = [sender tag] == 1 ? @"http://austinfanfest.com/" : @"http://apple.com";
+    
+    JHWebBrowser *modalBrowser = [JHWebBrowser new];
+    modalBrowser.showDoneButton = YES;
+    modalBrowser.url = [NSURL URLWithString:infoURL];
+    [self presentViewController:modalBrowser animated:YES completion:nil];
+    
+    modalBrowser.showAddressBar = NO;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -89,7 +113,10 @@
     NSArray *selectedRow = [selectedSection objectForKey:@"section"];
     NSDictionary *cellValue = [selectedRow objectAtIndex:indexPath.row];
     cell.textLabel.text = [cellValue objectForKey:@"title"];
-    cell.detailTextLabel.text = [cellValue objectForKey:@"date"];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.text = [NSString formattedDateRelativeToNow: [self.dateFormatter dateFromString: [cellValue objectForKey:@"date"]]];
+    cell.detailTextLabel.textColor = [UIColor lightGrayColor];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
     
     return cell;
 }

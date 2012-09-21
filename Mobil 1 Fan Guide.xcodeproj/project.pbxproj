@@ -60,6 +60,13 @@
 		864A6EF6160B912E005A86E2 /* LBYouTubePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 864A6EF2160B912E005A86E2 /* LBYouTubePlayerController.m */; };
 		864A6EF7160B912E005A86E2 /* LBYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 864A6EF4160B912E005A86E2 /* LBYouTubePlayerViewController.m */; };
 		864A6EFA160B913C005A86E2 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 864A6EF9160B913C005A86E2 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		866B3A2E160CC58400A13E81 /* NSString+RelativeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 866B3A2D160CC58400A13E81 /* NSString+RelativeDate.m */; };
+		866B3A3D160D022700A13E81 /* backIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 866B3A36160D022700A13E81 /* backIcon.png */; };
+		866B3A3E160D022700A13E81 /* backIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 866B3A37160D022700A13E81 /* backIcon@2x.png */; };
+		866B3A3F160D022700A13E81 /* forwardIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 866B3A38160D022700A13E81 /* forwardIcon.png */; };
+		866B3A40160D022700A13E81 /* forwardIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 866B3A39160D022700A13E81 /* forwardIcon@2x.png */; };
+		866B3A41160D022700A13E81 /* JHWebBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 866B3A3B160D022700A13E81 /* JHWebBrowser.m */; };
+		866B3A42160D022700A13E81 /* JHWebBrowser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866B3A3C160D022700A13E81 /* JHWebBrowser.xib */; };
 		86A6F9FE160A64CC00780A2E /* Turn1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86A6F9FD160A64CC00780A2E /* Turn1@2x.png */; };
 		86A6FA00160A657F00780A2E /* Turn2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86A6F9FF160A657F00780A2E /* Turn2@2x.png */; };
 		86DC1AB2160BA9AD008531D5 /* Schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 86DC1AB1160BA9AD008531D5 /* Schedule.json */; };
@@ -202,6 +209,15 @@
 		864A6EF4160B912E005A86E2 /* LBYouTubePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBYouTubePlayerViewController.m; path = LBYouTubeView/LBYouTubePlayerViewController.m; sourceTree = "<group>"; };
 		864A6EF8160B913C005A86E2 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = JSONKit/JSONKit.h; sourceTree = SOURCE_ROOT; };
 		864A6EF9160B913C005A86E2 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = JSONKit/JSONKit.m; sourceTree = SOURCE_ROOT; };
+		866B3A2C160CC58400A13E81 /* NSString+RelativeDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RelativeDate.h"; sourceTree = "<group>"; };
+		866B3A2D160CC58400A13E81 /* NSString+RelativeDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RelativeDate.m"; sourceTree = "<group>"; };
+		866B3A36160D022700A13E81 /* backIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backIcon.png; sourceTree = "<group>"; };
+		866B3A37160D022700A13E81 /* backIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backIcon@2x.png"; sourceTree = "<group>"; };
+		866B3A38160D022700A13E81 /* forwardIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forwardIcon.png; sourceTree = "<group>"; };
+		866B3A39160D022700A13E81 /* forwardIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forwardIcon@2x.png"; sourceTree = "<group>"; };
+		866B3A3A160D022700A13E81 /* JHWebBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHWebBrowser.h; sourceTree = "<group>"; };
+		866B3A3B160D022700A13E81 /* JHWebBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHWebBrowser.m; sourceTree = "<group>"; };
+		866B3A3C160D022700A13E81 /* JHWebBrowser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHWebBrowser.xib; sourceTree = "<group>"; };
 		86A6F9FD160A64CC00780A2E /* Turn1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Turn1@2x.png"; path = "Pins/Turn1@2x.png"; sourceTree = "<group>"; };
 		86A6F9FF160A657F00780A2E /* Turn2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Turn2@2x.png"; path = "Pins/Turn2@2x.png"; sourceTree = "<group>"; };
 		86DC1AB1160BA9AD008531D5 /* Schedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Schedule.json; sourceTree = "<group>"; };
@@ -471,11 +487,35 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		866B3A34160D022700A13E81 /* JHWebBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				866B3A35160D022700A13E81 /* Images */,
+				866B3A3A160D022700A13E81 /* JHWebBrowser.h */,
+				866B3A3B160D022700A13E81 /* JHWebBrowser.m */,
+				866B3A3C160D022700A13E81 /* JHWebBrowser.xib */,
+			);
+			path = JHWebBrowser;
+			sourceTree = "<group>";
+		};
+		866B3A35160D022700A13E81 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				866B3A36160D022700A13E81 /* backIcon.png */,
+				866B3A37160D022700A13E81 /* backIcon@2x.png */,
+				866B3A38160D022700A13E81 /* forwardIcon.png */,
+				866B3A39160D022700A13E81 /* forwardIcon@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		86DC1AAA160B969D008531D5 /* Schedule Tab */ = {
 			isa = PBXGroup;
 			children = (
 				863C366515F8EE150015BD7D /* M1ScheduleViewController.h */,
 				863C366615F8EE150015BD7D /* M1ScheduleViewController.m */,
+				866B3A2C160CC58400A13E81 /* NSString+RelativeDate.h */,
+				866B3A2D160CC58400A13E81 /* NSString+RelativeDate.m */,
 				86DC1AB1160BA9AD008531D5 /* Schedule.json */,
 				86DC1AB3160BCD38008531D5 /* ScheduleHeader@2x.png */,
 			);
@@ -488,6 +528,7 @@
 				864A6EF8160B913C005A86E2 /* JSONKit.h */,
 				864A6EF9160B913C005A86E2 /* JSONKit.m */,
 				86F25FBD15FA447300A9C7C1 /* AMCountdownTicker */,
+				866B3A34160D022700A13E81 /* JHWebBrowser */,
 				86E4E9761603E0E000C19AE9 /* LBYouTubePlayer */,
 				864A6EB0160B7050005A86E2 /* MKNetworkKit */,
 			);
@@ -720,6 +761,11 @@
 				864A6EA5160B4EC0005A86E2 /* Turn20@2x.png in Resources */,
 				86DC1AB2160BA9AD008531D5 /* Schedule.json in Resources */,
 				86DC1AB4160BCD38008531D5 /* ScheduleHeader@2x.png in Resources */,
+				866B3A3D160D022700A13E81 /* backIcon.png in Resources */,
+				866B3A3E160D022700A13E81 /* backIcon@2x.png in Resources */,
+				866B3A3F160D022700A13E81 /* forwardIcon.png in Resources */,
+				866B3A40160D022700A13E81 /* forwardIcon@2x.png in Resources */,
+				866B3A42160D022700A13E81 /* JHWebBrowser.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +808,8 @@
 				864A6EF6160B912E005A86E2 /* LBYouTubePlayerController.m in Sources */,
 				864A6EF7160B912E005A86E2 /* LBYouTubePlayerViewController.m in Sources */,
 				864A6EFA160B913C005A86E2 /* JSONKit.m in Sources */,
+				866B3A2E160CC58400A13E81 /* NSString+RelativeDate.m in Sources */,
+				866B3A41160D022700A13E81 /* JHWebBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
