@@ -23,7 +23,8 @@
              {
              "title": "Race",
              "date": "18-11-2012 14:00",
-             "time": "14:00"
+             "end": "18-11-2012 16:00",
+             "location": "Circuit of the Americas, Austin TX"
              },
              ],
  },
@@ -69,7 +70,7 @@
              ]
  },
  {
- "title" : "Performance Zone Road Tour",
+ "title" : "Performance Zone Tour",
  "section": [
              {
              "title": "Event 1",
