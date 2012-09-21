@@ -8,6 +8,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import <EventKit/EventKit.h>
+#import <Social/Social.h>
 #import "M1ScheduleViewController.h"
 #import "NSString+RelativeDate.h"
 #import "JHWebBrowser.h"
@@ -144,9 +145,12 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex==0) {
+    if (buttonIndex==0)
         [self registerEventInCalendar];
-    }
+    else if (buttonIndex==1)
+        [self getDirectionsToEvent];
+    else if (buttonIndex==2)
+        [self shareEventOnFacebook];
     
     [self.scheduleTabTable deselectRowAtIndexPath:[self.scheduleTabTable indexPathForSelectedRow] animated:YES];
 }
@@ -172,6 +176,49 @@
         [eventToAdd setCalendar:[eventStore defaultCalendarForNewEvents]];
         [eventStore saveEvent:eventToAdd span:EKSpanThisEvent error:nil];
     }];
+}
+
+- (void)getDirectionsToEvent
+{
+    NSDictionary *selectedSection = [self.schedule objectAtIndex:[self.scheduleTabTable indexPathForSelectedRow].section];
+    NSArray *selectedRow = [selectedSection objectForKey:@"section"];
+    NSDictionary *cellValue = [selectedRow objectAtIndex:[self.scheduleTabTable indexPathForSelectedRow].row];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/maps?daddr=%@", [cellValue objectForKey:@"maps"]]]];
+}
+
+- (void)shareEventOnFacebook
+{
+    SLComposeViewController *fbController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    
+    
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    {
+        SLComposeViewControllerCompletionHandler __block completionHandler=^(SLComposeViewControllerResult result){
+            
+            [fbController dismissViewControllerAnimated:YES completion:nil];
+            
+            switch(result){
+                case SLComposeViewControllerResultCancelled:
+                default:
+                {
+                    NSLog(@"Cancelled.....");
+                    
+                }
+                    break;
+                case SLComposeViewControllerResultDone:
+                {
+                    NSLog(@"Posted....");
+                }
+                    break;
+            }};
+        
+        [fbController addImage:[UIImage imageNamed:@"AppIcon@2x"]];
+        [fbController setInitialText:@"Check out this article."];
+        [fbController addURL:[NSURL URLWithString:@"http://austinfanfest.com/"]];
+        [fbController setCompletionHandler:completionHandler];
+        [self presentViewController:fbController animated:YES completion:nil];
+    }
 }
 
 @end
