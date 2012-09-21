@@ -23,6 +23,17 @@
 
 #define TRACK_RECT MKMapRectMake(61407232.000000, 110626923.789474, 20480.000000, 13653.333333)
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // Show the user location
+    _mapView.showsUserLocation = YES;
+    
+    // Zoom into the track by default
+    _mapView.visibleMapRect = TRACK_RECT;
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -31,12 +42,6 @@
     // Any valid tiled image directory structure in there will do.
     _overlay = [[TileOverlay alloc] initWithTileDirectory:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Tiles"]];
     [_mapView addOverlay:self.overlay];
-    
-    // Show the user location
-    _mapView.showsUserLocation = YES;
-    
-    // Zoom into the track by default
-    _mapView.visibleMapRect = TRACK_RECT;
     
     [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.12977222222222,-97.63660833333336) title:@"Special" subtitle:@"Turn1"]];
     [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13233573484781,-97.63761198869007) title:@"Special" subtitle:@"Turn2"]];
