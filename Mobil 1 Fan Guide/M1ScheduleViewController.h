@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface M1ScheduleViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface M1ScheduleViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
 
 @property (strong, nonatomic) NSArray *schedule;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
