@@ -52,6 +52,26 @@
     return [array count];
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    CGFloat width = CGRectGetWidth(tableView.bounds);
+    
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectZero];
+    headerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ScheduleHeader"]];
+    
+    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 3, width, 20)];
+    headerLabel.text = [self tableView:tableView titleForHeaderInSection:section];
+    headerLabel.backgroundColor = [UIColor clearColor];
+    headerLabel.font = [UIFont boldSystemFontOfSize:19];
+    headerLabel.shadowOffset = CGSizeMake(0, -1);
+    headerLabel.textColor = [UIColor colorWithWhite:0.7 alpha:1.0];
+    headerLabel.shadowColor = [UIColor blackColor];
+    
+    [headerView addSubview:headerLabel];
+    
+    return headerView;
+}
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return [[self.schedule objectAtIndex:section] objectForKey:@"title"];
 }
