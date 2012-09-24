@@ -22,7 +22,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.schedule = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Schedule.json"]] options:kNilOptions error:nil];
+    NSLog(@"%@", [self.schedule objectAtIndex:0]);
     
+    self.scheduleTabTable.separatorColor = [UIColor blackColor];
+    [self.scheduleTabTable reloadData];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
     _dateFormatter = [[NSDateFormatter alloc]init];
     [_dateFormatter setDateFormat:@"d-M-yyy H:m"];
     [_dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
@@ -30,18 +39,13 @@
     NSDate *today = [NSDate date];
     NSDate *raceDate = [self.dateFormatter dateFromString:@"16-11-2012 18:00"];
     
-    // If the current time is during the race window (2hrs) change to Live Now
+    // If the current time is after the race start, tweak the visuals of the tab to match the new content
     if ([today compare:raceDate]==NSOrderedDescending) {
         self.scheduleTabTitle.hidden = YES;
-        
         self.scheduleTabTable.frame = CGRectMake(0, 0, self.scheduleTabTable.frame.size.width, self.view.frame.size.height);
     }
-
-    self.schedule = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Schedule.json"]] options:kNilOptions error:nil];
-    NSLog(@"%@", [self.schedule objectAtIndex:0]);
     
-    self.scheduleTabTable.separatorColor = [UIColor blackColor];
-    [self.scheduleTabTable reloadData];
+    // If the current time is during the race window (2hrs) change to Live Now
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
