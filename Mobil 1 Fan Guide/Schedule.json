@@ -5,20 +5,30 @@
              {
              "title": "Practice 1",
              "date": "16-11-2012 11:00",
+             "end": "16-11-2012 13:00",
+             "location": "Circuit of the Americas, Austin TX",
+             "maps": "30.132778,-97.641113"
              },
              {
              "title": "Practice 2",
              "date": "16-11-2012 15:00",
+             "end": "16-11-2012 17:00",
+             "location": "Circuit of the Americas, Austin TX",
+             "maps": "30.132778,-97.641113"
              },
              {
              "title": "Practice 3",
              "date": "17-11-2012 15:00",
-             "time": "15:00"
+             "end": "17-11-2012 17:00",
+             "location": "Circuit of the Americas, Austin TX",
+             "maps": "30.132778,-97.641113"
              },
              {
              "title": "Qualifying",
              "date": "17-11-2012 14:00",
-             "time": "14:00"
+             "end": "17-11-2012 16:00",
+             "location": "Circuit of the Americas, Austin TX",
+             "maps": "30.132778,-97.641113"
              },
              {
              "title": "Race",
@@ -33,40 +43,64 @@
  "title" : "Austin Fan Fest",
  "section": [
              {
-             "title": "Fan Fest",
+             "title": "Mobil 1 Experience",
              "date": "16-11-2012 18:00",
+             "location": "Colorado Ave and 3rd Street",
+             "maps": "30.26577624419581,-97.74470479363161"
              },
              {
              "title": "Aerosmith",
              "date": "16-11-2012 20:00",
+             "location": "Frank Erwin Center",
+             "maps": "30.27723,-97.73304600000002"
              },
              {
              "title": "Flo Rida",
              "date": "16-11-2012 20:00",
+             "location": "The COTA Club @ Austin Convention Center",
+             "maps": "30.263278,-97.74059099999998"
              },
              {
              "title": "Juanes",
              "date": "16-11-2012 21:00",
+             "location": "ACL Live @ Moody Theater",
+             "maps": "30.265407,-97.74727799999999"
              },
              {
-             "title": "Fan Fest",
+             "title": "Mobil 1 Experience",
              "date": "17-11-2012 10:00",
+             "location": "Colorado Ave and 3rd Street",
+             "maps": "30.26577624419581,-97.74470479363161"
              },
              {
              "title": "Enrique Iglesias",
              "date": "17-11-2012 20:00",
+             "location": "The COTA Club @ Austin Convention Center",
+             "maps": "30.263278,-97.74059099999998"
              },
              {
              "title": "Lupe Fiasco",
              "date": "17-11-2012 21:00",
+             "location": "ACL Live @ Moody Theater",
+             "maps": "30.265407,-97.74727799999999"
              },
              {
-             "title": "Fan Fest",
+             "title": "Mobil 1 Experience",
              "date": "18-11-2012 10:00",
+             "location": "Colorado Ave and 3rd Street",
+             "maps": "30.26577624419581,-97.74470479363161"
+             },
+             {
+             "title": "Ghostland Observatory",
+             "date": "18-11-2012 20:00",
+             "location": "Bob Bullock Texas State History Museum",
+             "maps": "30.280285,-97.73885199999998"
              },
              {
              "title": "The Wallflowers",
              "date": "18-11-2012 21:00",
+             "location": "ACL Live @ Moody Theater",
+             "maps": "30.265407,-97.74727799999999"
              },
              ]
  },
