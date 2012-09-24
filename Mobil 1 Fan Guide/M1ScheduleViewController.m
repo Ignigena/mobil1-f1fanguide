@@ -9,6 +9,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import <EventKit/EventKit.h>
 #import <Social/Social.h>
+#import "AMCountdownView.h"
+#import "M1CountdownViewController.h"
 #import "M1ScheduleViewController.h"
 #import "NSString+RelativeDate.h"
 #import "JHWebBrowser.h"
@@ -22,30 +24,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.schedule = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Schedule.json"]] options:kNilOptions error:nil];
-    NSLog(@"%@", [self.schedule objectAtIndex:0]);
     
-    self.scheduleTabTable.separatorColor = [UIColor blackColor];
-    [self.scheduleTabTable reloadData];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
     _dateFormatter = [[NSDateFormatter alloc]init];
     [_dateFormatter setDateFormat:@"d-M-yyy H:m"];
     [_dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
+
+    self.schedule = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Schedule.json"]] options:kNilOptions error:nil];
     
-    NSDate *today = [NSDate date];
-    NSDate *raceDate = [self.dateFormatter dateFromString:@"16-11-2012 18:00"];
+    self.scheduleTabTable.separatorColor = [UIColor blackColor];
+    [self.scheduleTabTable reloadData];
     
-    // If the current time is after the race start, tweak the visuals of the tab to match the new content
-    if ([today compare:raceDate]==NSOrderedDescending) {
+    [self countdownUpdated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(countdownUpdated) name:@"AMCountdownDidChangeNotification" object:nil];
+}
+
+- (void)countdownUpdated
+{
+    M1CountdownViewController *countdownController = (M1CountdownViewController *)self.tabBarController;
+    
+    if ([countdownController.countdownView isCountdownFinished]) {
         self.scheduleTabTitle.hidden = YES;
         self.scheduleTabTable.frame = CGRectMake(0, 0, self.scheduleTabTable.frame.size.width, self.view.frame.size.height);
     }
-    
-    // If the current time is during the race window (2hrs) change to Live Now
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -164,7 +165,6 @@
     EKEventStore *eventStore = [[EKEventStore alloc] init];
     [eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error){
         if (!granted) return;
-        NSLog(@"adding event");
         EKEvent *eventToAdd     = [EKEvent eventWithEventStore:eventStore];
         eventToAdd.title        = [NSString stringWithFormat:@"Austin F1: %@", [cellValue objectForKey:@"title"]];
         eventToAdd.startDate    = [self.dateFormatter dateFromString:[cellValue objectForKey:@"date"]];

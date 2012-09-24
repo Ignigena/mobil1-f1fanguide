@@ -26,8 +26,8 @@
     [dateFormatter setDateFormat:@"d-M-yyy H:m"];
     [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
     
-    //NSDate *raceDate = [dateFormatter dateFromString:@"16-11-2012 18:00"];
-    NSDate *raceDate = [dateFormatter dateFromString:@"24-09-2012 10:52"];
+    NSDate *raceDate = [dateFormatter dateFromString:@"18-11-2012 14:00"];
+    //raceDate = [dateFormatter dateFromString:@"24-09-2012 11:13"]; //for testing
     
     [super viewDidLoad];
     
