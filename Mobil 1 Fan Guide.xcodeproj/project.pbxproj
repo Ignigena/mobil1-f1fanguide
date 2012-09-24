@@ -71,6 +71,7 @@
 		866B3A46160D1B6400A13E81 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866B3A45160D1B6400A13E81 /* EventKit.framework */; };
 		866B3A48160D236300A13E81 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866B3A47160D236300A13E81 /* Social.framework */; };
 		866B3A4B1610A93300A13E81 /* Win-Jenson@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 866B3A4A1610A93300A13E81 /* Win-Jenson@2x.png */; };
+		866B3A4F1610B6D100A13E81 /* UIView+ParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 866B3A4E1610B6D100A13E81 /* UIView+ParentViewController.m */; };
 		86A6F9FE160A64CC00780A2E /* Turn1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86A6F9FD160A64CC00780A2E /* Turn1@2x.png */; };
 		86A6FA00160A657F00780A2E /* Turn2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86A6F9FF160A657F00780A2E /* Turn2@2x.png */; };
 		86DC1AB2160BA9AD008531D5 /* Schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 86DC1AB1160BA9AD008531D5 /* Schedule.json */; };
@@ -226,6 +227,8 @@
 		866B3A45160D1B6400A13E81 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		866B3A47160D236300A13E81 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		866B3A4A1610A93300A13E81 /* Win-Jenson@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Win-Jenson@2x.png"; path = "App Banners/Win-Jenson@2x.png"; sourceTree = SOURCE_ROOT; };
+		866B3A4D1610B6D100A13E81 /* UIView+ParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+ParentViewController.h"; path = "../UIView+ParentViewController.h"; sourceTree = "<group>"; };
+		866B3A4E1610B6D100A13E81 /* UIView+ParentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+ParentViewController.m"; path = "../UIView+ParentViewController.m"; sourceTree = "<group>"; };
 		86A6F9FD160A64CC00780A2E /* Turn1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Turn1@2x.png"; path = "Pins/Turn1@2x.png"; sourceTree = "<group>"; };
 		86A6F9FF160A657F00780A2E /* Turn2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Turn2@2x.png"; path = "Pins/Turn2@2x.png"; sourceTree = "<group>"; };
 		86DC1AB1160BA9AD008531D5 /* Schedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Schedule.json; sourceTree = "<group>"; };
@@ -529,6 +532,8 @@
 				86F25FCD15FA5AEC00A9C7C1 /* M1CountdownViewController.m */,
 				86F25FCF15FA62D100A9C7C1 /* AMCountdownView.h */,
 				86F25FD015FA62D200A9C7C1 /* AMCountdownView.m */,
+				866B3A4D1610B6D100A13E81 /* UIView+ParentViewController.h */,
+				866B3A4E1610B6D100A13E81 /* UIView+ParentViewController.m */,
 				866B3A4A1610A93300A13E81 /* Win-Jenson@2x.png */,
 			);
 			name = "Countdown Banner";
@@ -834,6 +839,7 @@
 				864A6EFA160B913C005A86E2 /* JSONKit.m in Sources */,
 				866B3A2E160CC58400A13E81 /* NSString+RelativeDate.m in Sources */,
 				866B3A41160D022700A13E81 /* JHWebBrowser.m in Sources */,
+				866B3A4F1610B6D100A13E81 /* UIView+ParentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

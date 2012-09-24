@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Albert Martin. All rights reserved.
 //
 
+#import "UIView+ParentViewController.h"
 #import "AMCountdownView.h"
 #import "SBTickerView.h"
 #import "AMNumberView.h"
@@ -93,16 +94,19 @@
     
     // Check if the countdown has finished running
     if ([self isCountdownFinished]) {
+        UITabBarItem *scheduleTabBar = [self.tabBarController.tabBar.items objectAtIndex:1];
         // The countdown is over, check to see if we're within the race window
         if ([self isRaceWindow]) {
             // Race is happening, display Live Now graphic
             _winBanner.image = [UIImage imageNamed:@"Win-Jenson"];
             _winBanner.hidden = NO;
+            scheduleTabBar.title = @"Live Now!";
         } else {
             // Race is over, display results and win banner if applicable
             #warning Need to fetch win banner state from results JSON file.
             _winBanner.image = [UIImage imageNamed:@"Win-Jenson"];
             _winBanner.hidden = NO;
+            scheduleTabBar.title = @"Results";
         }
     }
 }
