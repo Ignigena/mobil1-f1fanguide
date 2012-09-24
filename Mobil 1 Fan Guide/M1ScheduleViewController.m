@@ -189,32 +189,29 @@
 
 - (void)shareEventOnFacebook
 {
+    NSDictionary *selectedSection = [self.schedule objectAtIndex:[self.scheduleTabTable indexPathForSelectedRow].section];
+    NSArray *selectedRow = [selectedSection objectForKey:@"section"];
+    NSDictionary *cellValue = [selectedRow objectAtIndex:[self.scheduleTabTable indexPathForSelectedRow].row];
     SLComposeViewController *fbController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
     
-    
-    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
-    {
-        SLComposeViewControllerCompletionHandler __block completionHandler=^(SLComposeViewControllerResult result){
-            
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        SLComposeViewControllerCompletionHandler __block completionHandler=^(SLComposeViewControllerResult result) {
             [fbController dismissViewControllerAnimated:YES completion:nil];
             
             switch(result){
                 case SLComposeViewControllerResultCancelled:
-                default:
-                {
-                    NSLog(@"Cancelled.....");
-                    
+                default: {
+                    NSLog(@"Cancelled...");
                 }
                     break;
-                case SLComposeViewControllerResultDone:
-                {
-                    NSLog(@"Posted....");
+                case SLComposeViewControllerResultDone: {
+                    NSLog(@"Posted...");
                 }
                     break;
             }};
         
         [fbController addImage:[UIImage imageNamed:@"AppIcon@2x"]];
-        [fbController setInitialText:@"Check out this article."];
+        [fbController setInitialText:[NSString stringWithFormat:@"I'm attending the Austin F1: %@ at %@", [cellValue objectForKey:@"title"], [cellValue objectForKey:@"date"]]];
         [fbController addURL:[NSURL URLWithString:@"http://austinfanfest.com/"]];
         [fbController setCompletionHandler:completionHandler];
         [self presentViewController:fbController animated:YES completion:nil];
