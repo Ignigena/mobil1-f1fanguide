@@ -12,6 +12,9 @@
 
 @interface AMCountdownView : UIView
 
+- (BOOL)isCountdownFinished;
+
+
 @property (strong, nonatomic) NSString *days;
 @property (strong, nonatomic) NSString *hours;
 @property (strong, nonatomic) NSString *minutes;
