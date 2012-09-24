@@ -527,6 +527,8 @@
 			children = (
 				86F25FCC15FA5AEC00A9C7C1 /* M1CountdownViewController.h */,
 				86F25FCD15FA5AEC00A9C7C1 /* M1CountdownViewController.m */,
+				86F25FCF15FA62D100A9C7C1 /* AMCountdownView.h */,
+				86F25FD015FA62D200A9C7C1 /* AMCountdownView.m */,
 				866B3A4A1610A93300A13E81 /* Win-Jenson@2x.png */,
 			);
 			name = "Countdown Banner";
@@ -636,8 +638,6 @@
 			isa = PBXGroup;
 			children = (
 				86F25FC115FA449E00A9C7C1 /* Supporting Images */,
-				86F25FCF15FA62D100A9C7C1 /* AMCountdownView.h */,
-				86F25FD015FA62D200A9C7C1 /* AMCountdownView.m */,
 				863C367515F8EF410015BD7D /* AMCountdownModel.h */,
 				863C367615F8EF410015BD7D /* AMCountdownModel.m */,
 				863C368515F907D80015BD7D /* AMNumberView.h */,

@@ -50,11 +50,15 @@
         _countdownSeconds.frontView = [AMNumberView tickViewWithTitle:@"00" fontSize:40.0];
         [self addSubview:_countdownSeconds];
         
-        NSLog(@"%f", frame.size.height);
-        
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showFullSchedule:)];
         [singleTap setNumberOfTapsRequired:1];
         [self addGestureRecognizer:singleTap];
+        
+        _winBanner = [[UIImageView alloc] initWithFrame:CGRectMake(0, 12, 320, 94)];
+        _winBanner.contentMode = UIViewContentModeTop;
+        _winBanner.clipsToBounds = YES;
+        _winBanner.hidden = YES;
+        [self addSubview:self.winBanner];
     }
     return self;
 }
@@ -87,6 +91,40 @@
         [_countdownSeconds tick:SBTickerViewTickDirectionDown animated:YES completion:nil];
     }
     
+    // Check if the countdown has finished running
+    if ([self isCountdownFinished]) {
+        // The countdown is over, check to see if we're within the race window
+        if ([self isRaceWindow]) {
+            // Race is happening, display Live Now graphic
+            _winBanner.image = [UIImage imageNamed:@"Win-Jenson"];
+            _winBanner.hidden = NO;
+        } else {
+            // Race is over, display results and win banner if applicable
+            #warning Need to fetch win banner state from results JSON file.
+            _winBanner.image = [UIImage imageNamed:@"Win-Jenson"];
+            _winBanner.hidden = NO;
+        }
+    }
+}
+
+- (BOOL)isCountdownFinished
+{
+    // If all values are below zero the countdown has finished
+    if ([self.days floatValue] <= 0 && [self.hours floatValue] <= 0 && [self.minutes floatValue] <= 0 && [self.seconds floatValue] <= 0) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (BOOL)isRaceWindow
+{
+    // We're within the race window if the current time is within three hours of the race start
+    if ([self.days floatValue] == 0 && [self.hours floatValue] >= -3) {
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 - (void)showFullSchedule:(id)sender

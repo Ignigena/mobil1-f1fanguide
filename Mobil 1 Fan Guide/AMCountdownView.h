@@ -22,6 +22,8 @@
 @property (strong, nonatomic) SBTickerView *countdownMinutes;
 @property (strong, nonatomic) SBTickerView *countdownSeconds;
 
+@property (strong, nonatomic) UIImageView *winBanner;
+
 @property (nonatomic) int cachedTabBarSelectedIndex;
 
 @end

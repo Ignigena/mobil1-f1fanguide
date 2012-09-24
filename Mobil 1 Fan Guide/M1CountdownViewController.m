@@ -26,7 +26,8 @@
     [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
     
     NSDate *today = [NSDate date];
-    NSDate *raceDate = [dateFormatter dateFromString:@"16-11-2012 18:00"];
+    //NSDate *raceDate = [dateFormatter dateFromString:@"16-11-2012 18:00"];
+    NSDate *raceDate = [dateFormatter dateFromString:@"24-09-2012 10:32"];
     NSDate *raceFinishedDate = [dateFormatter dateFromString:@"16-11-2012 20:00"];
     
     [super viewDidLoad];
@@ -57,13 +58,6 @@
     if ([today compare:raceFinishedDate]==NSOrderedDescending) {
         UITabBarItem *scheduleTabBar = [self.tabBar.items objectAtIndex:1];
         scheduleTabBar.title = @"Results";
-        
-        #warning This needs to fetch appropriate banner image from JSON
-        UIImageView *winBanner = [[UIImageView alloc] initWithFrame:CGRectMake(0, 12, 320, 94)];
-        winBanner.image = [UIImage imageNamed:@"Win-Jenson"];
-        winBanner.contentMode = UIViewContentModeTop;
-        winBanner.clipsToBounds = YES;
-        [self.countdownView addSubview:winBanner];
     }
     
     [self showCountdownView];
