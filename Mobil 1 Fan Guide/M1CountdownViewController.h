@@ -9,20 +9,21 @@
 #import <UIKit/UIKit.h>
 
 @class M1MapViewController;
+@class AMCountdownView;
 
 @protocol M1CountdownViewDelegate <UITabBarControllerDelegate>
 - (UIView *)getCountdownView;
 @end
 
 @interface M1CountdownViewController : UITabBarController {
-	UIView *countdownView;
+	AMCountdownView *countdownView;
 	UIView *container;
 	CGRect countdownFrame;
 	CGRect containerFrame;
 	id <M1CountdownViewDelegate> delegate;
 }
 
-@property (nonatomic, strong) UIView *countdownView;
+@property (nonatomic, strong) AMCountdownView *countdownView;
 @property (nonatomic, strong) UIView *container;
 @property (nonatomic) CGRect countdownFrame;
 @property (nonatomic) CGRect containerFrame;
