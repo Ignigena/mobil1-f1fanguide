@@ -29,16 +29,12 @@
     
     NSDate *today = [NSDate date];
     NSDate *raceDate = [self.dateFormatter dateFromString:@"16-11-2012 18:00"];
-    NSDate *raceFinishedDate = [self.dateFormatter dateFromString:@"16-11-2012 20:00"];
     
     // If the current time is during the race window (2hrs) change to Live Now
-    if ([today compare:raceDate]==NSOrderedSame && [today compare:raceFinishedDate]==NSOrderedAscending) {
+    if ([today compare:raceDate]==NSOrderedDescending) {
         self.scheduleTabTitle.hidden = YES;
-    }
-    
-    // If the current time is after the race change to Results
-    if ([today compare:raceFinishedDate]==NSOrderedDescending) {
-        self.scheduleTabTitle.text = @"Race Results";
+        
+        self.scheduleTabTable.frame = CGRectMake(0, 0, self.scheduleTabTable.frame.size.width, self.view.frame.size.height);
     }
 
     self.schedule = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Schedule.json"]] options:kNilOptions error:nil];

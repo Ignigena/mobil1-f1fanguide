@@ -29,18 +29,6 @@
     NSDate *raceDate = [dateFormatter dateFromString:@"16-11-2012 18:00"];
     NSDate *raceFinishedDate = [dateFormatter dateFromString:@"16-11-2012 20:00"];
     
-    // If the current time is during the race window (2hrs) change to Live Now
-    if ([today compare:raceDate]==NSOrderedSame && [today compare:raceFinishedDate]==NSOrderedAscending) {
-        UITabBarItem *scheduleTabBar = [self.tabBar.items objectAtIndex:1];
-        scheduleTabBar.title = @"Live Now!";
-    }
-    
-    // If the current time is after the race change to Results
-    if ([today compare:raceFinishedDate]==NSOrderedDescending) {
-        UITabBarItem *scheduleTabBar = [self.tabBar.items objectAtIndex:1];
-        scheduleTabBar.title = @"Results";
-    }
-    
     [super viewDidLoad];
     
     _shouldAutoRotateInterface = YES;
@@ -58,6 +46,25 @@
     
     AMCountdownModel *countdown = [[AMCountdownModel alloc] initWithTargetDate:raceDate];
     [countdown run];
+    
+    // If the current time is during the race window (2hrs) change to Live Now
+    if ([today compare:raceDate]==NSOrderedSame && [today compare:raceFinishedDate]==NSOrderedAscending) {
+        UITabBarItem *scheduleTabBar = [self.tabBar.items objectAtIndex:1];
+        scheduleTabBar.title = @"Live Now!";
+    }
+    
+    // If the current time is after the race change to Results
+    if ([today compare:raceFinishedDate]==NSOrderedDescending) {
+        UITabBarItem *scheduleTabBar = [self.tabBar.items objectAtIndex:1];
+        scheduleTabBar.title = @"Results";
+        
+        #warning This needs to fetch appropriate banner image from JSON
+        UIImageView *winBanner = [[UIImageView alloc] initWithFrame:CGRectMake(0, 12, 320, 94)];
+        winBanner.image = [UIImage imageNamed:@"Win-Jenson"];
+        winBanner.contentMode = UIViewContentModeTop;
+        winBanner.clipsToBounds = YES;
+        [self.countdownView addSubview:winBanner];
+    }
     
     [self showCountdownView];
     
