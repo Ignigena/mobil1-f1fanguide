@@ -98,15 +98,43 @@
         // The countdown is over, check to see if we're within the race window
         if ([self isRaceWindow]) {
             // Race is happening, display Live Now graphic
-            _winBanner.image = [UIImage imageNamed:@"Win-Jenson"];
+            _winBanner.image = [UIImage imageNamed:@"Live-Now"];
             _winBanner.hidden = NO;
             scheduleTabBar.title = @"Live Now!";
         } else {
             // Race is over, display results and win banner if applicable
-            #warning Need to fetch win banner state from results JSON file.
-            _winBanner.image = [UIImage imageNamed:@"Win-Jenson"];
-            _winBanner.hidden = NO;
-            scheduleTabBar.title = @"Results";
+            // Flood control
+            if (self.checkInterval>=1) {
+                _checkInterval--;
+            } else {
+                _checkInterval = 240;
+                
+                // Fetch results file if no first place name or if we're showing the temporary results file.
+                if (!self.firstPlace || self.firstPlace == @"Results coming soon!") {
+                    #warning Need to fetch win banner state from results JSON file.
+                    NSLog(@"fetching results");
+                    _resultsJSON = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Results.json"]] options:kNilOptions error:nil];
+            
+                    // Fetch the first row from the results to check who won
+                    NSString *firstPlaceFinisher = [[[[self.resultsJSON objectAtIndex:0] valueForKey:@"section"] objectAtIndex:0] valueForKey:@"title"];
+                    
+                    // Make sure we display the correct win banner, if appropriate
+                    if ([firstPlaceFinisher isEqualToString: @"Jenson Button"]) {
+                        // Show Jenson win banner
+                        _winBanner.image = [UIImage imageNamed:@"Win-Jenson"];
+                    } else if ([firstPlaceFinisher isEqualToString: @"Lewis Hamilton"]) {
+                        // Show Lewis win banner
+                        _winBanner.image = [UIImage imageNamed:@"Win-Lewis"];
+                    } else {
+                        // Show generic banner
+                        _winBanner.image = [UIImage imageNamed:@"Win-Generic"];
+                    }
+                    
+                    _winBanner.hidden = NO;
+                }
+                
+                scheduleTabBar.title = @"Results";
+            }
         }
     }
 }

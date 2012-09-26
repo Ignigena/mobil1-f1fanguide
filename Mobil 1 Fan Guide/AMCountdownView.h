@@ -20,6 +20,10 @@
 @property (strong, nonatomic) NSString *minutes;
 @property (strong, nonatomic) NSString *seconds;
 
+@property (strong, nonatomic) NSArray *resultsJSON;
+@property (strong, nonatomic) NSString *firstPlace;
+@property (nonatomic) int checkInterval;
+
 @property (strong, nonatomic) SBTickerView *countdownDays;
 @property (strong, nonatomic) SBTickerView *countdownHours;
 @property (strong, nonatomic) SBTickerView *countdownMinutes;
