@@ -19,11 +19,7 @@
 		863C365A15F8EE150015BD7D /* M1AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C365915F8EE150015BD7D /* M1AppDelegate.m */; };
 		863C365D15F8EE150015BD7D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863C365B15F8EE150015BD7D /* MainStoryboard.storyboard */; };
 		863C366015F8EE150015BD7D /* M1FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C365F15F8EE150015BD7D /* M1FirstViewController.m */; };
-		863C366215F8EE150015BD7D /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C366115F8EE150015BD7D /* first.png */; };
-		863C366415F8EE150015BD7D /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C366315F8EE150015BD7D /* first@2x.png */; };
 		863C366715F8EE150015BD7D /* M1ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C366615F8EE150015BD7D /* M1ScheduleViewController.m */; };
-		863C366915F8EE150015BD7D /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C366815F8EE150015BD7D /* second.png */; };
-		863C366B15F8EE150015BD7D /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 863C366A15F8EE150015BD7D /* second@2x.png */; };
 		863C367715F8EF410015BD7D /* AMCountdownModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C367615F8EF410015BD7D /* AMCountdownModel.m */; };
 		863C369215F90A030015BD7D /* SBTickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C368A15F907E60015BD7D /* SBTickerView.m */; };
 		863C369315F90A030015BD7D /* SBDoubleSidedLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 863C368C15F907E60015BD7D /* SBDoubleSidedLayer.m */; };
@@ -148,11 +144,9 @@
 		86F2601515FE38FD00A9C7C1 /* 12-map-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F2601415FE38FD00A9C7C1 /* 12-map-pin.png */; };
 		86F2601715FE396A00A9C7C1 /* 04-eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F2601615FE396A00A9C7C1 /* 04-eye.png */; };
 		86F2602215FE3D4000A9C7C1 /* UIView+Origami.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F2602115FE3D3F00A9C7C1 /* UIView+Origami.m */; };
-		86F2602415FE404800A9C7C1 /* InfoPane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F2602315FE404800A9C7C1 /* InfoPane@2x.png */; };
 		86F2602615FE45CC00A9C7C1 /* InfoDrawerBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F2602515FE45CB00A9C7C1 /* InfoDrawerBackground@2x.png */; };
 		86F2602815FE485100A9C7C1 /* InfoDivider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F2602715FE485000A9C7C1 /* InfoDivider@2x.png */; };
 		86F2602B15FE6BC600A9C7C1 /* M1MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F2602A15FE6BC500A9C7C1 /* M1MapAnnotation.m */; };
-		86F2602D15FE6F7E00A9C7C1 /* Render.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86F2602C15FE6F7D00A9C7C1 /* Render.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,12 +167,8 @@
 		863C365C15F8EE150015BD7D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		863C365E15F8EE150015BD7D /* M1FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M1FirstViewController.h; sourceTree = "<group>"; };
 		863C365F15F8EE150015BD7D /* M1FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M1FirstViewController.m; sourceTree = "<group>"; };
-		863C366115F8EE150015BD7D /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		863C366315F8EE150015BD7D /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		863C366515F8EE150015BD7D /* M1ScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M1ScheduleViewController.h; sourceTree = "<group>"; };
 		863C366615F8EE150015BD7D /* M1ScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M1ScheduleViewController.m; sourceTree = "<group>"; };
-		863C366815F8EE150015BD7D /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		863C366A15F8EE150015BD7D /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		863C367515F8EF410015BD7D /* AMCountdownModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMCountdownModel.h; sourceTree = "<group>"; };
 		863C367615F8EF410015BD7D /* AMCountdownModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMCountdownModel.m; sourceTree = "<group>"; };
 		863C368515F907D80015BD7D /* AMNumberView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMNumberView.h; sourceTree = "<group>"; };
@@ -336,12 +326,10 @@
 		86F2601615FE396A00A9C7C1 /* 04-eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-eye.png"; sourceTree = "<group>"; };
 		86F2602015FE3D3E00A9C7C1 /* UIView+Origami.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Origami.h"; sourceTree = "<group>"; };
 		86F2602115FE3D3F00A9C7C1 /* UIView+Origami.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Origami.m"; sourceTree = "<group>"; };
-		86F2602315FE404800A9C7C1 /* InfoPane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "InfoPane@2x.png"; sourceTree = "<group>"; };
 		86F2602515FE45CB00A9C7C1 /* InfoDrawerBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "InfoDrawerBackground@2x.png"; sourceTree = "<group>"; };
 		86F2602715FE485000A9C7C1 /* InfoDivider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "InfoDivider@2x.png"; sourceTree = "<group>"; };
 		86F2602915FE6BC400A9C7C1 /* M1MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M1MapAnnotation.h; sourceTree = "<group>"; };
 		86F2602A15FE6BC500A9C7C1 /* M1MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M1MapAnnotation.m; sourceTree = "<group>"; };
-		86F2602C15FE6F7D00A9C7C1 /* Render.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Render.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,16 +428,10 @@
 				863C365F15F8EE150015BD7D /* M1FirstViewController.m */,
 				86E4E93816036E9F00C19AE9 /* TableGradient@2x.png */,
 				86F2602715FE485000A9C7C1 /* InfoDivider@2x.png */,
-				86F2602C15FE6F7D00A9C7C1 /* Render.jpg */,
 				86F2602015FE3D3E00A9C7C1 /* UIView+Origami.h */,
 				86F2602115FE3D3F00A9C7C1 /* UIView+Origami.m */,
-				86F2602315FE404800A9C7C1 /* InfoPane@2x.png */,
 				86F2602515FE45CB00A9C7C1 /* InfoDrawerBackground@2x.png */,
 				86F2600315FE344800A9C7C1 /* TrackOverlay@2x.png */,
-				863C366115F8EE150015BD7D /* first.png */,
-				863C366315F8EE150015BD7D /* first@2x.png */,
-				863C366815F8EE150015BD7D /* second.png */,
-				863C366A15F8EE150015BD7D /* second@2x.png */,
 				86F2601415FE38FD00A9C7C1 /* 12-map-pin.png */,
 				86F2601215FE38DB00A9C7C1 /* 11-map-marker.png */,
 				86F2601615FE396A00A9C7C1 /* 04-eye.png */,
@@ -797,10 +779,6 @@
 			files = (
 				863C365415F8EE150015BD7D /* InfoPlist.strings in Resources */,
 				863C365D15F8EE150015BD7D /* MainStoryboard.storyboard in Resources */,
-				863C366215F8EE150015BD7D /* first.png in Resources */,
-				863C366415F8EE150015BD7D /* first@2x.png in Resources */,
-				863C366915F8EE150015BD7D /* second.png in Resources */,
-				863C366B15F8EE150015BD7D /* second@2x.png in Resources */,
 				86F25FC315FA456500A9C7C1 /* TickerBackground@2x.png in Resources */,
 				86F25FE315FA92DD00A9C7C1 /* TickerFrame@2x.png in Resources */,
 				86F25FE515FAA3B400A9C7C1 /* TickerGradient@2x.png in Resources */,
@@ -816,10 +794,8 @@
 				86F2601315FE38DB00A9C7C1 /* 11-map-marker.png in Resources */,
 				86F2601515FE38FD00A9C7C1 /* 12-map-pin.png in Resources */,
 				86F2601715FE396A00A9C7C1 /* 04-eye.png in Resources */,
-				86F2602415FE404800A9C7C1 /* InfoPane@2x.png in Resources */,
 				86F2602615FE45CC00A9C7C1 /* InfoDrawerBackground@2x.png in Resources */,
 				86F2602815FE485100A9C7C1 /* InfoDivider@2x.png in Resources */,
-				86F2602D15FE6F7E00A9C7C1 /* Render.jpg in Resources */,
 				86E4E93216036A4A00C19AE9 /* AppIcon.png in Resources */,
 				86E4E93416036A4D00C19AE9 /* AppIcon@2x.png in Resources */,
 				86E4E93916036E9F00C19AE9 /* TableGradient@2x.png in Resources */,
