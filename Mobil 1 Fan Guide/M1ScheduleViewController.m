@@ -84,7 +84,7 @@
     
     [headerView addSubview:headerLabel];
     
-    if (section != 0) {
+    if (section == 1) {
         UIButton *whatsThisButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
         whatsThisButton.frame = CGRectMake(290, 4, 15, 15);
         whatsThisButton.tag = section;
@@ -98,7 +98,7 @@
 
 - (IBAction)whatsThisButtonClicked:(id)sender
 {
-    NSString *infoURL = [sender tag] == 1 ? @"http://austinfanfest.com/" : @"http://apple.com";
+    NSString *infoURL = @"http://austinfanfest.com/";
     
     JHWebBrowser *modalBrowser = [JHWebBrowser new];
     modalBrowser.showDoneButton = YES;
