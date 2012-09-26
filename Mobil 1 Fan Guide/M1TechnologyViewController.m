@@ -8,6 +8,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "M1TechnologyViewController.h"
+#import "M1TechnologyStoryViewController.h"
 
 @interface M1TechnologyViewController ()
 
@@ -54,6 +55,26 @@
     self.trackButton.frame = CGRectMake(self.trackOrigin.x+(self.trackOrigin.x*(offset/3000)), self.trackButton.frame.origin.y, self.trackButton.frame.size.width, self.trackButton.frame.size.height);
     self.trackText.frame = CGRectMake(self.trackTextOrigin.x+(self.trackTextOrigin.x*(0-offset/10000)), self.trackText.frame.origin.y, self.trackText.frame.size.width, self.trackText.frame.size.height);
     self.tourButton.frame = CGRectMake(self.tourOrigin.x+(self.tourOrigin.x*(offset/9000)), self.tourButton.frame.origin.y, self.tourButton.frame.size.width, self.tourButton.frame.size.height);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    M1TechnologyStoryViewController *destination = [segue destinationViewController];
+    
+    if ([sender tag]==1) {
+        destination.navigationItem.title = @"F1 Cars";
+    } else if ([sender tag]==2) {
+        destination.navigationItem.title = @"Drivers";
+        destination.infoSectionContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Driver-Jenson" ofType:@"html"] encoding:NSUTF8StringEncoding error:nil];
+        
+        destination.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Lewis" style:UIBarButtonItemStyleBordered target:destination action:@selector(toggleDriver:)];
+    } else if ([sender tag]==3) {
+        destination.navigationItem.title = @"Fan Fest";
+    } else if ([sender tag]==4) {
+        destination.navigationItem.title = @"Track";
+    } else if ([sender tag]==5) {
+        destination.navigationItem.title = @"Tour";
+    }
 }
 
 - (void)didReceiveMemoryWarning

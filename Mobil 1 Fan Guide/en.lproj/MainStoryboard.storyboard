@@ -232,6 +232,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="sFE-Wj-pCt" customClass="M1NavigationBar">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.050980396568775177" green="0.15686275064945221" blue="0.25098040699958801" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="bwh-Hy-8Oa" kind="relationship" relationship="rootViewController" id="a96-F2-qRm"/>
@@ -253,7 +254,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gkW-WN-aub" userLabel="Cars Button">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gkW-WN-aub" userLabel="Cars Button">
                                         <rect key="frame" x="-78" y="81" width="337" height="218"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -264,8 +265,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="GMu-dT-BbT" kind="push" id="lhz-tX-Y67"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CxS-kp-Pzz" userLabel="Tour Button">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CxS-kp-Pzz" userLabel="Tour Button">
                                         <rect key="frame" x="683" y="36" width="796" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -276,8 +280,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="GMu-dT-BbT" kind="push" id="hW0-0s-ehq"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tBL-Gk-oPU" userLabel="Fan Fest Button">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tBL-Gk-oPU" userLabel="Fan Fest Button">
                                         <rect key="frame" x="267" y="79" width="307" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -288,8 +295,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="GMu-dT-BbT" kind="push" id="TbQ-ux-BeO"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TGd-F9-I6g" userLabel="Track Button">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TGd-F9-I6g" userLabel="Track Button">
                                         <rect key="frame" x="585" y="54" width="273" height="269"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -300,8 +310,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="GMu-dT-BbT" kind="push" id="DUF-r4-Mq0"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h2q-qq-HEM" userLabel="Driver Button">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h2q-qq-HEM" userLabel="Driver Button">
                                         <rect key="frame" x="212" y="28" width="191" height="310"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -312,8 +325,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="GMu-dT-BbT" kind="push" id="rDa-XA-Ilz"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8CC-c9-Mph">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8CC-c9-Mph">
                                         <rect key="frame" x="13" y="102" width="85" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
@@ -324,8 +340,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="GMu-dT-BbT" kind="push" id="WBx-59-kql"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="o5Q-T3-oCC">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="o5Q-T3-oCC">
                                         <rect key="frame" x="140" y="272" width="85" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
@@ -336,8 +355,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="GMu-dT-BbT" kind="push" id="GGa-VH-Zjf"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ibx-sf-ZHF">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ibx-sf-ZHF">
                                         <rect key="frame" x="444" y="246" width="90" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
@@ -348,8 +370,11 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="GMu-dT-BbT" kind="push" id="6CK-h7-PtY"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bHA-wD-1zA">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bHA-wD-1zA">
                                         <rect key="frame" x="570" y="77" width="85" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
@@ -360,9 +385,12 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="GMu-dT-BbT" kind="push" id="R5D-IY-Yof"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5RF-Lx-P6j">
-                                        <rect key="frame" x="750" y="96" width="85" height="23"/>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5RF-Lx-P6j">
+                                        <rect key="frame" x="750" y="126" width="85" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="18"/>
                                         <state key="normal" title="TOUR">
@@ -372,6 +400,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="GMu-dT-BbT" kind="push" id="a3J-ds-5e8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <connections>
@@ -397,6 +428,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tR5-r4-wf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1113" y="1122"/>
+        </scene>
+        <!--Technology Story View Controller-->
+        <scene sceneID="cTG-VE-kdS">
+            <objects>
+                <viewController id="GMu-dT-BbT" customClass="M1TechnologyStoryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yre-eb-e2H">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="VZz-qD-NbQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.074509806931018829" green="0.12156863510608673" blue="0.15294118225574493" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2Sf-nd-YYM"/>
+                    <connections>
+                        <outlet property="infoSection" destination="VZz-qD-NbQ" id="qNV-2n-JoJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VK7-l3-9nk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606" y="1122"/>
         </scene>
         <!--Countdown View Controller-->
         <scene sceneID="15">
@@ -545,69 +601,20 @@ Circuit of The Americas is ideally situated on a 1000-acre site in southeast Aus
         <image name="91-beaker-2.png" width="20" height="24"/>
         <image name="InfoDivider@2x.png" width="88" height="640"/>
         <image name="InfoDrawerBackground@2x.png" width="10" height="640"/>
-        <image name="TechCar@2x.png" width="719" height="464"/>
-        <image name="TechDrivers@2x.png" width="191" height="310"/>
-        <image name="TechFanFest@2x.png" width="918" height="600"/>
+        <image name="TechCar@2x.png" width="961" height="620"/>
+        <image name="TechDrivers@2x.png" width="394" height="640"/>
+        <image name="TechFanFest@2x.png" width="949" height="620"/>
         <image name="TechTour@2x.png" width="1592" height="600"/>
-        <image name="TechTrack@2x.png" width="561" height="552"/>
+        <image name="TechTrack@2x.png" width="630" height="620"/>
         <image name="TickerGradientExtended@2x.png" width="640" height="1260"/>
         <image name="VideoCarousel.png" width="320" height="353"/>
     </resources>
-    <classes>
-        <class className="M1CountdownViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1CountdownViewController.h"/>
-        </class>
-        <class className="M1FirstViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1FirstViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="newsTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="M1MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1MapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="toggleMapView:" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="infoView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="mapCanvas" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="mapScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="M1NavigationBar" superclassName="UINavigationBar">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1NavigationBar.h"/>
-        </class>
-        <class className="M1ScheduleViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1ScheduleViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="scheduleTabTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="scheduleTabTitle" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="M1TechnologyViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1TechnologyViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="carsText" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="driversButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="driversText" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="fanFestText" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="technologyScroller" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="tourButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="trackButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="trackText" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="M1VideoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1VideoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="videoThumbnailSelect:"/>
-                <relationship kind="outlet" name="videoScrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="rDa-XA-Ilz"/>
+    </inferredMetricsTieBreakers>
 </document>

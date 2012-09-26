@@ -10,4 +10,9 @@
 
 @interface M1TechnologyStoryViewController : UIViewController
 
+- (void)toggleDriver:(UIBarButtonItem *)sender;
+
+@property (strong, nonatomic) NSString *infoSectionContent;
+@property (strong, nonatomic) IBOutlet UIWebView *infoSection;
+
 @end
