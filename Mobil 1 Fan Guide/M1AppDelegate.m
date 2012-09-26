@@ -6,14 +6,43 @@
 //  Copyright (c) 2012 Albert Martin. All rights reserved.
 //
 
+#import "UAirship.h"
 #import "M1AppDelegate.h"
 
 @implementation M1AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.    
+    //Init Airship launch options
+    NSMutableDictionary *takeOffOptions = [[NSMutableDictionary alloc] init];
+    [takeOffOptions setValue:launchOptions forKey:UAirshipTakeOffOptionsLaunchOptionsKey];
+    
+    // Create Airship singleton that's used to talk to Urban Airship servers.
+    [UAirship takeOff:takeOffOptions];
+    
+    // Register Airship to recieve notifications
+    [[UAPush shared] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                         UIRemoteNotificationTypeSound |
+                                                         UIRemoteNotificationTypeAlert)];
+    
     return YES;
+}
+
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Updates the device token and registers the token with Airship
+    [[UAPush shared] registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    UALOG(@"Received remote notification: %@", userInfo);
+    
+    if ([userInfo objectForKey:@"tab"]) {
+        [(UITabBarController *)self.window.rootViewController setSelectedIndex: [[userInfo objectForKey:@"tab"] intValue]-1];
+    }
+    
+    [[UAPush shared] handleNotification:userInfo applicationState:application.applicationState];
+    [[UAPush shared] resetBadge]; // zero badge after push received
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -40,7 +69,8 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    // The Airship is cleared for landing
+    [UAirship land];
 }
 
 @end

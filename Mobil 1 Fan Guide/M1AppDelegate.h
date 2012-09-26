@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UAPush.h"
 #import "AMCountdownModel.h"
 
-@interface M1AppDelegate : UIResponder <UIApplicationDelegate>
+@interface M1AppDelegate : UIResponder <UIApplicationDelegate, UAPushNotificationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

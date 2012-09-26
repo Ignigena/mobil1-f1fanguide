@@ -78,6 +78,16 @@
 		866B3A5B1610F02A00A13E81 /* TechFanFest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 866B3A5A1610F02A00A13E81 /* TechFanFest@2x.png */; };
 		866B3A5D1610FA8E00A13E81 /* TechTrack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 866B3A5C1610FA8E00A13E81 /* TechTrack@2x.png */; };
 		866B3A5F1611011C00A13E81 /* TechTour@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 866B3A5E1611011C00A13E81 /* TechTour@2x.png */; };
+		866B3A621611DF1100A13E81 /* M1TechnologyStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 866B3A611611DF1100A13E81 /* M1TechnologyStoryViewController.m */; };
+		866B3AAA1611F17000A13E81 /* Driver-Jenson.html in Resources */ = {isa = PBXBuildFile; fileRef = 866B3AA81611F16F00A13E81 /* Driver-Jenson.html */; };
+		866B3AAB1611F17000A13E81 /* Driver-Jenson@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 866B3AA91611F16F00A13E81 /* Driver-Jenson@2x.png */; };
+		866B3AAD161227A300A13E81 /* libUAirship-1.3.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 866B3AAC161227A300A13E81 /* libUAirship-1.3.3.a */; };
+		866B3AAF161227E500A13E81 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866B3AAE161227E400A13E81 /* MobileCoreServices.framework */; };
+		866B3AB11612280700A13E81 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 866B3AB01612280700A13E81 /* libz.dylib */; };
+		866B3AB31612281600A13E81 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 866B3AB21612281600A13E81 /* libsqlite3.dylib */; };
+		866B3AB51612282000A13E81 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866B3AB41612282000A13E81 /* CoreTelephony.framework */; };
+		866B3AB71612282600A13E81 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866B3AB61612282600A13E81 /* StoreKit.framework */; };
+		866B3AB91612285800A13E81 /* AirshipConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 866B3AB81612285800A13E81 /* AirshipConfig.plist */; };
 		86A6F9FE160A64CC00780A2E /* Turn1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86A6F9FD160A64CC00780A2E /* Turn1@2x.png */; };
 		86A6FA00160A657F00780A2E /* Turn2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86A6F9FF160A657F00780A2E /* Turn2@2x.png */; };
 		86DC1AB2160BA9AD008531D5 /* Schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 86DC1AB1160BA9AD008531D5 /* Schedule.json */; };
@@ -242,6 +252,17 @@
 		866B3A5A1610F02A00A13E81 /* TechFanFest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TechFanFest@2x.png"; sourceTree = "<group>"; };
 		866B3A5C1610FA8E00A13E81 /* TechTrack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TechTrack@2x.png"; sourceTree = "<group>"; };
 		866B3A5E1611011C00A13E81 /* TechTour@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TechTour@2x.png"; sourceTree = "<group>"; };
+		866B3A601611DF1000A13E81 /* M1TechnologyStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M1TechnologyStoryViewController.h; sourceTree = "<group>"; };
+		866B3A611611DF1100A13E81 /* M1TechnologyStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M1TechnologyStoryViewController.m; sourceTree = "<group>"; };
+		866B3AA81611F16F00A13E81 /* Driver-Jenson.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "Driver-Jenson.html"; path = "Technology/Driver-Jenson.html"; sourceTree = SOURCE_ROOT; };
+		866B3AA91611F16F00A13E81 /* Driver-Jenson@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Driver-Jenson@2x.png"; path = "Technology/Driver-Jenson@2x.png"; sourceTree = SOURCE_ROOT; };
+		866B3AAC161227A300A13E81 /* libUAirship-1.3.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libUAirship-1.3.3.a"; path = "../Airship/libUAirship-1.3.3.a"; sourceTree = "<group>"; };
+		866B3AAE161227E400A13E81 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		866B3AB01612280700A13E81 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		866B3AB21612281600A13E81 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		866B3AB41612282000A13E81 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		866B3AB61612282600A13E81 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		866B3AB81612285800A13E81 /* AirshipConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AirshipConfig.plist; sourceTree = "<group>"; };
 		86A6F9FD160A64CC00780A2E /* Turn1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Turn1@2x.png"; path = "Pins/Turn1@2x.png"; sourceTree = "<group>"; };
 		86A6F9FF160A657F00780A2E /* Turn2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Turn2@2x.png"; path = "Pins/Turn2@2x.png"; sourceTree = "<group>"; };
 		86DC1AB1160BA9AD008531D5 /* Schedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Schedule.json; sourceTree = "<group>"; };
@@ -320,6 +341,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				866B3AB71612282600A13E81 /* StoreKit.framework in Frameworks */,
+				866B3AB51612282000A13E81 /* CoreTelephony.framework in Frameworks */,
+				866B3AB31612281600A13E81 /* libsqlite3.dylib in Frameworks */,
+				866B3AB11612280700A13E81 /* libz.dylib in Frameworks */,
+				866B3AAF161227E500A13E81 /* MobileCoreServices.framework in Frameworks */,
 				866B3A48160D236300A13E81 /* Social.framework in Frameworks */,
 				866B3A46160D1B6400A13E81 /* EventKit.framework in Frameworks */,
 				866B3A44160D0C6900A13E81 /* CoreImage.framework in Frameworks */,
@@ -333,6 +359,7 @@
 				863C364A15F8EE150015BD7D /* UIKit.framework in Frameworks */,
 				863C364C15F8EE150015BD7D /* Foundation.framework in Frameworks */,
 				863C364E15F8EE150015BD7D /* CoreGraphics.framework in Frameworks */,
+				866B3AAD161227A300A13E81 /* libUAirship-1.3.3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +392,7 @@
 		863C364815F8EE150015BD7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				866B3AAC161227A300A13E81 /* libUAirship-1.3.3.a */,
 				866B3A47160D236300A13E81 /* Social.framework */,
 				866B3A45160D1B6400A13E81 /* EventKit.framework */,
 				86E4E97F1603E21100C19AE9 /* MediaPlayer.framework */,
@@ -378,6 +406,11 @@
 				864A6ED3160B70A6005A86E2 /* Security.framework */,
 				864A6ED1160B709F005A86E2 /* SystemConfiguration.framework */,
 				864A6ECF160B7095005A86E2 /* CFNetwork.framework */,
+				866B3AB61612282600A13E81 /* StoreKit.framework */,
+				866B3AB41612282000A13E81 /* CoreTelephony.framework */,
+				866B3AB21612281600A13E81 /* libsqlite3.dylib */,
+				866B3AB01612280700A13E81 /* libz.dylib */,
+				866B3AAE161227E400A13E81 /* MobileCoreServices.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -431,6 +464,7 @@
 				863C365215F8EE150015BD7D /* InfoPlist.strings */,
 				863C365515F8EE150015BD7D /* main.m */,
 				863C365715F8EE150015BD7D /* Mobil 1 Fan Guide-Prefix.pch */,
+				866B3AB81612285800A13E81 /* AirshipConfig.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -558,7 +592,15 @@
 			children = (
 				866B3A501610DE1C00A13E81 /* M1TechnologyViewController.h */,
 				866B3A511610DE1C00A13E81 /* M1TechnologyViewController.m */,
+				866B3A601611DF1000A13E81 /* M1TechnologyStoryViewController.h */,
+				866B3A611611DF1100A13E81 /* M1TechnologyStoryViewController.m */,
+				866B3A581610E63B00A13E81 /* TechCar@2x.png */,
 				866B3A561610E43100A13E81 /* TechDrivers@2x.png */,
+				866B3A5A1610F02A00A13E81 /* TechFanFest@2x.png */,
+				866B3A5C1610FA8E00A13E81 /* TechTrack@2x.png */,
+				866B3A5E1611011C00A13E81 /* TechTour@2x.png */,
+				866B3AA81611F16F00A13E81 /* Driver-Jenson.html */,
+				866B3AA91611F16F00A13E81 /* Driver-Jenson@2x.png */,
 			);
 			name = "Technology Tab";
 			sourceTree = "<group>";
@@ -571,11 +613,7 @@
 				866B3A2C160CC58400A13E81 /* NSString+RelativeDate.h */,
 				866B3A2D160CC58400A13E81 /* NSString+RelativeDate.m */,
 				86DC1AB1160BA9AD008531D5 /* Schedule.json */,
-				866B3A581610E63B00A13E81 /* TechCar@2x.png */,
 				86DC1AB3160BCD38008531D5 /* ScheduleHeader@2x.png */,
-				866B3A5A1610F02A00A13E81 /* TechFanFest@2x.png */,
-				866B3A5C1610FA8E00A13E81 /* TechTrack@2x.png */,
-				866B3A5E1611011C00A13E81 /* TechTour@2x.png */,
 			);
 			name = "Schedule Tab";
 			sourceTree = "<group>";
@@ -828,6 +866,9 @@
 				866B3A5B1610F02A00A13E81 /* TechFanFest@2x.png in Resources */,
 				866B3A5D1610FA8E00A13E81 /* TechTrack@2x.png in Resources */,
 				866B3A5F1611011C00A13E81 /* TechTour@2x.png in Resources */,
+				866B3AAA1611F17000A13E81 /* Driver-Jenson.html in Resources */,
+				866B3AAB1611F17000A13E81 /* Driver-Jenson@2x.png in Resources */,
+				866B3AB91612285800A13E81 /* AirshipConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -874,6 +915,7 @@
 				866B3A41160D022700A13E81 /* JHWebBrowser.m in Sources */,
 				866B3A4F1610B6D100A13E81 /* UIView+ParentViewController.m in Sources */,
 				866B3A521610DE1C00A13E81 /* M1TechnologyViewController.m in Sources */,
+				866B3A621611DF1100A13E81 /* M1TechnologyStoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -949,10 +991,17 @@
 		863C366F15F8EE150015BD7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Albert Martin (5W953E5288)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mobil 1 Fan Guide/Mobil 1 Fan Guide-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../Airship/**";
 				INFOPLIST_FILE = "Mobil 1 Fan Guide/Mobil 1 Fan Guide-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Airship\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FAA13EF1-6030-4077-8C35-B16CFA23BFB2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -960,10 +1009,17 @@
 		863C367015F8EE150015BD7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Albert Martin (5W953E5288)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mobil 1 Fan Guide/Mobil 1 Fan Guide-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../Airship/**";
 				INFOPLIST_FILE = "Mobil 1 Fan Guide/Mobil 1 Fan Guide-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../Airship\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FAA13EF1-6030-4077-8C35-B16CFA23BFB2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
