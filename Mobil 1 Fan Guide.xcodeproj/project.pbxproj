@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		86120832161332210021F4A2 /* Driver-Lewis@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86120831161332210021F4A2 /* Driver-Lewis@2x.png */; };
 		861208341613322E0021F4A2 /* Driver-Lewis.html in Resources */ = {isa = PBXBuildFile; fileRef = 861208331613322E0021F4A2 /* Driver-Lewis.html */; };
+		8612083616134D5D0021F4A2 /* Win-Lewis@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8612083516134D5D0021F4A2 /* Win-Lewis@2x.png */; };
 		8612083816134F010021F4A2 /* Results.json in Resources */ = {isa = PBXBuildFile; fileRef = 8612083716134F010021F4A2 /* Results.json */; };
 		863C364A15F8EE150015BD7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364915F8EE150015BD7D /* UIKit.framework */; };
 		863C364C15F8EE150015BD7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364B15F8EE150015BD7D /* Foundation.framework */; };
@@ -157,6 +158,7 @@
 /* Begin PBXFileReference section */
 		86120831161332210021F4A2 /* Driver-Lewis@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Driver-Lewis@2x.png"; path = "Technology/Driver-Lewis@2x.png"; sourceTree = SOURCE_ROOT; };
 		861208331613322E0021F4A2 /* Driver-Lewis.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "Driver-Lewis.html"; path = "Technology/Driver-Lewis.html"; sourceTree = SOURCE_ROOT; };
+		8612083516134D5D0021F4A2 /* Win-Lewis@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Win-Lewis@2x.png"; path = "App Banners/Win-Lewis@2x.png"; sourceTree = SOURCE_ROOT; };
 		8612083716134F010021F4A2 /* Results.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Results.json; sourceTree = "<group>"; };
 		863C364515F8EE150015BD7D /* F1 Austin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "F1 Austin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		863C364915F8EE150015BD7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -589,6 +591,7 @@
 				866B3A4D1610B6D100A13E81 /* UIView+ParentViewController.h */,
 				866B3A4E1610B6D100A13E81 /* UIView+ParentViewController.m */,
 				866B3A4A1610A93300A13E81 /* Win-Jenson@2x.png */,
+				8612083516134D5D0021F4A2 /* Win-Lewis@2x.png */,
 			);
 			name = "Countdown Banner";
 			sourceTree = "<group>";
@@ -880,6 +883,7 @@
 				866B3AB91612285800A13E81 /* AirshipConfig.plist in Resources */,
 				86120832161332210021F4A2 /* Driver-Lewis@2x.png in Resources */,
 				861208341613322E0021F4A2 /* Driver-Lewis.html in Resources */,
+				8612083616134D5D0021F4A2 /* Win-Lewis@2x.png in Resources */,
 				8612083816134F010021F4A2 /* Results.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
