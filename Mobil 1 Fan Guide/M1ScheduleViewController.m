@@ -28,10 +28,11 @@
     _dateFormatter = [[NSDateFormatter alloc]init];
     [_dateFormatter setDateFormat:@"d-M-yyy H:m"];
     [_dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
-
-    self.schedule = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Schedule.json"]] options:kNilOptions error:nil];
     
     self.scheduleTabTable.separatorColor = [UIColor blackColor];
+    
+    self.schedule = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Schedule.json"]] options:kNilOptions error:nil];
+    _isResults = NO;
     [self.scheduleTabTable reloadData];
     
     [self countdownUpdated];
@@ -46,6 +47,13 @@
     if ([countdownController.countdownView isCountdownFinished]) {
         self.scheduleTabTitle.hidden = YES;
         self.scheduleTabTable.frame = CGRectMake(0, 0, self.scheduleTabTable.frame.size.width, self.view.frame.size.height);
+        
+        if (!self.isResults) {
+            #warning Replace with internet fetched Results.json file
+            self.schedule = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Results.json"]] options:kNilOptions error:nil];
+            _isResults = YES;
+            [self.scheduleTabTable reloadData];
+        }
     }
 }
 
@@ -119,7 +127,7 @@
     
     cell.textLabel.text = [cellValue objectForKey:@"title"];
     cell.textLabel.textColor = [UIColor whiteColor];
-    cell.detailTextLabel.text = [NSString formattedDateRelativeToNow: [self.dateFormatter dateFromString: [cellValue objectForKey:@"date"]]];
+    cell.detailTextLabel.text = self.isResults ? [cellValue objectForKey:@"time"] : [NSString formattedDateRelativeToNow: [self.dateFormatter dateFromString: [cellValue objectForKey:@"date"]]];
     cell.detailTextLabel.textColor = [UIColor lightGrayColor];
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
     
@@ -133,6 +141,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (self.isResults)
+        return;
+    
     NSDictionary *selectedSection = [self.schedule objectAtIndex:indexPath.section];
     NSArray *selectedRow = [selectedSection objectForKey:@"section"];
     NSDictionary *cellValue = [selectedRow objectAtIndex:indexPath.row];

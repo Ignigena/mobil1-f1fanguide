@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		86120832161332210021F4A2 /* Driver-Lewis@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86120831161332210021F4A2 /* Driver-Lewis@2x.png */; };
 		861208341613322E0021F4A2 /* Driver-Lewis.html in Resources */ = {isa = PBXBuildFile; fileRef = 861208331613322E0021F4A2 /* Driver-Lewis.html */; };
+		8612083816134F010021F4A2 /* Results.json in Resources */ = {isa = PBXBuildFile; fileRef = 8612083716134F010021F4A2 /* Results.json */; };
 		863C364A15F8EE150015BD7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364915F8EE150015BD7D /* UIKit.framework */; };
 		863C364C15F8EE150015BD7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364B15F8EE150015BD7D /* Foundation.framework */; };
 		863C364E15F8EE150015BD7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364D15F8EE150015BD7D /* CoreGraphics.framework */; };
@@ -156,6 +157,7 @@
 /* Begin PBXFileReference section */
 		86120831161332210021F4A2 /* Driver-Lewis@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Driver-Lewis@2x.png"; path = "Technology/Driver-Lewis@2x.png"; sourceTree = SOURCE_ROOT; };
 		861208331613322E0021F4A2 /* Driver-Lewis.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "Driver-Lewis.html"; path = "Technology/Driver-Lewis.html"; sourceTree = SOURCE_ROOT; };
+		8612083716134F010021F4A2 /* Results.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Results.json; sourceTree = "<group>"; };
 		863C364515F8EE150015BD7D /* F1 Austin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "F1 Austin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		863C364915F8EE150015BD7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		863C364B15F8EE150015BD7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -619,6 +621,7 @@
 				866B3A2C160CC58400A13E81 /* NSString+RelativeDate.h */,
 				866B3A2D160CC58400A13E81 /* NSString+RelativeDate.m */,
 				86DC1AB1160BA9AD008531D5 /* Schedule.json */,
+				8612083716134F010021F4A2 /* Results.json */,
 				86DC1AB3160BCD38008531D5 /* ScheduleHeader@2x.png */,
 			);
 			name = "Schedule Tab";
@@ -877,6 +880,7 @@
 				866B3AB91612285800A13E81 /* AirshipConfig.plist in Resources */,
 				86120832161332210021F4A2 /* Driver-Lewis@2x.png in Resources */,
 				861208341613322E0021F4A2 /* Driver-Lewis.html in Resources */,
+				8612083816134F010021F4A2 /* Results.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 
 @interface M1ScheduleViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
 
+@property (nonatomic) BOOL isResults;
 @property (strong, nonatomic) NSArray *schedule;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 
