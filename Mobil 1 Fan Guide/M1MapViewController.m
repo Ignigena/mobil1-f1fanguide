@@ -22,6 +22,7 @@
 @synthesize containerView = _containerView;
 
 #define TRACK_RECT MKMapRectMake(61407232.000000, 110626923.789474, 20480.000000, 13653.333333)
+#define FANFEST_RECT MKMapRectMake(61331819.915805, 110519799.982554, 3458.589826, 1948.501337)
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -42,6 +43,8 @@
     // Any valid tiled image directory structure in there will do.
     _overlay = [[TileOverlay alloc] initWithTileDirectory:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Tiles"]];
     [_mapView addOverlay:self.overlay];
+    
+    [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.265648,-97.745189) title:@"Austin Fan Fest" subtitle:@"powered by Mobil 1"]];
     
     [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.12977222222222,-97.63660833333336) title:@"Special" subtitle:@"Turn1"]];
     [_mapView addAnnotation:[[M1MapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(30.13233573484781,-97.63761198869007) title:@"Special" subtitle:@"Turn2"]];
@@ -82,6 +85,8 @@
         _infoDrawerOpen = NO;
 
     }
+    
+    NSLog(@"%f - %f - %f - %f", [self.mapView visibleMapRect].origin.x, [self.mapView visibleMapRect].origin.y, [self.mapView visibleMapRect].size.width, [self.mapView visibleMapRect].size.height);
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation
@@ -103,10 +108,6 @@
                 customPinView.pinColor = MKPinAnnotationColorPurple;
                 customPinView.animatesDrop = YES;
                 customPinView.canShowCallout = YES;
-                
-                UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-                [rightButton addTarget:self action:@selector(toggleInfoDrawer:) forControlEvents:UIControlEventTouchUpInside];
-                customPinView.rightCalloutAccessoryView = rightButton;
             }
             
             return customPinView;
@@ -125,10 +126,6 @@
     return view;
 }
 
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-    return _mapCanvas;
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -141,6 +138,7 @@
         [_mapView setVisibleMapRect:TRACK_RECT animated:YES];
     } else {
         // User selected "Fan Fest"
+        [_mapView setVisibleMapRect:FANFEST_RECT animated:YES];
     }
 }
 
