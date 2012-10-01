@@ -112,6 +112,7 @@
                 
                 // Fetch results file if no first place name or if we're showing the temporary results file.
                 if (!self.firstPlace || self.firstPlace == @"Results coming soon!") {
+                if (!self.firstPlace || [self.firstPlace isEqualToString: @"Results coming soon!"]) {
                     MKNetworkEngine *engine = [[MKNetworkEngine alloc] init];
                     
                     MKNetworkOperation *raceResults = [engine operationWithURLString:@"https://www.ilovetheory.com/sites/com.apps.mobil1.f1/files/Results.json" params:nil httpMethod:@"GET"];
