@@ -108,11 +108,9 @@
                 _checkInterval--;
             } else {
                 // Set check interval to every 4 minutes until results are posted
-                _checkInterval = 240;
                 _checkInterval = 30;
                 
                 // Fetch results file if no first place name or if we're showing the temporary results file.
-                if (!self.firstPlace || self.firstPlace == @"Results coming soon!") {
                 if (!self.firstPlace || [self.firstPlace isEqualToString: @"Results coming soon!"]) {
                     MKNetworkEngine *engine = [[MKNetworkEngine alloc] init];
                     

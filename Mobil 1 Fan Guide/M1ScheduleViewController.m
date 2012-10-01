@@ -48,18 +48,28 @@
         self.scheduleTabTitle.hidden = YES;
         self.scheduleTabTable.frame = CGRectMake(0, 0, self.scheduleTabTable.frame.size.width, self.view.frame.size.height);
         
-        if (!self.isResults) {
-            MKNetworkEngine *engine = [[MKNetworkEngine alloc] init];
-            
-            MKNetworkOperation *raceResults = [engine operationWithURLString:@"https://www.ilovetheory.com/sites/com.apps.mobil1.f1/files/Results.json" params:nil httpMethod:@"GET"];
-            
-            [raceResults onCompletion:^(MKNetworkOperation *completedOperation) {
-                self.schedule = [NSJSONSerialization JSONObjectWithData:[completedOperation responseData] options:kNilOptions error:nil];
-                _isResults = YES;
-                [self.scheduleTabTable reloadData];
-            } onError:^(NSError *error) { NSLog(@"%@", error); }];
-            
-            [engine enqueueOperation:raceResults];
+        if (!self.isResults || [self.firstPlaceFinisher isEqualToString:@"Results coming soon!"]) {
+            // Race is over, display results and win banner if applicable
+            // Flood control
+            if (self.checkInterval>=1) {
+                _checkInterval--;
+            } else {
+                // Set check interval to every 4 minutes until results are posted
+                _checkInterval = 30;
+                MKNetworkEngine *engine = [[MKNetworkEngine alloc] init];
+                
+                MKNetworkOperation *raceResults = [engine operationWithURLString:@"https://www.ilovetheory.com/sites/com.apps.mobil1.f1/files/Results.json" params:nil httpMethod:@"GET"];
+                
+                [raceResults onCompletion:^(MKNetworkOperation *completedOperation) {
+                    _schedule = [NSJSONSerialization JSONObjectWithData:[completedOperation responseData] options:kNilOptions error:nil];
+                    _isResults = YES;
+                    [self.scheduleTabTable reloadData];
+                    
+                    _firstPlaceFinisher = [[[[self.schedule objectAtIndex:0] valueForKey:@"section"] objectAtIndex:0] valueForKey:@"title"];
+                } onError:^(NSError *error) { NSLog(@"%@", error); }];
+                
+                [engine enqueueOperation:raceResults];
+            }
         }
     }
 }

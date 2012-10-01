@@ -17,4 +17,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *scheduleTabTitle;
 @property (strong, nonatomic) IBOutlet UITableView *scheduleTabTable;
 
+@property (nonatomic) int checkInterval;
+@property (strong, nonatomic) NSString *firstPlaceFinisher;
+
 @end
