@@ -45,70 +45,70 @@
              {
              "title": "Mobil 1 Experience",
              "date": "16-11-2012 18:00",
-             "date": "16-11-2012 20:00",
+             "end": "16-11-2012 20:00",
              "location": "Colorado Ave and 3rd Street",
              "maps": "30.26577624419581,-97.74470479363161"
              },
              {
              "title": "Aerosmith",
              "date": "16-11-2012 20:00",
-             "date": "16-11-2012 22:00",
+             "end": "16-11-2012 22:00",
              "location": "Frank Erwin Center",
              "maps": "30.27723,-97.73304600000002"
              },
              {
              "title": "Flo Rida",
              "date": "16-11-2012 20:00",
-             "date": "16-11-2012 22:00",
+             "end": "16-11-2012 22:00",
              "location": "The COTA Club @ Austin Convention Center",
              "maps": "30.263278,-97.74059099999998"
              },
              {
              "title": "Juanes",
              "date": "16-11-2012 21:00",
-             "date": "16-11-2012 23:00",
+             "end": "16-11-2012 23:00",
              "location": "ACL Live @ Moody Theater",
              "maps": "30.265407,-97.74727799999999"
              },
              {
              "title": "Mobil 1 Experience",
              "date": "17-11-2012 10:00",
-             "date": "17-11-2012 12:00",
+             "end": "17-11-2012 12:00",
              "location": "Colorado Ave and 3rd Street",
              "maps": "30.26577624419581,-97.74470479363161"
              },
              {
              "title": "Enrique Iglesias",
              "date": "17-11-2012 20:00",
-             "date": "17-11-2012 22:00",
+             "end": "17-11-2012 22:00",
              "location": "The COTA Club @ Austin Convention Center",
              "maps": "30.263278,-97.74059099999998"
              },
              {
              "title": "Lupe Fiasco",
              "date": "17-11-2012 21:00",
-             "date": "17-11-2012 23:00",
+             "end": "17-11-2012 23:00",
              "location": "ACL Live @ Moody Theater",
              "maps": "30.265407,-97.74727799999999"
              },
              {
              "title": "Mobil 1 Experience",
              "date": "18-11-2012 10:00",
-             "date": "18-11-2012 12:00",
+             "end": "18-11-2012 12:00",
              "location": "Colorado Ave and 3rd Street",
              "maps": "30.26577624419581,-97.74470479363161"
              },
              {
              "title": "Ghostland Observatory",
              "date": "18-11-2012 20:00",
-             "date": "18-11-2012 22:00",
+             "end": "18-11-2012 22:00",
              "location": "Bob Bullock Texas State History Museum",
              "maps": "30.280285,-97.73885199999998"
              },
              {
              "title": "The Wallflowers",
              "date": "18-11-2012 21:00",
-             "date": "18-11-2012 23:00",
+             "end": "18-11-2012 23:00",
              "location": "ACL Live @ Moody Theater",
              "maps": "30.265407,-97.74727799999999"
              },
@@ -160,7 +160,7 @@
              "maps": "29.74033500000001,-95.024925"
              },
              {
-             "title": "Houston Office - Greenspoint",
+             "title": "Houston Office",
              "date": "19-10-2012 10:00",
              "end": "19-10-2012 16:00",
              "location": "10AM-4PM. Houston Office, Houston, TX",
