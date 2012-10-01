@@ -49,10 +49,17 @@
         self.scheduleTabTable.frame = CGRectMake(0, 0, self.scheduleTabTable.frame.size.width, self.view.frame.size.height);
         
         if (!self.isResults) {
-            #warning Replace with internet fetched Results.json file
-            self.schedule = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Results.json"]] options:kNilOptions error:nil];
-            _isResults = YES;
-            [self.scheduleTabTable reloadData];
+            MKNetworkEngine *engine = [[MKNetworkEngine alloc] init];
+            
+            MKNetworkOperation *raceResults = [engine operationWithURLString:@"https://www.ilovetheory.com/sites/com.apps.mobil1.f1/files/Results.json" params:nil httpMethod:@"GET"];
+            
+            [raceResults onCompletion:^(MKNetworkOperation *completedOperation) {
+                self.schedule = [NSJSONSerialization JSONObjectWithData:[completedOperation responseData] options:kNilOptions error:nil];
+                _isResults = YES;
+                [self.scheduleTabTable reloadData];
+            } onError:^(NSError *error) { NSLog(@"%@", error); }];
+            
+            [engine enqueueOperation:raceResults];
         }
     }
 }

@@ -107,30 +107,38 @@
             if (self.checkInterval>=1) {
                 _checkInterval--;
             } else {
+                // Set check interval to every 4 minutes until results are posted
                 _checkInterval = 240;
                 
                 // Fetch results file if no first place name or if we're showing the temporary results file.
                 if (!self.firstPlace || self.firstPlace == @"Results coming soon!") {
-                    #warning Need to fetch win banner state from results JSON file.
-                    NSLog(@"fetching results");
-                    _resultsJSON = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Results.json"]] options:kNilOptions error:nil];
-            
-                    // Fetch the first row from the results to check who won
-                    NSString *firstPlaceFinisher = [[[[self.resultsJSON objectAtIndex:0] valueForKey:@"section"] objectAtIndex:0] valueForKey:@"title"];
+                    MKNetworkEngine *engine = [[MKNetworkEngine alloc] init];
                     
-                    // Make sure we display the correct win banner, if appropriate
-                    if ([firstPlaceFinisher isEqualToString: @"Jenson Button"]) {
-                        // Show Jenson win banner
-                        _winBanner.image = [UIImage imageNamed:@"Win-Jenson"];
-                    } else if ([firstPlaceFinisher isEqualToString: @"Lewis Hamilton"]) {
-                        // Show Lewis win banner
-                        _winBanner.image = [UIImage imageNamed:@"Win-Lewis"];
-                    } else {
-                        // Show generic banner
-                        _winBanner.image = [UIImage imageNamed:@"Win-Generic"];
-                    }
+                    MKNetworkOperation *raceResults = [engine operationWithURLString:@"https://www.ilovetheory.com/sites/com.apps.mobil1.f1/files/Results.json" params:nil httpMethod:@"GET"];
                     
-                    _winBanner.hidden = NO;
+                    [raceResults onCompletion:^(MKNetworkOperation *completedOperation) {
+                        _resultsJSON = [NSJSONSerialization JSONObjectWithData:[completedOperation responseData] options:kNilOptions error:nil];
+                        
+                        // Fetch the first row from the results to check who won
+                        NSString *firstPlaceFinisher = [[[[self.resultsJSON objectAtIndex:0] valueForKey:@"section"] objectAtIndex:0] valueForKey:@"title"];
+                        _firstPlace = firstPlaceFinisher;
+                        
+                        // Make sure we display the correct win banner, if appropriate
+                        if ([firstPlaceFinisher isEqualToString: @"Jenson Button"]) {
+                            // Show Jenson win banner
+                            _winBanner.image = [UIImage imageNamed:@"Win-Jenson"];
+                        } else if ([firstPlaceFinisher isEqualToString: @"Lewis Hamilton"]) {
+                            // Show Lewis win banner
+                            _winBanner.image = [UIImage imageNamed:@"Win-Lewis"];
+                        } else {
+                            // Show generic banner
+                            _winBanner.image = [UIImage imageNamed:@"Win-Generic"];
+                        }
+                        
+                        _winBanner.hidden = NO;
+                    } onError:^(NSError *error) { NSLog(@"%@", error); }];
+                    
+                    [engine enqueueOperation:raceResults];
                 }
                 
                 scheduleTabBar.title = @"Results";
