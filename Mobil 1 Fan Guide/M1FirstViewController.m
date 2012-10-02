@@ -58,6 +58,10 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"M1NewsRowIdentifier"];
         cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"TableGradient"]];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 92)];
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.tag = 2;
+        [cell addSubview: imageView];
     }
     
     if ([[self.newsFeed objectForKey:@"articles"] count] >= indexPath.row+1) {
@@ -71,10 +75,7 @@
         MKNetworkOperation *articleImage = [engine operationWithURLString:[cellValue objectForKey:@"image"] params:nil httpMethod:@"GET"];
         
         [articleImage onCompletion:^(MKNetworkOperation *completedOperation) {
-            UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageWithData:[completedOperation responseData]]];
-            imageView.frame = cell.frame;
-            imageView.contentMode = UIViewContentModeScaleAspectFit;
-            [cell addSubview: imageView];
+            ((UIImageView *)[cell viewWithTag:2]).image = [UIImage imageWithData:[completedOperation responseData]];
         } onError:^(NSError *error) { NSLog(@"%@", error); }];
         
         [engine enqueueOperation:articleImage];
