@@ -86,6 +86,7 @@
         destination.navigationItem.title = @"Track";
     } else if ([sender tag]==5) {
         destination.navigationItem.title = @"Tour";
+        destination.infoSectionContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Tour" ofType:@"html"] encoding:NSUTF8StringEncoding error:nil];
     }
 }
 
