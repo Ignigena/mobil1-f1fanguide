@@ -20,6 +20,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="F1 Austin Fan Guide" id="7T8-BN-xSs"/>
+                    <connections>
+                        <outlet property="newsTable" destination="Bj4-pS-Uxs" id="JIV-qq-QcT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78D-C9-70a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

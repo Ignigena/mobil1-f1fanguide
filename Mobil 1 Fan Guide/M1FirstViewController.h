@@ -13,5 +13,6 @@
 
 
 @property (strong, nonatomic) IBOutlet UITableView *newsTable;
+@property (strong, nonatomic) NSDictionary *newsFeed;
 
 @end

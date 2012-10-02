@@ -17,27 +17,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self refreshInitiated:self];
+    
     self.tableView.rowHeight = 92.0;
-    self.view.superview.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Linen"]];
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refreshInitiated:) forControlEvents:UIControlEventValueChanged];
 }
 
 -(void)refreshInitiated:(id)sender
-{
-    #warning Implement refreshing of table view.
-    [self.refreshControl endRefreshing];
-}
-
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-	return 1;
+{    
+    MKNetworkEngine *engine = [[MKNetworkEngine alloc] init];
+    
+    MKNetworkOperation *raceResults = [engine operationWithURLString:@"https://www.ilovetheory.com/apps/mobil1/f1/iphone" params:nil httpMethod:@"GET"];
+    
+    [raceResults onCompletion:^(MKNetworkOperation *completedOperation) {
+        _newsFeed = [NSJSONSerialization JSONObjectWithData:[completedOperation responseData] options:kNilOptions error:nil];
+        [self.newsTable reloadData];
+        [self.refreshControl endRefreshing];
+    } onError:^(NSError *error) { NSLog(@"%@", error); }];
+    
+    [engine enqueueOperation:raceResults];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 3;
+    if ([[self.newsFeed objectForKey:@"articles"] count] <=4) {
+        return 4;
+    } else {
+        return [[self.newsFeed objectForKey:@"articles"] count];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -47,6 +55,26 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"M1NewsRowIdentifier"];
         cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"TableGradient"]];
+    }
+    
+    if ([[self.newsFeed objectForKey:@"articles"] count] >= indexPath.row+1) {
+        NSDictionary *cellValue = [[self.newsFeed objectForKey:@"articles"] objectAtIndex:indexPath.row];
+    
+        cell.textLabel.text = [cellValue objectForKey:@"title"];
+        cell.detailTextLabel.text = [cellValue objectForKey:@"subtitle"];
+        
+        MKNetworkEngine *engine = [[MKNetworkEngine alloc] init];
+        
+        MKNetworkOperation *articleImage = [engine operationWithURLString:[cellValue objectForKey:@"image"] params:nil httpMethod:@"GET"];
+        
+        [articleImage onCompletion:^(MKNetworkOperation *completedOperation) {
+            UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageWithData:[completedOperation responseData]]];
+            imageView.frame = cell.frame;
+            imageView.contentMode = UIViewContentModeScaleAspectFit;
+            [cell addSubview: imageView];
+        } onError:^(NSError *error) { NSLog(@"%@", error); }];
+        
+        [engine enqueueOperation:articleImage];
     }
     
     return cell;
