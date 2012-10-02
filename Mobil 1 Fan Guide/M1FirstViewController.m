@@ -23,6 +23,8 @@
     self.tableView.rowHeight = 92.0;
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refreshInitiated:) forControlEvents:UIControlEventValueChanged];
+    
+    [[self parentViewController].view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ScrollBackground"]]];
 }
 
 -(void)refreshInitiated:(id)sender
