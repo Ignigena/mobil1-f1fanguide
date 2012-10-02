@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Albert Martin. All rights reserved.
 //
 
+#import "M1TechnologyViewController.h"
 #import "M1FirstViewController.h"
 
 @interface M1FirstViewController ()
@@ -80,10 +81,16 @@
     return cell;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSDictionary *cellValue = [[self.newsFeed objectForKey:@"articles"] objectAtIndex:indexPath.row];
+    
+    if ([[cellValue objectForKey:@"performTechnologySegue"] isEqualToString:@"YES"]) {
+        [(UITabBarController *)[UIApplication sharedApplication].delegate.window.rootViewController setSelectedIndex: 2];
+        M1TechnologyViewController *techViewController = (M1TechnologyViewController *)[((UINavigationController *)[((UITabBarController *)[UIApplication sharedApplication].delegate.window.rootViewController) selectedViewController]).viewControllers objectAtIndex:0] ;
+        
+        [techViewController performSegueWithSpoofedSenderTag:[[cellValue objectForKey:@"technologySegueID"] intValue]];
+    }
 }
 
 @end
