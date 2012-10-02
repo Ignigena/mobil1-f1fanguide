@@ -8,6 +8,7 @@
 
 #import "M1TechnologyViewController.h"
 #import "M1FirstViewController.h"
+#import "NSString+HTML.h"
 
 @interface M1FirstViewController ()
 
@@ -107,9 +108,11 @@
 {
     UIViewController *destination = [segue destinationViewController];
     NSDictionary *cellValue = [[self.newsFeed objectForKey:@"articles"] objectAtIndex:self.newsTable.indexPathForSelectedRow.row];
-
+    
+    [destination.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ScrollBackground"]]];
+    
     destination.navigationItem.title = [cellValue objectForKey:@"title"];
-    [(UIWebView *)destination.view loadHTMLString:[cellValue objectForKey:@"body"] baseURL:[NSURL URLWithString: @"http://ilovetheory.com/apps/mobil1/f1"]];
+    [(UIWebView *)destination.view loadHTMLString:[[cellValue objectForKey:@"body"] stringByDecodingHTMLEntities] baseURL:[NSURL URLWithString: @"http://ilovetheory.com/apps/mobil1/f1"]];
 }
 
 @end
