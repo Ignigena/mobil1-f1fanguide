@@ -54,7 +54,7 @@
     self.fanFestText.frame = CGRectMake(self.fanFestTextOrigin.x+(self.fanFestTextOrigin.x*(offset/2000)), self.fanFestText.frame.origin.y, self.fanFestText.frame.size.width, self.fanFestText.frame.size.height);
     self.trackButton.frame = CGRectMake(self.trackOrigin.x+(self.trackOrigin.x*(offset/2000)), self.trackButton.frame.origin.y, self.trackButton.frame.size.width, self.trackButton.frame.size.height);
     self.trackText.frame = CGRectMake(self.trackTextOrigin.x+(self.trackTextOrigin.x*(0-offset/12000)), self.trackText.frame.origin.y, self.trackText.frame.size.width, self.trackText.frame.size.height);
-    self.tourButton.frame = CGRectMake(self.tourOrigin.x+(self.tourOrigin.x*(offset/8000)), self.tourButton.frame.origin.y, self.tourButton.frame.size.width, self.tourButton.frame.size.height);
+    self.tourButton.frame = CGRectMake(self.tourOrigin.x+(self.tourOrigin.x*(offset/7000)), self.tourButton.frame.origin.y, self.tourButton.frame.size.width, self.tourButton.frame.size.height);
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
