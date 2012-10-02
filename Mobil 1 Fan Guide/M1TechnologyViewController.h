@@ -27,6 +27,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *trackButton;
 @property (strong, nonatomic) IBOutlet UIButton *tourButton;
 
+- (IBAction)showTechInfo:(id)sender;
 - (void)performSegueWithSpoofedSenderTag:(int)tag;
 
 @end

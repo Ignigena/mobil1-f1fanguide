@@ -57,6 +57,10 @@
     self.tourButton.frame = CGRectMake(self.tourOrigin.x+(self.tourOrigin.x*(offset/7000)), self.tourButton.frame.origin.y, self.tourButton.frame.size.width, self.tourButton.frame.size.height);
 }
 
+- (IBAction)showTechInfo:(id)sender {
+    [self performSegueWithIdentifier:@"showStoryView" sender:sender];
+}
+
 - (void)performSegueWithSpoofedSenderTag:(int)tag
 {
     UIButton *spoofButton = [[UIButton alloc] init];
