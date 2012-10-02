@@ -95,6 +95,7 @@
 		86AD3D5D161B4EBB00B83E33 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AD3D5C161B4DBD00B83E33 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		86AD3D60161B6CE700B83E33 /* M1NewsArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AD3D5F161B6CE700B83E33 /* M1NewsArticleViewController.m */; };
 		86AD3D62161B7C8C00B83E33 /* MP4-27.html in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D61161B7C8C00B83E33 /* MP4-27.html */; };
+		86AD3D64161B7D3200B83E33 /* HelveticaNeueLTStd-HvCnO.otf in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D63161B7D3200B83E33 /* HelveticaNeueLTStd-HvCnO.otf */; };
 		86AD3D67161B7DDB00B83E33 /* Car-Front@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D65161B7DDB00B83E33 /* Car-Front@2x.png */; };
 		86AD3D68161B7DDB00B83E33 /* Car-Top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D66161B7DDB00B83E33 /* Car-Top@2x.png */; };
 		86AD3D6A161B83F800B83E33 /* M1Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D69161B83F800B83E33 /* M1Logo@2x.png */; };
@@ -274,6 +275,7 @@
 		86AD3D5E161B6CE600B83E33 /* M1NewsArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M1NewsArticleViewController.h; sourceTree = "<group>"; };
 		86AD3D5F161B6CE700B83E33 /* M1NewsArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M1NewsArticleViewController.m; sourceTree = "<group>"; };
 		86AD3D61161B7C8C00B83E33 /* MP4-27.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "MP4-27.html"; path = "Technology/MP4-27.html"; sourceTree = SOURCE_ROOT; };
+		86AD3D63161B7D3200B83E33 /* HelveticaNeueLTStd-HvCnO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "HelveticaNeueLTStd-HvCnO.otf"; path = "../../../Library/Fonts/HelveticaNeueLTStd-HvCnO.otf"; sourceTree = "<group>"; };
 		86AD3D65161B7DDB00B83E33 /* Car-Front@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Car-Front@2x.png"; path = "Technology/Car-Front@2x.png"; sourceTree = SOURCE_ROOT; };
 		86AD3D66161B7DDB00B83E33 /* Car-Top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Car-Top@2x.png"; path = "Technology/Car-Top@2x.png"; sourceTree = SOURCE_ROOT; };
 		86AD3D69161B83F800B83E33 /* M1Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "M1Logo@2x.png"; path = "Technology/M1Logo@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -457,6 +459,7 @@
 				86F25FF415FE266500A9C7C1 /* M1NavigationBar.h */,
 				86F25FF515FE266600A9C7C1 /* M1NavigationBar.m */,
 				86F25FF715FE26EE00A9C7C1 /* NavBar@2x.png */,
+				86AD3D63161B7D3200B83E33 /* HelveticaNeueLTStd-HvCnO.otf */,
 				86F25FE615FE1E3B00A9C7C1 /* Novecentowide-Bold.otf */,
 				86F25FE715FE1E3B00A9C7C1 /* Novecentowide-Book.otf */,
 				86F25FE815FE1E3B00A9C7C1 /* Novecentowide-DemiBold.otf */,
@@ -872,6 +875,11 @@
 				8612083616134D5D0021F4A2 /* Win-Lewis@2x.png in Resources */,
 				8612083816134F010021F4A2 /* Results.json in Resources */,
 				86AD3D54161B412400B83E33 /* ScrollBackground@2x.png in Resources */,
+				86AD3D62161B7C8C00B83E33 /* MP4-27.html in Resources */,
+				86AD3D64161B7D3200B83E33 /* HelveticaNeueLTStd-HvCnO.otf in Resources */,
+				86AD3D67161B7DDB00B83E33 /* Car-Front@2x.png in Resources */,
+				86AD3D68161B7DDB00B83E33 /* Car-Top@2x.png in Resources */,
+				86AD3D6A161B83F800B83E33 /* M1Logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,6 +39,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>HelveticaNeueLTStd-HvCnO.otf</string>
 		<string>Novecentowide-DemiBold.otf</string>
 		<string>Novecentowide-Bold.otf</string>
 	</array>
