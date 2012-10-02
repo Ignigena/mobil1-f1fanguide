@@ -73,7 +73,8 @@
     M1TechnologyStoryViewController *destination = [segue destinationViewController];
     
     if ([sender tag]==1) {
-        destination.navigationItem.title = @"F1 Cars";
+        destination.navigationItem.title = @"MP4-27";
+        destination.infoSectionContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MP4-27" ofType:@"html"] encoding:NSUTF8StringEncoding error:nil];
     } else if ([sender tag]==2) {
         destination.navigationItem.title = @"Drivers";
         destination.infoSectionContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Driver-Jenson" ofType:@"html"] encoding:NSUTF8StringEncoding error:nil];
