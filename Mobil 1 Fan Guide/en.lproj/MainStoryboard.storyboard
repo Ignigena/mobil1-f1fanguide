@@ -22,11 +22,27 @@
                     <navigationItem key="navigationItem" title="F1 Austin Fan Guide" id="7T8-BN-xSs"/>
                     <connections>
                         <outlet property="newsTable" destination="Bj4-pS-Uxs" id="JIV-qq-QcT"/>
+                        <segue destination="9lX-bg-GJq" kind="push" identifier="showNewsStory" id="Xhz-Oi-w5T"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78D-C9-70a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1113" y="-236"/>
+        </scene>
+        <!--View Controller - News Item-->
+        <scene sceneID="Hsz-YB-CL3">
+            <objects>
+                <viewController id="9lX-bg-GJq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ViY-eK-ThR" customClass="UIWebView">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="News Item" id="W89-Te-tcU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JKb-WH-5ml" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="-236"/>
         </scene>
         <!--Schedule View Controller - Second-->
         <scene sceneID="13">
@@ -618,64 +634,6 @@ Circuit of The Americas is ideally situated on a 1000-acre site in southeast Aus
         <image name="TickerGradientExtended@2x.png" width="640" height="1260"/>
         <image name="VideoCarousel.png" width="320" height="353"/>
     </resources>
-    <classes>
-        <class className="M1CountdownViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1CountdownViewController.h"/>
-        </class>
-        <class className="M1FirstViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1FirstViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="newsTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="M1MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1MapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="toggleMapView:" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="infoView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="mapScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="M1NavigationBar" superclassName="UINavigationBar">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1NavigationBar.h"/>
-        </class>
-        <class className="M1ScheduleViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1ScheduleViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="scheduleTabTable" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="scheduleTabTitle" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="M1TechnologyStoryViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1TechnologyStoryViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="infoSection" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="M1TechnologyViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1TechnologyViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="showTechInfo:"/>
-                <relationship kind="outlet" name="carsText" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="driversButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="driversText" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="fanFestText" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="technologyScroller" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="tourButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="trackButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="trackText" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="M1VideoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/M1VideoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="videoThumbnailSelect:"/>
-                <relationship kind="outlet" name="videoScrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

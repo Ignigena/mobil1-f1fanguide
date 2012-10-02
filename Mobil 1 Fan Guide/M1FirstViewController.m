@@ -25,6 +25,10 @@
     [self.refreshControl addTarget:self action:@selector(refreshInitiated:) forControlEvents:UIControlEventValueChanged];
     
     [[self parentViewController].view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ScrollBackground"]]];
+    [self.navigationItem setBackBarButtonItem: [[UIBarButtonItem alloc]
+                                                initWithTitle: @"News"
+                                                style: UIBarButtonItemStyleBordered
+                                                target: nil action: nil]];
 }
 
 -(void)refreshInitiated:(id)sender
@@ -93,7 +97,19 @@
         M1TechnologyViewController *techViewController = (M1TechnologyViewController *)[((UINavigationController *)[((UITabBarController *)[UIApplication sharedApplication].delegate.window.rootViewController) selectedViewController]).viewControllers objectAtIndex:0] ;
         
         [techViewController performSegueWithSpoofedSenderTag:[[cellValue objectForKey:@"technologySegueID"] intValue]];
+    } else {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];        
+        [self performSegueWithIdentifier:@"showNewsStory" sender:self];
     }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController *destination = [segue destinationViewController];
+    NSDictionary *cellValue = [[self.newsFeed objectForKey:@"articles"] objectAtIndex:self.newsTable.indexPathForSelectedRow.row];
+
+    destination.navigationItem.title = [cellValue objectForKey:@"title"];
+    [(UIWebView *)destination.view loadHTMLString:[cellValue objectForKey:@"body"] baseURL:[NSURL URLWithString: @"http://ilovetheory.com/apps/mobil1/f1"]];
 }
 
 @end
