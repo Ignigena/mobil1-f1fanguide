@@ -12,8 +12,8 @@
 #import "AMCountdownView.h"
 #import "M1CountdownViewController.h"
 #import "M1ScheduleViewController.h"
+#import "M1TechnologyViewController.h"
 #import "NSString+RelativeDate.h"
-#import "JHWebBrowser.h"
 
 @interface M1ScheduleViewController ()
 
@@ -101,7 +101,7 @@
     
     [headerView addSubview:headerLabel];
     
-    if (section == 1) {
+    if (section != 0) {
         UIButton *whatsThisButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
         whatsThisButton.frame = CGRectMake(290, 4, 15, 15);
         whatsThisButton.tag = section;
@@ -115,14 +115,14 @@
 
 - (IBAction)whatsThisButtonClicked:(id)sender
 {
-    NSString *infoURL = @"http://austinfanfest.com/";
+    [(UITabBarController *)[UIApplication sharedApplication].delegate.window.rootViewController setSelectedIndex: 2];
+    M1TechnologyViewController *techViewController = (M1TechnologyViewController *)[((UINavigationController *)[((UITabBarController *)[UIApplication sharedApplication].delegate.window.rootViewController) selectedViewController]).viewControllers objectAtIndex:0] ;
     
-    JHWebBrowser *modalBrowser = [JHWebBrowser new];
-    modalBrowser.showDoneButton = YES;
-    modalBrowser.url = [NSURL URLWithString:infoURL];
-    [self presentViewController:modalBrowser animated:YES completion:nil];
-    
-    modalBrowser.showAddressBar = NO;
+    if ([sender tag]==1) {
+        [techViewController performSegueWithSpoofedSenderTag:3];
+    } else {
+        [techViewController performSegueWithSpoofedSenderTag:5];
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
