@@ -85,6 +85,7 @@
         destination.infoSectionContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"FanFest" ofType:@"html"] encoding:NSUTF8StringEncoding error:nil];
     } else if ([sender tag]==4) {
         destination.navigationItem.title = @"Track";
+        destination.infoSectionContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Track" ofType:@"html"] encoding:NSUTF8StringEncoding error:nil];
     } else if ([sender tag]==5) {
         destination.navigationItem.title = @"Tour";
         destination.infoSectionContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Tour" ofType:@"html"] encoding:NSUTF8StringEncoding error:nil];
