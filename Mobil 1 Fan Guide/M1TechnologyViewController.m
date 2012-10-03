@@ -82,6 +82,7 @@
         destination.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Lewis" style:UIBarButtonItemStyleBordered target:destination action:@selector(toggleDriver:)];
     } else if ([sender tag]==3) {
         destination.navigationItem.title = @"Fan Fest";
+        destination.infoSectionContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"FanFest" ofType:@"html"] encoding:NSUTF8StringEncoding error:nil];
     } else if ([sender tag]==4) {
         destination.navigationItem.title = @"Track";
     } else if ([sender tag]==5) {

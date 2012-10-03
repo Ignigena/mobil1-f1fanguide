@@ -101,6 +101,13 @@
 		86AD3D6A161B83F800B83E33 /* M1Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D69161B83F800B83E33 /* M1Logo@2x.png */; };
 		86AD3D6C161B88AB00B83E33 /* Tour.html in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D6B161B88AB00B83E33 /* Tour.html */; };
 		86AD3D6E161B8B0700B83E33 /* Pointer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D6D161B8B0700B83E33 /* Pointer@2x.png */; };
+		86AD3D70161C682B00B83E33 /* FanFest.html in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D6F161C682B00B83E33 /* FanFest.html */; };
+		86AD3D72161C6BFB00B83E33 /* FanFest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D71161C6BFB00B83E33 /* FanFest@2x.png */; };
+		86AD3D74161C6D1800B83E33 /* FanFestLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D73161C6D1800B83E33 /* FanFestLogo@2x.png */; };
+		86AD3D76161C6EDC00B83E33 /* FanFestTechnology@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D75161C6EDC00B83E33 /* FanFestTechnology@2x.png */; };
+		86AD3D78161C707900B83E33 /* FanFestExpertise@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D77161C707900B83E33 /* FanFestExpertise@2x.png */; };
+		86AD3D7A161C71C800B83E33 /* FanFestPerformance@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D79161C71C800B83E33 /* FanFestPerformance@2x.png */; };
+		86AD3D7C161C727700B83E33 /* FanFestExperience@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D7B161C727600B83E33 /* FanFestExperience@2x.png */; };
 		86DC1AB2160BA9AD008531D5 /* Schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 86DC1AB1160BA9AD008531D5 /* Schedule.json */; };
 		86DC1AB4160BCD38008531D5 /* ScheduleHeader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86DC1AB3160BCD38008531D5 /* ScheduleHeader@2x.png */; };
 		86E4E93216036A4A00C19AE9 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E93116036A4A00C19AE9 /* AppIcon.png */; };
@@ -283,6 +290,13 @@
 		86AD3D69161B83F800B83E33 /* M1Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "M1Logo@2x.png"; path = "Technology/M1Logo@2x.png"; sourceTree = SOURCE_ROOT; };
 		86AD3D6B161B88AB00B83E33 /* Tour.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Tour.html; path = Technology/Tour.html; sourceTree = SOURCE_ROOT; };
 		86AD3D6D161B8B0700B83E33 /* Pointer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pointer@2x.png"; path = "Technology/Pointer@2x.png"; sourceTree = SOURCE_ROOT; };
+		86AD3D6F161C682B00B83E33 /* FanFest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = FanFest.html; path = Technology/FanFest.html; sourceTree = SOURCE_ROOT; };
+		86AD3D71161C6BFB00B83E33 /* FanFest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FanFest@2x.png"; path = "Technology/FanFest@2x.png"; sourceTree = SOURCE_ROOT; };
+		86AD3D73161C6D1800B83E33 /* FanFestLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FanFestLogo@2x.png"; path = "Technology/FanFestLogo@2x.png"; sourceTree = SOURCE_ROOT; };
+		86AD3D75161C6EDC00B83E33 /* FanFestTechnology@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FanFestTechnology@2x.png"; path = "Technology/FanFestTechnology@2x.png"; sourceTree = SOURCE_ROOT; };
+		86AD3D77161C707900B83E33 /* FanFestExpertise@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FanFestExpertise@2x.png"; path = "Technology/FanFestExpertise@2x.png"; sourceTree = SOURCE_ROOT; };
+		86AD3D79161C71C800B83E33 /* FanFestPerformance@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FanFestPerformance@2x.png"; path = "Technology/FanFestPerformance@2x.png"; sourceTree = SOURCE_ROOT; };
+		86AD3D7B161C727600B83E33 /* FanFestExperience@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FanFestExperience@2x.png"; path = "Technology/FanFestExperience@2x.png"; sourceTree = SOURCE_ROOT; };
 		86DC1AB1160BA9AD008531D5 /* Schedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Schedule.json; sourceTree = "<group>"; };
 		86DC1AB3160BCD38008531D5 /* ScheduleHeader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScheduleHeader@2x.png"; sourceTree = "<group>"; };
 		86E4E93116036A4A00C19AE9 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon.png; path = ../AppIcon.png; sourceTree = "<group>"; };
@@ -616,6 +630,13 @@
 				861208331613322E0021F4A2 /* Driver-Lewis.html */,
 				86120831161332210021F4A2 /* Driver-Lewis@2x.png */,
 				86AD3D6B161B88AB00B83E33 /* Tour.html */,
+				86AD3D6F161C682B00B83E33 /* FanFest.html */,
+				86AD3D71161C6BFB00B83E33 /* FanFest@2x.png */,
+				86AD3D73161C6D1800B83E33 /* FanFestLogo@2x.png */,
+				86AD3D75161C6EDC00B83E33 /* FanFestTechnology@2x.png */,
+				86AD3D77161C707900B83E33 /* FanFestExpertise@2x.png */,
+				86AD3D79161C71C800B83E33 /* FanFestPerformance@2x.png */,
+				86AD3D7B161C727600B83E33 /* FanFestExperience@2x.png */,
 				86AD3D69161B83F800B83E33 /* M1Logo@2x.png */,
 				86AD3D6D161B8B0700B83E33 /* Pointer@2x.png */,
 			);
@@ -888,6 +909,13 @@
 				86AD3D6A161B83F800B83E33 /* M1Logo@2x.png in Resources */,
 				86AD3D6C161B88AB00B83E33 /* Tour.html in Resources */,
 				86AD3D6E161B8B0700B83E33 /* Pointer@2x.png in Resources */,
+				86AD3D70161C682B00B83E33 /* FanFest.html in Resources */,
+				86AD3D72161C6BFB00B83E33 /* FanFest@2x.png in Resources */,
+				86AD3D74161C6D1800B83E33 /* FanFestLogo@2x.png in Resources */,
+				86AD3D76161C6EDC00B83E33 /* FanFestTechnology@2x.png in Resources */,
+				86AD3D78161C707900B83E33 /* FanFestExpertise@2x.png in Resources */,
+				86AD3D7A161C71C800B83E33 /* FanFestPerformance@2x.png in Resources */,
+				86AD3D7C161C727700B83E33 /* FanFestExperience@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
