@@ -103,6 +103,7 @@
 		86AD3D7A161C71C800B83E33 /* FanFestPerformance@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D79161C71C800B83E33 /* FanFestPerformance@2x.png */; };
 		86AD3D7C161C727700B83E33 /* FanFestExperience@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D7B161C727600B83E33 /* FanFestExperience@2x.png */; };
 		86AD3D7E161C894800B83E33 /* Live-Now@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D7D161C894800B83E33 /* Live-Now@2x.png */; };
+		86AD3D80161C912700B83E33 /* Win-Generic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D7F161C912700B83E33 /* Win-Generic@2x.png */; };
 		86DC1AB2160BA9AD008531D5 /* Schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 86DC1AB1160BA9AD008531D5 /* Schedule.json */; };
 		86DC1AB4160BCD38008531D5 /* ScheduleHeader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86DC1AB3160BCD38008531D5 /* ScheduleHeader@2x.png */; };
 		86E4E93216036A4A00C19AE9 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E93116036A4A00C19AE9 /* AppIcon.png */; };
@@ -286,6 +287,7 @@
 		86AD3D79161C71C800B83E33 /* FanFestPerformance@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FanFestPerformance@2x.png"; path = "Technology/FanFestPerformance@2x.png"; sourceTree = SOURCE_ROOT; };
 		86AD3D7B161C727600B83E33 /* FanFestExperience@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FanFestExperience@2x.png"; path = "Technology/FanFestExperience@2x.png"; sourceTree = SOURCE_ROOT; };
 		86AD3D7D161C894800B83E33 /* Live-Now@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Live-Now@2x.png"; path = "App Banners/Live-Now@2x.png"; sourceTree = SOURCE_ROOT; };
+		86AD3D7F161C912700B83E33 /* Win-Generic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Win-Generic@2x.png"; path = "App Banners/Win-Generic@2x.png"; sourceTree = SOURCE_ROOT; };
 		86DC1AB1160BA9AD008531D5 /* Schedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Schedule.json; sourceTree = "<group>"; };
 		86DC1AB3160BCD38008531D5 /* ScheduleHeader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScheduleHeader@2x.png"; sourceTree = "<group>"; };
 		86E4E93116036A4A00C19AE9 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon.png; path = ../AppIcon.png; sourceTree = "<group>"; };
@@ -572,6 +574,7 @@
 				86F25FCF15FA62D100A9C7C1 /* AMCountdownView.h */,
 				86F25FD015FA62D200A9C7C1 /* AMCountdownView.m */,
 				86AD3D7D161C894800B83E33 /* Live-Now@2x.png */,
+				86AD3D7F161C912700B83E33 /* Win-Generic@2x.png */,
 				866B3A4A1610A93300A13E81 /* Win-Jenson@2x.png */,
 				8612083516134D5D0021F4A2 /* Win-Lewis@2x.png */,
 			);
@@ -879,6 +882,7 @@
 				86AD3D7A161C71C800B83E33 /* FanFestPerformance@2x.png in Resources */,
 				86AD3D7C161C727700B83E33 /* FanFestExperience@2x.png in Resources */,
 				86AD3D7E161C894800B83E33 /* Live-Now@2x.png in Resources */,
+				86AD3D80161C912700B83E33 /* Win-Generic@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
