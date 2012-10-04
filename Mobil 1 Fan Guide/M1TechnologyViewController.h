@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class M1WallpaperView, FDCurlViewControl;
+
 @interface M1TechnologyViewController : UIViewController <UIScrollViewDelegate>
 
 @property (nonatomic) CGPoint carsTextOrigin;
@@ -26,6 +28,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *trackText;
 @property (strong, nonatomic) IBOutlet UIButton *trackButton;
 @property (strong, nonatomic) IBOutlet UIButton *tourButton;
+
+@property (nonatomic, retain) M1WallpaperView *wallpaperView;
+@property (nonatomic, retain) FDCurlViewControl *curlButton;
 
 - (IBAction)showTechInfo:(id)sender;
 - (void)performSegueWithSpoofedSenderTag:(int)tag;

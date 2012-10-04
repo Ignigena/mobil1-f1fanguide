@@ -13,7 +13,14 @@
 		8612083816134F010021F4A2 /* Results.json in Resources */ = {isa = PBXBuildFile; fileRef = 8612083716134F010021F4A2 /* Results.json */; };
 		86353C2C161DCD1C007AA650 /* AppStoreIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C2B161DCD1C007AA650 /* AppStoreIcon.png */; };
 		86353C38161DCFF9007AA650 /* FDCurlViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 86353C37161DCFF9007AA650 /* FDCurlViewControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		86353C3B161DD2EF007AA650 /* M1WallpaperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86353C3A161DD2EF007AA650 /* M1WallpaperView.m */; };
+		86353C3D161DDAD4007AA650 /* Wallpaper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C3C161DDAD4007AA650 /* Wallpaper@2x.png */; };
 		86353C49161DEC56007AA650 /* AGMedallionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86353C48161DEC56007AA650 /* AGMedallionView.m */; };
+		86353C5A161E0F0A007AA650 /* Wallpaper-Car-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C55161E0F0A007AA650 /* Wallpaper-Car-Thumb@2x.png */; };
+		86353C5B161E0F0A007AA650 /* Wallpaper-Drivers-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C56161E0F0A007AA650 /* Wallpaper-Drivers-Thumb@2x.png */; };
+		86353C5C161E0F0A007AA650 /* Wallpaper-FanFest-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C57161E0F0A007AA650 /* Wallpaper-FanFest-Thumb@2x.png */; };
+		86353C5D161E0F0A007AA650 /* Wallpaper-Tour-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C58161E0F0A007AA650 /* Wallpaper-Tour-Thumb@2x.png */; };
+		86353C5E161E0F0A007AA650 /* Wallpaper-Track-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C59161E0F0A007AA650 /* Wallpaper-Track-Thumb@2x.png */; };
 		863C364A15F8EE150015BD7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364915F8EE150015BD7D /* UIKit.framework */; };
 		863C364C15F8EE150015BD7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364B15F8EE150015BD7D /* Foundation.framework */; };
 		863C364E15F8EE150015BD7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364D15F8EE150015BD7D /* CoreGraphics.framework */; };
@@ -174,8 +181,16 @@
 		86353C2B161DCD1C007AA650 /* AppStoreIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppStoreIcon.png; sourceTree = "<group>"; };
 		86353C36161DCFF9007AA650 /* FDCurlViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDCurlViewControl.h; sourceTree = "<group>"; };
 		86353C37161DCFF9007AA650 /* FDCurlViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDCurlViewControl.m; sourceTree = "<group>"; };
+		86353C39161DD2EF007AA650 /* M1WallpaperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M1WallpaperView.h; sourceTree = "<group>"; };
+		86353C3A161DD2EF007AA650 /* M1WallpaperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M1WallpaperView.m; sourceTree = "<group>"; };
+		86353C3C161DDAD4007AA650 /* Wallpaper@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wallpaper@2x.png"; sourceTree = "<group>"; };
 		86353C47161DEC56007AA650 /* AGMedallionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMedallionView.h; sourceTree = "<group>"; };
 		86353C48161DEC56007AA650 /* AGMedallionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMedallionView.m; sourceTree = "<group>"; };
+		86353C55161E0F0A007AA650 /* Wallpaper-Car-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Car-Thumb@2x.png"; path = "../../Wallpapers/Wallpaper-Car-Thumb@2x.png"; sourceTree = "<group>"; };
+		86353C56161E0F0A007AA650 /* Wallpaper-Drivers-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Drivers-Thumb@2x.png"; path = "../../Wallpapers/Wallpaper-Drivers-Thumb@2x.png"; sourceTree = "<group>"; };
+		86353C57161E0F0A007AA650 /* Wallpaper-FanFest-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-FanFest-Thumb@2x.png"; path = "../../Wallpapers/Wallpaper-FanFest-Thumb@2x.png"; sourceTree = "<group>"; };
+		86353C58161E0F0A007AA650 /* Wallpaper-Tour-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Tour-Thumb@2x.png"; path = "../../Wallpapers/Wallpaper-Tour-Thumb@2x.png"; sourceTree = "<group>"; };
+		86353C59161E0F0A007AA650 /* Wallpaper-Track-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Track-Thumb@2x.png"; path = "../../Wallpapers/Wallpaper-Track-Thumb@2x.png"; sourceTree = "<group>"; };
 		863C364515F8EE150015BD7D /* F1 Austin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "F1 Austin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		863C364915F8EE150015BD7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		863C364B15F8EE150015BD7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -414,6 +429,18 @@
 			name = "News Tab";
 			sourceTree = "<group>";
 		};
+		86353C4A161DF039007AA650 /* Wallpaper */ = {
+			isa = PBXGroup;
+			children = (
+				86353C55161E0F0A007AA650 /* Wallpaper-Car-Thumb@2x.png */,
+				86353C56161E0F0A007AA650 /* Wallpaper-Drivers-Thumb@2x.png */,
+				86353C57161E0F0A007AA650 /* Wallpaper-FanFest-Thumb@2x.png */,
+				86353C58161E0F0A007AA650 /* Wallpaper-Tour-Thumb@2x.png */,
+				86353C59161E0F0A007AA650 /* Wallpaper-Track-Thumb@2x.png */,
+			);
+			name = Wallpaper;
+			sourceTree = "<group>";
+		};
 		863C363A15F8EE140015BD7D = {
 			isa = PBXGroup;
 			children = (
@@ -606,8 +633,12 @@
 			children = (
 				866B3A501610DE1C00A13E81 /* M1TechnologyViewController.h */,
 				866B3A511610DE1C00A13E81 /* M1TechnologyViewController.m */,
+				86353C3C161DDAD4007AA650 /* Wallpaper@2x.png */,
+				86353C39161DD2EF007AA650 /* M1WallpaperView.h */,
+				86353C3A161DD2EF007AA650 /* M1WallpaperView.m */,
 				866B3A601611DF1000A13E81 /* M1TechnologyStoryViewController.h */,
 				866B3A611611DF1100A13E81 /* M1TechnologyStoryViewController.m */,
+				86353C4A161DF039007AA650 /* Wallpaper */,
 				866B3A581610E63B00A13E81 /* TechCar@2x.png */,
 				866B3A561610E43100A13E81 /* TechDrivers@2x.png */,
 				866B3A5A1610F02A00A13E81 /* TechFanFest@2x.png */,
@@ -918,6 +949,12 @@
 				86AD3D97161CB7BB00B83E33 /* TrackOutline@2x.png in Resources */,
 				86AD3D99161CB8A300B83E33 /* TrackFooter@2x.png in Resources */,
 				86353C2C161DCD1C007AA650 /* AppStoreIcon.png in Resources */,
+				86353C3D161DDAD4007AA650 /* Wallpaper@2x.png in Resources */,
+				86353C5A161E0F0A007AA650 /* Wallpaper-Car-Thumb@2x.png in Resources */,
+				86353C5B161E0F0A007AA650 /* Wallpaper-Drivers-Thumb@2x.png in Resources */,
+				86353C5C161E0F0A007AA650 /* Wallpaper-FanFest-Thumb@2x.png in Resources */,
+				86353C5D161E0F0A007AA650 /* Wallpaper-Tour-Thumb@2x.png in Resources */,
+				86353C5E161E0F0A007AA650 /* Wallpaper-Track-Thumb@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,6 +1006,7 @@
 				86AD3D60161B6CE700B83E33 /* M1NewsArticleViewController.m in Sources */,
 				86AD3DA4161CE42C00B83E33 /* SNPopupView.m in Sources */,
 				86353C38161DCFF9007AA650 /* FDCurlViewControl.m in Sources */,
+				86353C3B161DD2EF007AA650 /* M1WallpaperView.m in Sources */,
 				86353C49161DEC56007AA650 /* AGMedallionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

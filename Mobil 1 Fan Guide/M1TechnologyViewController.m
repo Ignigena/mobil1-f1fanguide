@@ -9,6 +9,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "M1TechnologyViewController.h"
 #import "M1TechnologyStoryViewController.h"
+#import "M1WallpaperView.h"
+#import "FDCurlViewControl.h"
 
 @interface M1TechnologyViewController ()
 
@@ -25,6 +27,21 @@
     return self;
 }
 
+- (void)loadView {
+	[super loadView];
+    
+    _wallpaperView = [[M1WallpaperView alloc] initWithFrame:self.view.bounds];
+	[_wallpaperView setPaddingTop:225];
+	[_wallpaperView setDelegate:self];
+	[_wallpaperView setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
+	[self.view insertSubview:self.wallpaperView belowSubview:self.technologyScroller];
+    
+    _curlButton = [[FDCurlViewControl alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 30.0f, 30.0f)];
+	[_curlButton setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
+	[_curlButton setHidesWhenAnimating:NO];
+	[_curlButton setTargetView:self.technologyScroller];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -39,9 +56,14 @@
     _tourOrigin = self.tourButton.frame.origin;
 	
     CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = self.view.bounds;
+    gradient.frame = CGRectMake(self.technologyScroller.frame.origin.x-100, self.technologyScroller.frame.origin.y, self.technologyScroller.frame.size.width*2.9+200, self.technologyScroller.frame.size.height);
     gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithHue:0.583 saturation:0.583 brightness:0.188 alpha:1.000] CGColor], (id)[[UIColor colorWithHue:0.595 saturation:0.269 brightness:0.102 alpha:1.000] CGColor], nil];
-    [self.view.layer insertSublayer:gradient atIndex:0];
+    [self.technologyScroller.layer insertSublayer:gradient atIndex:0];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.curlButton curlViewUp];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -92,10 +114,8 @@
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)didCaptureTouchOnPaddingRegion:(M1WallpaperView *)wallpaperView {
+	[self.curlButton curlViewDown];
 }
 
 @end
