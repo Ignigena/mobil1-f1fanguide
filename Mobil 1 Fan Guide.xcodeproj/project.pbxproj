@@ -15,11 +15,16 @@
 		86353C38161DCFF9007AA650 /* FDCurlViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 86353C37161DCFF9007AA650 /* FDCurlViewControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		86353C3B161DD2EF007AA650 /* M1WallpaperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86353C3A161DD2EF007AA650 /* M1WallpaperView.m */; };
 		86353C49161DEC56007AA650 /* AGMedallionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86353C48161DEC56007AA650 /* AGMedallionView.m */; };
-		86353C5A161E0F0A007AA650 /* Wallpaper-Car-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C55161E0F0A007AA650 /* Wallpaper-Car-Thumb@2x.png */; };
-		86353C5B161E0F0A007AA650 /* Wallpaper-Drivers-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C56161E0F0A007AA650 /* Wallpaper-Drivers-Thumb@2x.png */; };
-		86353C5C161E0F0A007AA650 /* Wallpaper-FanFest-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C57161E0F0A007AA650 /* Wallpaper-FanFest-Thumb@2x.png */; };
-		86353C5D161E0F0A007AA650 /* Wallpaper-Tour-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C58161E0F0A007AA650 /* Wallpaper-Tour-Thumb@2x.png */; };
-		86353C5E161E0F0A007AA650 /* Wallpaper-Track-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C59161E0F0A007AA650 /* Wallpaper-Track-Thumb@2x.png */; };
+		86353C6B161E25F9007AA650 /* Wallpaper-Car-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C60161E25F9007AA650 /* Wallpaper-Car-Thumb@2x.png */; };
+		86353C6C161E25F9007AA650 /* Wallpaper-Car.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C61161E25F9007AA650 /* Wallpaper-Car.png */; };
+		86353C6D161E25F9007AA650 /* Wallpaper-Drivers-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C62161E25F9007AA650 /* Wallpaper-Drivers-Thumb@2x.png */; };
+		86353C6E161E25F9007AA650 /* Wallpaper-Drivers.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C63161E25F9007AA650 /* Wallpaper-Drivers.png */; };
+		86353C6F161E25F9007AA650 /* Wallpaper-FanFest-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C64161E25F9007AA650 /* Wallpaper-FanFest-Thumb@2x.png */; };
+		86353C70161E25F9007AA650 /* Wallpaper-FanFest.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C65161E25F9007AA650 /* Wallpaper-FanFest.png */; };
+		86353C71161E25F9007AA650 /* Wallpaper-Tour-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C66161E25F9007AA650 /* Wallpaper-Tour-Thumb@2x.png */; };
+		86353C72161E25F9007AA650 /* Wallpaper-Tour.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C67161E25F9007AA650 /* Wallpaper-Tour.png */; };
+		86353C73161E25F9007AA650 /* Wallpaper-Track-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C68161E25F9007AA650 /* Wallpaper-Track-Thumb@2x.png */; };
+		86353C74161E25F9007AA650 /* Wallpaper-Track.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C69161E25F9007AA650 /* Wallpaper-Track.png */; };
 		863C364A15F8EE150015BD7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364915F8EE150015BD7D /* UIKit.framework */; };
 		863C364C15F8EE150015BD7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364B15F8EE150015BD7D /* Foundation.framework */; };
 		863C364E15F8EE150015BD7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364D15F8EE150015BD7D /* CoreGraphics.framework */; };
@@ -184,11 +189,16 @@
 		86353C3A161DD2EF007AA650 /* M1WallpaperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M1WallpaperView.m; sourceTree = "<group>"; };
 		86353C47161DEC56007AA650 /* AGMedallionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMedallionView.h; sourceTree = "<group>"; };
 		86353C48161DEC56007AA650 /* AGMedallionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMedallionView.m; sourceTree = "<group>"; };
-		86353C55161E0F0A007AA650 /* Wallpaper-Car-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Car-Thumb@2x.png"; path = "../../Wallpapers/Wallpaper-Car-Thumb@2x.png"; sourceTree = "<group>"; };
-		86353C56161E0F0A007AA650 /* Wallpaper-Drivers-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Drivers-Thumb@2x.png"; path = "../../Wallpapers/Wallpaper-Drivers-Thumb@2x.png"; sourceTree = "<group>"; };
-		86353C57161E0F0A007AA650 /* Wallpaper-FanFest-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-FanFest-Thumb@2x.png"; path = "../../Wallpapers/Wallpaper-FanFest-Thumb@2x.png"; sourceTree = "<group>"; };
-		86353C58161E0F0A007AA650 /* Wallpaper-Tour-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Tour-Thumb@2x.png"; path = "../../Wallpapers/Wallpaper-Tour-Thumb@2x.png"; sourceTree = "<group>"; };
-		86353C59161E0F0A007AA650 /* Wallpaper-Track-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Track-Thumb@2x.png"; path = "../../Wallpapers/Wallpaper-Track-Thumb@2x.png"; sourceTree = "<group>"; };
+		86353C60161E25F9007AA650 /* Wallpaper-Car-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Car-Thumb@2x.png"; path = "Wallpapers/Wallpaper-Car-Thumb@2x.png"; sourceTree = SOURCE_ROOT; };
+		86353C61161E25F9007AA650 /* Wallpaper-Car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Car.png"; path = "Wallpapers/Wallpaper-Car.png"; sourceTree = SOURCE_ROOT; };
+		86353C62161E25F9007AA650 /* Wallpaper-Drivers-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Drivers-Thumb@2x.png"; path = "Wallpapers/Wallpaper-Drivers-Thumb@2x.png"; sourceTree = SOURCE_ROOT; };
+		86353C63161E25F9007AA650 /* Wallpaper-Drivers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Drivers.png"; path = "Wallpapers/Wallpaper-Drivers.png"; sourceTree = SOURCE_ROOT; };
+		86353C64161E25F9007AA650 /* Wallpaper-FanFest-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-FanFest-Thumb@2x.png"; path = "Wallpapers/Wallpaper-FanFest-Thumb@2x.png"; sourceTree = SOURCE_ROOT; };
+		86353C65161E25F9007AA650 /* Wallpaper-FanFest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-FanFest.png"; path = "Wallpapers/Wallpaper-FanFest.png"; sourceTree = SOURCE_ROOT; };
+		86353C66161E25F9007AA650 /* Wallpaper-Tour-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Tour-Thumb@2x.png"; path = "Wallpapers/Wallpaper-Tour-Thumb@2x.png"; sourceTree = SOURCE_ROOT; };
+		86353C67161E25F9007AA650 /* Wallpaper-Tour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Tour.png"; path = "Wallpapers/Wallpaper-Tour.png"; sourceTree = SOURCE_ROOT; };
+		86353C68161E25F9007AA650 /* Wallpaper-Track-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Track-Thumb@2x.png"; path = "Wallpapers/Wallpaper-Track-Thumb@2x.png"; sourceTree = SOURCE_ROOT; };
+		86353C69161E25F9007AA650 /* Wallpaper-Track.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Track.png"; path = "Wallpapers/Wallpaper-Track.png"; sourceTree = SOURCE_ROOT; };
 		863C364515F8EE150015BD7D /* F1 Austin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "F1 Austin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		863C364915F8EE150015BD7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		863C364B15F8EE150015BD7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -430,11 +440,16 @@
 		86353C4A161DF039007AA650 /* Wallpaper */ = {
 			isa = PBXGroup;
 			children = (
-				86353C55161E0F0A007AA650 /* Wallpaper-Car-Thumb@2x.png */,
-				86353C56161E0F0A007AA650 /* Wallpaper-Drivers-Thumb@2x.png */,
-				86353C57161E0F0A007AA650 /* Wallpaper-FanFest-Thumb@2x.png */,
-				86353C58161E0F0A007AA650 /* Wallpaper-Tour-Thumb@2x.png */,
-				86353C59161E0F0A007AA650 /* Wallpaper-Track-Thumb@2x.png */,
+				86353C60161E25F9007AA650 /* Wallpaper-Car-Thumb@2x.png */,
+				86353C61161E25F9007AA650 /* Wallpaper-Car.png */,
+				86353C62161E25F9007AA650 /* Wallpaper-Drivers-Thumb@2x.png */,
+				86353C63161E25F9007AA650 /* Wallpaper-Drivers.png */,
+				86353C64161E25F9007AA650 /* Wallpaper-FanFest-Thumb@2x.png */,
+				86353C65161E25F9007AA650 /* Wallpaper-FanFest.png */,
+				86353C66161E25F9007AA650 /* Wallpaper-Tour-Thumb@2x.png */,
+				86353C67161E25F9007AA650 /* Wallpaper-Tour.png */,
+				86353C68161E25F9007AA650 /* Wallpaper-Track-Thumb@2x.png */,
+				86353C69161E25F9007AA650 /* Wallpaper-Track.png */,
 			);
 			name = Wallpaper;
 			sourceTree = "<group>";
@@ -946,11 +961,16 @@
 				86AD3D97161CB7BB00B83E33 /* TrackOutline@2x.png in Resources */,
 				86AD3D99161CB8A300B83E33 /* TrackFooter@2x.png in Resources */,
 				86353C2C161DCD1C007AA650 /* AppStoreIcon.png in Resources */,
-				86353C5A161E0F0A007AA650 /* Wallpaper-Car-Thumb@2x.png in Resources */,
-				86353C5B161E0F0A007AA650 /* Wallpaper-Drivers-Thumb@2x.png in Resources */,
-				86353C5C161E0F0A007AA650 /* Wallpaper-FanFest-Thumb@2x.png in Resources */,
-				86353C5D161E0F0A007AA650 /* Wallpaper-Tour-Thumb@2x.png in Resources */,
-				86353C5E161E0F0A007AA650 /* Wallpaper-Track-Thumb@2x.png in Resources */,
+				86353C6B161E25F9007AA650 /* Wallpaper-Car-Thumb@2x.png in Resources */,
+				86353C6C161E25F9007AA650 /* Wallpaper-Car.png in Resources */,
+				86353C6D161E25F9007AA650 /* Wallpaper-Drivers-Thumb@2x.png in Resources */,
+				86353C6E161E25F9007AA650 /* Wallpaper-Drivers.png in Resources */,
+				86353C6F161E25F9007AA650 /* Wallpaper-FanFest-Thumb@2x.png in Resources */,
+				86353C70161E25F9007AA650 /* Wallpaper-FanFest.png in Resources */,
+				86353C71161E25F9007AA650 /* Wallpaper-Tour-Thumb@2x.png in Resources */,
+				86353C72161E25F9007AA650 /* Wallpaper-Tour.png in Resources */,
+				86353C73161E25F9007AA650 /* Wallpaper-Track-Thumb@2x.png in Resources */,
+				86353C74161E25F9007AA650 /* Wallpaper-Track.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
