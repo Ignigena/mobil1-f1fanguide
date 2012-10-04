@@ -114,7 +114,11 @@ static CGFloat const kOffset = 10.0f;
     
     if ([defaults objectForKey:[NSString stringWithFormat:@"Wallpaper%i", sender.view.tag]]) {
         if ([sectionToUnlock isEqualToString:@"MP4-27"]) { sectionToUnlock = @"Car"; }
-        UIImageWriteToSavedPhotosAlbum([UIImage imageNamed:[NSString stringWithFormat:@"Wallpaper-%@", [sectionToUnlock stringByReplacingOccurrencesOfString:@" " withString:@""]]], self, @selector(wallpaperSaved), nil);
+        UIImageWriteToSavedPhotosAlbum([UIImage imageNamed:[NSString stringWithFormat:@"Wallpaper-%@", [sectionToUnlock stringByReplacingOccurrencesOfString:@" " withString:@""]]], self, nil, nil);
+        
+        UIAlertView *unlockStatus = [[UIAlertView alloc] initWithTitle:@"Wallpaper Unlocked" message:@"This wallpaper has been saved to your camera roll where you can choose to use it as your lock screen or wallpaper." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [unlockStatus show];
     } else {
         UIAlertView *unlockStatus = [[UIAlertView alloc] initWithTitle:@"Wallpaper Locked" message:[NSString stringWithFormat:@"In order to unlock this wallpaper, read the %@ section in Technology.", sectionToUnlock] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         
@@ -123,13 +127,6 @@ static CGFloat const kOffset = 10.0f;
         if ([self.delegate respondsToSelector:@selector(didCaptureTouchOnPaddingRegion:)])
             [self.delegate didCaptureTouchOnPaddingRegion:self];
     }
-}
-
-- (void)wallpaperSaved
-{
-    UIAlertView *unlockStatus = [[UIAlertView alloc] initWithTitle:@"Wallpaper Unlocked" message:@"This wallpaper has been saved to your camera roll where you can choose to use it as your lock screen or wallpaper." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    
-    [unlockStatus show];
 }
 
 - (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
