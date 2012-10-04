@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SNPopupView.h"
 
 @interface M1FirstViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 
 @property (strong, nonatomic) IBOutlet UITableView *newsTable;
 @property (strong, nonatomic) NSDictionary *newsFeed;
+@property (strong, nonatomic) SNPopupView *popup;
 
 @end

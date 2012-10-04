@@ -30,6 +30,20 @@
                                                 initWithTitle: @"News"
                                                 style: UIBarButtonItemStyleBordered
                                                 target: nil action: nil]];
+    
+    _popup = [[SNPopupView alloc] initWithString:@"Unlock exclusive wallpapers!" withFontOfSize:12];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.popup showAtPoint:CGPointMake(200,self.view.frame.size.height+2) inView:self.view animated:YES];
+    
+    [self performSelector:@selector(dismissPopup) withObject:nil afterDelay:3.0];
+}
+
+- (void)dismissPopup
+{
+    [self.popup dismiss:YES];
 }
 
 -(void)refreshInitiated:(id)sender
