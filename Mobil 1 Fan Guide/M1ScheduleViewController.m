@@ -238,9 +238,9 @@
                     break;
             }};
         
-        [fbController addImage:[UIImage imageNamed:@"AppIcon@2x"]];
-        [fbController setInitialText:[NSString stringWithFormat:@"I'm attending the Austin F1: %@ at %@", [cellValue objectForKey:@"title"], [cellValue objectForKey:@"date"]]];
-        [fbController addURL:[NSURL URLWithString:@"http://austinfanfest.com/"]];
+        [fbController addImage:[UIImage imageNamed:@"AppStoreIcon"]];
+        [fbController setInitialText:[NSString stringWithFormat:@"I'm attending - %@ at %@", [cellValue objectForKey:@"title"], [cellValue objectForKey:@"date"]]];
+        [fbController addURL:[NSURL URLWithString:@"http://mbl1.co/f1app"]];
         [fbController setCompletionHandler:completionHandler];
         [self presentViewController:fbController animated:YES completion:nil];
     }
