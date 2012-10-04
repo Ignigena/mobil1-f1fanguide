@@ -29,6 +29,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *trackButton;
 @property (strong, nonatomic) IBOutlet UIButton *tourButton;
 
+@property (nonatomic) BOOL didHighlightWallpaper;
 @property (nonatomic, retain) M1WallpaperView *wallpaperView;
 @property (nonatomic, retain) FDCurlViewControl *curlButton;
 

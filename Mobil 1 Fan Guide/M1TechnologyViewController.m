@@ -63,7 +63,10 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self.curlButton curlViewUp];
+    if (!self.didHighlightWallpaper) {
+        [self.curlButton curlViewUp];
+        _didHighlightWallpaper = YES;
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
