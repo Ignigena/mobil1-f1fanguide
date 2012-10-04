@@ -86,6 +86,10 @@
     [self performSegueWithIdentifier:@"showStoryView" sender:sender];
 }
 
+- (IBAction)showWallpapers:(id)sender {
+    [self.curlButton curlViewUp];
+}
+
 - (void)performSegueWithSpoofedSenderTag:(int)tag
 {
     UIButton *spoofButton = [[UIButton alloc] init];

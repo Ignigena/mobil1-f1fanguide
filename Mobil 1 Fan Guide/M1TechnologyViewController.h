@@ -34,6 +34,7 @@
 @property (nonatomic, retain) FDCurlViewControl *curlButton;
 
 - (IBAction)showTechInfo:(id)sender;
+- (IBAction)showWallpapers:(id)sender;
 - (void)performSegueWithSpoofedSenderTag:(int)tag;
 
 @end
