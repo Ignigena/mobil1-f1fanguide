@@ -55,7 +55,6 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	DNSLogMethod
 	if ([delegate shouldBeDismissedFor:touches withEvent:event])
 		[delegate dismissModal];
 }
@@ -598,8 +597,6 @@
 #pragma mark - Override
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	DNSLogMethod
-	
 	if ([self shouldBeDismissedFor:touches withEvent:event] && peekView != nil) {
 		[self dismissModal];
 		return;
@@ -625,7 +622,7 @@
 	// draw shadow, and base
 	CGContextSaveGState(context);
 	
-	CGContextSetRGBFillColor(context, 0.1, 0.1, 0.1, ALPHA);
+	CGContextSetRGBFillColor(context, 0.0549, 0.156, 0.25, ALPHA);
 	CGContextSetShadowWithColor (context, CGSizeMake(0, 2), 2, [[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5] CGColor]);
 	[self makePathCircleCornerRect:popupRect radius:10 popPoint:pointToBeShown];
 	CGContextClosePath(context);
@@ -661,7 +658,6 @@
 #pragma mark - dealloc
 
 - (void)dealloc {
-	DNSLogMethod
 	CGGradientRelease(gradient);
 	CGGradientRelease(gradient2);
 	

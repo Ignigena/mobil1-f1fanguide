@@ -108,6 +108,7 @@
 		86AD3D95161CB6C000B83E33 /* COTA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D94161CB6BF00B83E33 /* COTA@2x.png */; };
 		86AD3D97161CB7BB00B83E33 /* TrackOutline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D96161CB7BB00B83E33 /* TrackOutline@2x.png */; };
 		86AD3D99161CB8A300B83E33 /* TrackFooter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86AD3D98161CB8A300B83E33 /* TrackFooter@2x.png */; };
+		86AD3DA4161CE42C00B83E33 /* SNPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AD3DA3161CE42B00B83E33 /* SNPopupView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		86DC1AB2160BA9AD008531D5 /* Schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 86DC1AB1160BA9AD008531D5 /* Schedule.json */; };
 		86DC1AB4160BCD38008531D5 /* ScheduleHeader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86DC1AB3160BCD38008531D5 /* ScheduleHeader@2x.png */; };
 		86E4E93216036A4A00C19AE9 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 86E4E93116036A4A00C19AE9 /* AppIcon.png */; };
@@ -296,6 +297,8 @@
 		86AD3D94161CB6BF00B83E33 /* COTA@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "COTA@2x.png"; path = "Technology/COTA@2x.png"; sourceTree = SOURCE_ROOT; };
 		86AD3D96161CB7BB00B83E33 /* TrackOutline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TrackOutline@2x.png"; path = "Technology/TrackOutline@2x.png"; sourceTree = SOURCE_ROOT; };
 		86AD3D98161CB8A300B83E33 /* TrackFooter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TrackFooter@2x.png"; path = "Technology/TrackFooter@2x.png"; sourceTree = SOURCE_ROOT; };
+		86AD3DA2161CE42A00B83E33 /* SNPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNPopupView.h; sourceTree = "<group>"; };
+		86AD3DA3161CE42B00B83E33 /* SNPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNPopupView.m; sourceTree = "<group>"; };
 		86DC1AB1160BA9AD008531D5 /* Schedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Schedule.json; sourceTree = "<group>"; };
 		86DC1AB3160BCD38008531D5 /* ScheduleHeader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScheduleHeader@2x.png"; sourceTree = "<group>"; };
 		86E4E93116036A4A00C19AE9 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon.png; path = ../AppIcon.png; sourceTree = "<group>"; };
@@ -649,6 +652,8 @@
 				866B3A2D160CC58400A13E81 /* NSString+RelativeDate.m */,
 				86AD3D58161B4C8D00B83E33 /* NSString+HTML.h */,
 				86AD3D59161B4C8D00B83E33 /* NSString+HTML.m */,
+				86AD3DA2161CE42A00B83E33 /* SNPopupView.h */,
+				86AD3DA3161CE42B00B83E33 /* SNPopupView.m */,
 				86AD3D5B161B4DBD00B83E33 /* GTMNSString+HTML.h */,
 				86AD3D5C161B4DBD00B83E33 /* GTMNSString+HTML.m */,
 				864A6EF8160B913C005A86E2 /* JSONKit.h */,
@@ -948,6 +953,7 @@
 				86AD3D5A161B4C8D00B83E33 /* NSString+HTML.m in Sources */,
 				86AD3D5D161B4EBB00B83E33 /* GTMNSString+HTML.m in Sources */,
 				86AD3D60161B6CE700B83E33 /* M1NewsArticleViewController.m in Sources */,
+				86AD3DA4161CE42C00B83E33 /* SNPopupView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
