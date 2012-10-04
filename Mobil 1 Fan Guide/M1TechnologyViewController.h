@@ -28,6 +28,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *trackText;
 @property (strong, nonatomic) IBOutlet UIButton *trackButton;
 @property (strong, nonatomic) IBOutlet UIButton *tourButton;
+@property (strong, nonatomic) IBOutlet UIButton *pageCurlButton;
 
 @property (nonatomic) BOOL didHighlightWallpaper;
 @property (nonatomic, retain) M1WallpaperView *wallpaperView;

@@ -34,12 +34,12 @@
 	[_wallpaperView setPaddingTop:225];
 	[_wallpaperView setDelegate:self];
 	[_wallpaperView setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
-	[self.view insertSubview:self.wallpaperView belowSubview:self.technologyScroller];
+	[self.view insertSubview:self.wallpaperView belowSubview:self.technologyScroller.superview];
     
     _curlButton = [[FDCurlViewControl alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 30.0f, 30.0f)];
 	[_curlButton setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
 	[_curlButton setHidesWhenAnimating:NO];
-	[_curlButton setTargetView:self.technologyScroller];
+	[_curlButton setTargetView:self.technologyScroller.superview];
 }
 
 - (void)viewDidLoad
@@ -73,7 +73,7 @@
 {
     float offset = 0-scrollView.contentOffset.x;
     
-    self.carsText.frame = CGRectMake(self.carsTextOrigin.x+(self.carsTextOrigin.x*(0-offset/50)), self.carsText.frame.origin.y, self.carsText.frame.size.width, self.carsText.frame.size.height);
+    self.carsText.frame = CGRectMake(self.carsTextOrigin.x+(self.carsTextOrigin.x*(0-offset/100)), self.carsText.frame.origin.y, self.carsText.frame.size.width, self.carsText.frame.size.height);
     self.driversButton.frame = CGRectMake(self.driversOrigin.x+(self.driversOrigin.x*(offset/450)), self.driversButton.frame.origin.y, self.driversButton.frame.size.width, self.driversButton.frame.size.height);
     self.driversText.frame = CGRectMake(self.driversTextOrigin.x+(self.driversTextOrigin.x*(offset/500)), self.driversText.frame.origin.y, self.driversText.frame.size.width, self.driversText.frame.size.height);
     self.fanFestText.frame = CGRectMake(self.fanFestTextOrigin.x+(self.fanFestTextOrigin.x*(offset/2000)), self.fanFestText.frame.origin.y, self.fanFestText.frame.size.width, self.fanFestText.frame.size.height);
