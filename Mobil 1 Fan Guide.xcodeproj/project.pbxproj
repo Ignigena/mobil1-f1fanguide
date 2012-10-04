@@ -12,6 +12,8 @@
 		8612083616134D5D0021F4A2 /* Win-Lewis@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8612083516134D5D0021F4A2 /* Win-Lewis@2x.png */; };
 		8612083816134F010021F4A2 /* Results.json in Resources */ = {isa = PBXBuildFile; fileRef = 8612083716134F010021F4A2 /* Results.json */; };
 		86353C2C161DCD1C007AA650 /* AppStoreIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C2B161DCD1C007AA650 /* AppStoreIcon.png */; };
+		86353C38161DCFF9007AA650 /* FDCurlViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 86353C37161DCFF9007AA650 /* FDCurlViewControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		86353C49161DEC56007AA650 /* AGMedallionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86353C48161DEC56007AA650 /* AGMedallionView.m */; };
 		863C364A15F8EE150015BD7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364915F8EE150015BD7D /* UIKit.framework */; };
 		863C364C15F8EE150015BD7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364B15F8EE150015BD7D /* Foundation.framework */; };
 		863C364E15F8EE150015BD7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364D15F8EE150015BD7D /* CoreGraphics.framework */; };
@@ -170,6 +172,10 @@
 		8612083516134D5D0021F4A2 /* Win-Lewis@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Win-Lewis@2x.png"; path = "App Banners/Win-Lewis@2x.png"; sourceTree = SOURCE_ROOT; };
 		8612083716134F010021F4A2 /* Results.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Results.json; sourceTree = "<group>"; };
 		86353C2B161DCD1C007AA650 /* AppStoreIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppStoreIcon.png; sourceTree = "<group>"; };
+		86353C36161DCFF9007AA650 /* FDCurlViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDCurlViewControl.h; sourceTree = "<group>"; };
+		86353C37161DCFF9007AA650 /* FDCurlViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDCurlViewControl.m; sourceTree = "<group>"; };
+		86353C47161DEC56007AA650 /* AGMedallionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMedallionView.h; sourceTree = "<group>"; };
+		86353C48161DEC56007AA650 /* AGMedallionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMedallionView.m; sourceTree = "<group>"; };
 		863C364515F8EE150015BD7D /* F1 Austin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "F1 Austin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		863C364915F8EE150015BD7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		863C364B15F8EE150015BD7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -647,6 +653,10 @@
 		86DC1AB0160BA012008531D5 /* Supporting Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				86353C36161DCFF9007AA650 /* FDCurlViewControl.h */,
+				86353C37161DCFF9007AA650 /* FDCurlViewControl.m */,
+				86353C47161DEC56007AA650 /* AGMedallionView.h */,
+				86353C48161DEC56007AA650 /* AGMedallionView.m */,
 				86F2602015FE3D3E00A9C7C1 /* UIView+Origami.h */,
 				86F2602115FE3D3F00A9C7C1 /* UIView+Origami.m */,
 				866B3A4D1610B6D100A13E81 /* UIView+ParentViewController.h */,
@@ -958,6 +968,8 @@
 				86AD3D5D161B4EBB00B83E33 /* GTMNSString+HTML.m in Sources */,
 				86AD3D60161B6CE700B83E33 /* M1NewsArticleViewController.m in Sources */,
 				86AD3DA4161CE42C00B83E33 /* SNPopupView.m in Sources */,
+				86353C38161DCFF9007AA650 /* FDCurlViewControl.m in Sources */,
+				86353C49161DEC56007AA650 /* AGMedallionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
