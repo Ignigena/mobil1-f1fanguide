@@ -15,8 +15,6 @@
 @property (nonatomic, assign) CGFloat paddingTop;
 @property (nonatomic, assign) id <M1WallpaperViewDelegate> delegate;
 
-- (void)wallpaperSaved;
-
 @end
 
 @protocol M1WallpaperViewDelegate <NSObject>

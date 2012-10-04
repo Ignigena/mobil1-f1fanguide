@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "M1WallpaperView.h"
 
-@class M1WallpaperView, FDCurlViewControl;
+@class FDCurlViewControl;
 
-@interface M1TechnologyViewController : UIViewController <UIScrollViewDelegate>
+@interface M1TechnologyViewController : UIViewController <UIScrollViewDelegate, M1WallpaperViewDelegate>
 
 @property (nonatomic) CGPoint carsTextOrigin;
 @property (nonatomic) CGPoint driversTextOrigin;

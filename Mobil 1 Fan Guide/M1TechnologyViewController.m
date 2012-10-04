@@ -9,7 +9,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import "M1TechnologyViewController.h"
 #import "M1TechnologyStoryViewController.h"
-#import "M1WallpaperView.h"
 #import "FDCurlViewControl.h"
 
 @interface M1TechnologyViewController ()
