@@ -93,25 +93,33 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     M1TechnologyStoryViewController *destination = [segue destinationViewController];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     if ([sender tag]==1) {
         destination.navigationItem.title = @"MP4-27";
         destination.infoSectionContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MP4-27" ofType:@"html"] encoding:NSUTF8StringEncoding error:nil];
+        [defaults setObject:@"UNLOCKED" forKey:@"Wallpaper1"];
     } else if ([sender tag]==2) {
         destination.navigationItem.title = @"Drivers";
         destination.infoSectionContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Driver-Jenson" ofType:@"html"] encoding:NSUTF8StringEncoding error:nil];
         
         destination.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Lewis" style:UIBarButtonItemStyleBordered target:destination action:@selector(toggleDriver:)];
+        [defaults setObject:@"UNLOCKED" forKey:@"Wallpaper2"];
     } else if ([sender tag]==3) {
         destination.navigationItem.title = @"Fan Fest";
         destination.infoSectionContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"FanFest" ofType:@"html"] encoding:NSUTF8StringEncoding error:nil];
+        [defaults setObject:@"UNLOCKED" forKey:@"Wallpaper3"];
     } else if ([sender tag]==4) {
         destination.navigationItem.title = @"Track";
         destination.infoSectionContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Track" ofType:@"html"] encoding:NSUTF8StringEncoding error:nil];
+        [defaults setObject:@"UNLOCKED" forKey:@"Wallpaper4"];
     } else if ([sender tag]==5) {
         destination.navigationItem.title = @"Tour";
         destination.infoSectionContent = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Tour" ofType:@"html"] encoding:NSUTF8StringEncoding error:nil];
+        [defaults setObject:@"UNLOCKED" forKey:@"Wallpaper5"];
     }
+    
+    [defaults synchronize];
 }
 
 - (void)didCaptureTouchOnPaddingRegion:(M1WallpaperView *)wallpaperView {

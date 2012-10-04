@@ -14,7 +14,6 @@
 		86353C2C161DCD1C007AA650 /* AppStoreIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C2B161DCD1C007AA650 /* AppStoreIcon.png */; };
 		86353C38161DCFF9007AA650 /* FDCurlViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 86353C37161DCFF9007AA650 /* FDCurlViewControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		86353C3B161DD2EF007AA650 /* M1WallpaperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86353C3A161DD2EF007AA650 /* M1WallpaperView.m */; };
-		86353C3D161DDAD4007AA650 /* Wallpaper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C3C161DDAD4007AA650 /* Wallpaper@2x.png */; };
 		86353C49161DEC56007AA650 /* AGMedallionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86353C48161DEC56007AA650 /* AGMedallionView.m */; };
 		86353C5A161E0F0A007AA650 /* Wallpaper-Car-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C55161E0F0A007AA650 /* Wallpaper-Car-Thumb@2x.png */; };
 		86353C5B161E0F0A007AA650 /* Wallpaper-Drivers-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C56161E0F0A007AA650 /* Wallpaper-Drivers-Thumb@2x.png */; };
@@ -183,7 +182,6 @@
 		86353C37161DCFF9007AA650 /* FDCurlViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDCurlViewControl.m; sourceTree = "<group>"; };
 		86353C39161DD2EF007AA650 /* M1WallpaperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M1WallpaperView.h; sourceTree = "<group>"; };
 		86353C3A161DD2EF007AA650 /* M1WallpaperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M1WallpaperView.m; sourceTree = "<group>"; };
-		86353C3C161DDAD4007AA650 /* Wallpaper@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wallpaper@2x.png"; sourceTree = "<group>"; };
 		86353C47161DEC56007AA650 /* AGMedallionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMedallionView.h; sourceTree = "<group>"; };
 		86353C48161DEC56007AA650 /* AGMedallionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMedallionView.m; sourceTree = "<group>"; };
 		86353C55161E0F0A007AA650 /* Wallpaper-Car-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Car-Thumb@2x.png"; path = "../../Wallpapers/Wallpaper-Car-Thumb@2x.png"; sourceTree = "<group>"; };
@@ -633,7 +631,6 @@
 			children = (
 				866B3A501610DE1C00A13E81 /* M1TechnologyViewController.h */,
 				866B3A511610DE1C00A13E81 /* M1TechnologyViewController.m */,
-				86353C3C161DDAD4007AA650 /* Wallpaper@2x.png */,
 				86353C39161DD2EF007AA650 /* M1WallpaperView.h */,
 				86353C3A161DD2EF007AA650 /* M1WallpaperView.m */,
 				866B3A601611DF1000A13E81 /* M1TechnologyStoryViewController.h */,
@@ -949,7 +946,6 @@
 				86AD3D97161CB7BB00B83E33 /* TrackOutline@2x.png in Resources */,
 				86AD3D99161CB8A300B83E33 /* TrackFooter@2x.png in Resources */,
 				86353C2C161DCD1C007AA650 /* AppStoreIcon.png in Resources */,
-				86353C3D161DDAD4007AA650 /* Wallpaper@2x.png in Resources */,
 				86353C5A161E0F0A007AA650 /* Wallpaper-Car-Thumb@2x.png in Resources */,
 				86353C5B161E0F0A007AA650 /* Wallpaper-Drivers-Thumb@2x.png in Resources */,
 				86353C5C161E0F0A007AA650 /* Wallpaper-FanFest-Thumb@2x.png in Resources */,
