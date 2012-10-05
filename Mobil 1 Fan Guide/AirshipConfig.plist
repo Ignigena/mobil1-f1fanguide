@@ -8,5 +8,9 @@
 	<string>5UIYge4nR_KBTN1YR_EeVw</string>
 	<key>DEVELOPMENT_APP_SECRET</key>
 	<string>sy6st5ovQn2slxUWAnEe1g</string>
+	<key>PRODUCTION_APP_KEY</key>
+	<string>covv__miT8G3WOL1DHRvPQ</string>
+	<key>PRODUCTION_APP_SECRET</key>
+	<string>eAidwg4STtayPFFZsRFyiw</string>
 </dict>
 </plist>
