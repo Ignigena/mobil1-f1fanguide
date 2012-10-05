@@ -17,6 +17,8 @@
 
 @implementation M1TechnologyViewController
 
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -30,7 +32,7 @@
 	[super loadView];
     
     _wallpaperView = [[M1WallpaperView alloc] initWithFrame:self.view.bounds];
-	[_wallpaperView setPaddingTop:225];
+	[_wallpaperView setPaddingTop:IS_IPHONE_5 ? 225 : 173];
 	[_wallpaperView setDelegate:self];
 	[_wallpaperView setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
 	[self.view insertSubview:self.wallpaperView belowSubview:self.technologyScroller.superview];
@@ -39,6 +41,11 @@
 	[_curlButton setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
 	[_curlButton setHidesWhenAnimating:NO];
 	[_curlButton setTargetView:self.technologyScroller.superview];
+    
+    if (!IS_IPHONE_5) {
+        _driversButton.frame = CGRectMake(self.driversButton.frame.origin.x, self.driversButton.frame.origin.y-80, self.driversButton.frame.size.width, self.driversButton.frame.size.height);
+        [self.view setNeedsDisplay];
+    }
 }
 
 - (void)viewDidLoad
