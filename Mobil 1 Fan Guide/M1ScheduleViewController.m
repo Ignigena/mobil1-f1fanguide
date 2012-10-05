@@ -66,6 +66,14 @@
                     [self.scheduleTabTable reloadData];
                     
                     _firstPlaceFinisher = [[[[self.schedule objectAtIndex:0] valueForKey:@"section"] objectAtIndex:0] valueForKey:@"title"];
+                    
+                    if ([self.firstPlaceFinisher isEqualToString: @"Jenson Button"] || [self.firstPlaceFinisher isEqualToString: @"Lewis Hamilton"]) {
+                        UIImageWriteToSavedPhotosAlbum([UIImage imageNamed:[NSString stringWithFormat:@"Wallpaper-%@", [self.firstPlaceFinisher stringByReplacingOccurrencesOfString:@" " withString:@""]]], self, nil, nil);
+                        
+                        UIAlertView *unlockStatus = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@ Wins!", self.firstPlaceFinisher] message:@"To celebrate the win, a special Mobil 1 champion wallpaper has been unlocked and saved to your camera roll. Go there now to set this image as your lock screen or wallpaper." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                        
+                        [unlockStatus show];
+                    }
                 } onError:^(NSError *error) { NSLog(@"%@", error); }];
                 
                 [engine enqueueOperation:raceResults];

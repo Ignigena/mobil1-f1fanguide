@@ -26,6 +26,8 @@
 		86353C72161E25F9007AA650 /* Wallpaper-Tour.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C67161E25F9007AA650 /* Wallpaper-Tour.png */; };
 		86353C73161E25F9007AA650 /* Wallpaper-Track-Thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C68161E25F9007AA650 /* Wallpaper-Track-Thumb@2x.png */; };
 		86353C74161E25F9007AA650 /* Wallpaper-Track.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C69161E25F9007AA650 /* Wallpaper-Track.png */; };
+		86353C77161F8CA6007AA650 /* Wallpaper-JensonButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C75161F8CA6007AA650 /* Wallpaper-JensonButton.png */; };
+		86353C78161F8CA6007AA650 /* Wallpaper-LewisHamilton.png in Resources */ = {isa = PBXBuildFile; fileRef = 86353C76161F8CA6007AA650 /* Wallpaper-LewisHamilton.png */; };
 		863C364A15F8EE150015BD7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364915F8EE150015BD7D /* UIKit.framework */; };
 		863C364C15F8EE150015BD7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364B15F8EE150015BD7D /* Foundation.framework */; };
 		863C364E15F8EE150015BD7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863C364D15F8EE150015BD7D /* CoreGraphics.framework */; };
@@ -201,6 +203,8 @@
 		86353C67161E25F9007AA650 /* Wallpaper-Tour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Tour.png"; path = "Wallpapers/Wallpaper-Tour.png"; sourceTree = SOURCE_ROOT; };
 		86353C68161E25F9007AA650 /* Wallpaper-Track-Thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Track-Thumb@2x.png"; path = "Wallpapers/Wallpaper-Track-Thumb@2x.png"; sourceTree = SOURCE_ROOT; };
 		86353C69161E25F9007AA650 /* Wallpaper-Track.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Track.png"; path = "Wallpapers/Wallpaper-Track.png"; sourceTree = SOURCE_ROOT; };
+		86353C75161F8CA6007AA650 /* Wallpaper-JensonButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-JensonButton.png"; path = "Wallpapers/Wallpaper-JensonButton.png"; sourceTree = SOURCE_ROOT; };
+		86353C76161F8CA6007AA650 /* Wallpaper-LewisHamilton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-LewisHamilton.png"; path = "Wallpapers/Wallpaper-LewisHamilton.png"; sourceTree = SOURCE_ROOT; };
 		863C364515F8EE150015BD7D /* F1 Austin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "F1 Austin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		863C364915F8EE150015BD7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		863C364B15F8EE150015BD7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -442,6 +446,8 @@
 		86353C4A161DF039007AA650 /* Wallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				86353C75161F8CA6007AA650 /* Wallpaper-JensonButton.png */,
+				86353C76161F8CA6007AA650 /* Wallpaper-LewisHamilton.png */,
 				86353C60161E25F9007AA650 /* Wallpaper-Car-Thumb@2x.png */,
 				86353C61161E25F9007AA650 /* Wallpaper-Car.png */,
 				86353C62161E25F9007AA650 /* Wallpaper-Drivers-Thumb@2x.png */,
@@ -975,6 +981,8 @@
 				86353C72161E25F9007AA650 /* Wallpaper-Tour.png in Resources */,
 				86353C73161E25F9007AA650 /* Wallpaper-Track-Thumb@2x.png in Resources */,
 				86353C74161E25F9007AA650 /* Wallpaper-Track.png in Resources */,
+				86353C77161F8CA6007AA650 /* Wallpaper-JensonButton.png in Resources */,
+				86353C78161F8CA6007AA650 /* Wallpaper-LewisHamilton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
