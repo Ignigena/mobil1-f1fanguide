@@ -819,9 +819,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		863C364415F8EE150015BD7D /* F1 Austin */ = {
+		863C364415F8EE150015BD7D /* Fan Guide */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 863C366E15F8EE150015BD7D /* Build configuration list for PBXNativeTarget "F1 Austin" */;
+			buildConfigurationList = 863C366E15F8EE150015BD7D /* Build configuration list for PBXNativeTarget "Fan Guide" */;
 			buildPhases = (
 				863C364115F8EE150015BD7D /* Sources */,
 				863C364215F8EE150015BD7D /* Frameworks */,
@@ -831,7 +831,7 @@
 			);
 			dependencies = (
 			);
-			name = "F1 Austin";
+			name = "Fan Guide";
 			productName = "Mobil 1 Fan Guide";
 			productReference = 863C364515F8EE150015BD7D /* F1 Austin.app */;
 			productType = "com.apple.product-type.application";
@@ -858,7 +858,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				863C364415F8EE150015BD7D /* F1 Austin */,
+				863C364415F8EE150015BD7D /* Fan Guide */,
 			);
 		};
 /* End PBXProject section */
@@ -1148,7 +1148,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		863C366E15F8EE150015BD7D /* Build configuration list for PBXNativeTarget "F1 Austin" */ = {
+		863C366E15F8EE150015BD7D /* Build configuration list for PBXNativeTarget "Fan Guide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				863C366F15F8EE150015BD7D /* Debug */,
