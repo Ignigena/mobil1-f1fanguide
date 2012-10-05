@@ -30,7 +30,7 @@ static CGFloat const kOffset = 10.0f;
 	CGFloat height = self.paddingTop;
 	
 	
-	NSString *text = NSLocalizedString(@"Explore Technology to unlock wallpapers!", nil);
+	NSString *text = NSLocalizedString(@"Explore Technology to Unlock Wallpapers!", nil);
 	UIFont *textFont = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
 	CGRect textRect = CGRectMake(kOffset, height + kOffset, CGRectGetWidth(self.frame) - 2 * kOffset, MAXFLOAT);
 	CGSize textSize = [text sizeWithFont:textFont
@@ -116,11 +116,11 @@ static CGFloat const kOffset = 10.0f;
         if ([sectionToUnlock isEqualToString:@"MP4-27"]) { sectionToUnlock = @"Car"; }
         UIImageWriteToSavedPhotosAlbum([UIImage imageNamed:[NSString stringWithFormat:@"Wallpaper-%@", [sectionToUnlock stringByReplacingOccurrencesOfString:@" " withString:@""]]], self, nil, nil);
         
-        UIAlertView *unlockStatus = [[UIAlertView alloc] initWithTitle:@"Wallpaper Unlocked" message:@"This wallpaper has been saved to your camera roll where you can choose to use it as your lock screen or wallpaper." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *unlockStatus = [[UIAlertView alloc] initWithTitle:@"Wallpaper Unlocked" message:@"Congratulations! This wallpaper has been saved to your camera roll. From there you can set this image as your lock screen or wallpaper." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         
         [unlockStatus show];
     } else {
-        UIAlertView *unlockStatus = [[UIAlertView alloc] initWithTitle:@"Wallpaper Locked" message:[NSString stringWithFormat:@"In order to unlock this wallpaper, read the %@ section in Technology.", sectionToUnlock] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *unlockStatus = [[UIAlertView alloc] initWithTitle:@"Wallpaper Locked" message:[NSString stringWithFormat:@"In order to unlock this wallpaper, read the %@ section in the Technology tab.", sectionToUnlock] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         
         [unlockStatus show];
         
