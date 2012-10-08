@@ -62,7 +62,7 @@
     _tourOrigin = self.tourButton.frame.origin;
 	
     CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = CGRectMake(self.technologyScroller.frame.origin.x-100, self.technologyScroller.frame.origin.y, self.technologyScroller.frame.size.width*2.9+200, self.technologyScroller.frame.size.height);
+    gradient.frame = CGRectMake(self.technologyScroller.frame.origin.x-200, self.technologyScroller.frame.origin.y, self.technologyScroller.frame.size.width*2.9+400, self.technologyScroller.frame.size.height);
     gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithHue:0.583 saturation:0.583 brightness:0.188 alpha:1.000] CGColor], (id)[[UIColor colorWithHue:0.595 saturation:0.269 brightness:0.102 alpha:1.000] CGColor], nil];
     [self.technologyScroller.layer insertSublayer:gradient atIndex:0];
 }
