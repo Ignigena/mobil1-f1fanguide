@@ -97,8 +97,6 @@ static CGFloat const kOffset = 10.0f;
     [self addSubview:wallpaperFanFest];
     [self addSubview:wallpaperTrack];
     [self addSubview:wallpaperTour];
-    
-	height = CGRectGetMaxY(textRect);
 }
 
 - (void)unlockWallpaper:(UITapGestureRecognizer *)sender
