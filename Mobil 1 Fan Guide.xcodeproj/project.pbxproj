@@ -174,7 +174,6 @@
 		86F25FF815FE26EF00A9C7C1 /* NavBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F25FF715FE26EE00A9C7C1 /* NavBar@2x.png */; };
 		86F25FFA15FE291500A9C7C1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F25FF915FE291500A9C7C1 /* MapKit.framework */; };
 		86F25FFC15FE2BA200A9C7C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F25FFB15FE2BA200A9C7C1 /* CoreLocation.framework */; };
-		86F2602215FE3D4000A9C7C1 /* UIView+Origami.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F2602115FE3D3F00A9C7C1 /* UIView+Origami.m */; };
 		86F2602615FE45CC00A9C7C1 /* InfoDrawerBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F2602515FE45CB00A9C7C1 /* InfoDrawerBackground@2x.png */; };
 		86F2602815FE485100A9C7C1 /* InfoDivider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F2602715FE485000A9C7C1 /* InfoDivider@2x.png */; };
 		86F2602B15FE6BC600A9C7C1 /* M1MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F2602A15FE6BC500A9C7C1 /* M1MapAnnotation.m */; };
@@ -205,7 +204,7 @@
 		86353C69161E25F9007AA650 /* Wallpaper-Track.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-Track.png"; path = "Wallpapers/Wallpaper-Track.png"; sourceTree = SOURCE_ROOT; };
 		86353C75161F8CA6007AA650 /* Wallpaper-JensonButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-JensonButton.png"; path = "Wallpapers/Wallpaper-JensonButton.png"; sourceTree = SOURCE_ROOT; };
 		86353C76161F8CA6007AA650 /* Wallpaper-LewisHamilton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Wallpaper-LewisHamilton.png"; path = "Wallpapers/Wallpaper-LewisHamilton.png"; sourceTree = SOURCE_ROOT; };
-		863C364515F8EE150015BD7D /* F1 Austin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "F1 Austin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		863C364515F8EE150015BD7D /* Fan Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fan Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		863C364915F8EE150015BD7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		863C364B15F8EE150015BD7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		863C364D15F8EE150015BD7D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -392,8 +391,6 @@
 		86F25FF715FE26EE00A9C7C1 /* NavBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBar@2x.png"; sourceTree = "<group>"; };
 		86F25FF915FE291500A9C7C1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		86F25FFB15FE2BA200A9C7C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		86F2602015FE3D3E00A9C7C1 /* UIView+Origami.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Origami.h"; path = "Mobil 1 Fan Guide/UIView+Origami.h"; sourceTree = "<group>"; };
-		86F2602115FE3D3F00A9C7C1 /* UIView+Origami.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Origami.m"; path = "Mobil 1 Fan Guide/UIView+Origami.m"; sourceTree = "<group>"; };
 		86F2602515FE45CB00A9C7C1 /* InfoDrawerBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "InfoDrawerBackground@2x.png"; sourceTree = "<group>"; };
 		86F2602715FE485000A9C7C1 /* InfoDivider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "InfoDivider@2x.png"; sourceTree = "<group>"; };
 		86F2602915FE6BC400A9C7C1 /* M1MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M1MapAnnotation.h; sourceTree = "<group>"; };
@@ -475,7 +472,7 @@
 		863C364615F8EE150015BD7D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				863C364515F8EE150015BD7D /* F1 Austin.app */,
+				863C364515F8EE150015BD7D /* Fan Guide.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -709,8 +706,6 @@
 				86353C37161DCFF9007AA650 /* FDCurlViewControl.m */,
 				86353C47161DEC56007AA650 /* AGMedallionView.h */,
 				86353C48161DEC56007AA650 /* AGMedallionView.m */,
-				86F2602015FE3D3E00A9C7C1 /* UIView+Origami.h */,
-				86F2602115FE3D3F00A9C7C1 /* UIView+Origami.m */,
 				866B3A4D1610B6D100A13E81 /* UIView+ParentViewController.h */,
 				866B3A4E1610B6D100A13E81 /* UIView+ParentViewController.m */,
 				866B3A2C160CC58400A13E81 /* NSString+RelativeDate.h */,
@@ -839,7 +834,7 @@
 			);
 			name = "Fan Guide";
 			productName = "Mobil 1 Fan Guide";
-			productReference = 863C364515F8EE150015BD7D /* F1 Austin.app */;
+			productReference = 863C364515F8EE150015BD7D /* Fan Guide.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1007,7 +1002,6 @@
 				86F25FD115FA62D200A9C7C1 /* AMCountdownView.m in Sources */,
 				86F25FDB15FA813A00A9C7C1 /* M1MapViewController.m in Sources */,
 				86F25FF615FE266600A9C7C1 /* M1NavigationBar.m in Sources */,
-				86F2602215FE3D4000A9C7C1 /* UIView+Origami.m in Sources */,
 				86F2602B15FE6BC600A9C7C1 /* M1MapAnnotation.m in Sources */,
 				86E4E95D16039EE000C19AE9 /* M1VideoViewController.m in Sources */,
 				86E4E96C1603BBD600C19AE9 /* M1VideoLoadingView.m in Sources */,
