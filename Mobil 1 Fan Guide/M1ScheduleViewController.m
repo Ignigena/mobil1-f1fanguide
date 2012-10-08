@@ -14,6 +14,7 @@
 #import "M1ScheduleViewController.h"
 #import "M1TechnologyViewController.h"
 #import "NSString+RelativeDate.h"
+#import "MKNetworkKit.h"
 
 @interface M1ScheduleViewController ()
 
