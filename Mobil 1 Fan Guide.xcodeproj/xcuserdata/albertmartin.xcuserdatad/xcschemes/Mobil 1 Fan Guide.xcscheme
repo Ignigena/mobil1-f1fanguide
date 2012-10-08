@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "863C364415F8EE150015BD7D"
-               BuildableName = "F1 Austin.app"
+               BuildableName = "Fan Guide.app"
                BlueprintName = "Fan Guide"
                ReferencedContainer = "container:Mobil 1 Fan Guide.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "863C364415F8EE150015BD7D"
-            BuildableName = "F1 Austin.app"
+            BuildableName = "Fan Guide.app"
             BlueprintName = "Fan Guide"
             ReferencedContainer = "container:Mobil 1 Fan Guide.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "863C364415F8EE150015BD7D"
-            BuildableName = "F1 Austin.app"
+            BuildableName = "Fan Guide.app"
             BlueprintName = "Fan Guide"
             ReferencedContainer = "container:Mobil 1 Fan Guide.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "863C364415F8EE150015BD7D"
-            BuildableName = "F1 Austin.app"
+            BuildableName = "Fan Guide.app"
             BlueprintName = "Fan Guide"
             ReferencedContainer = "container:Mobil 1 Fan Guide.xcodeproj">
          </BuildableReference>
