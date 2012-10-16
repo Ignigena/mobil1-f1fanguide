@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
-        <!--First View Controller - F1 USGP Fan Guide-->
+        <!--First View Controller - USGP Fan Guide-->
         <scene sceneID="saK-wG-fka">
             <objects>
                 <tableViewController id="Xer-rc-IEg" customClass="M1FirstViewController" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                             <outlet property="delegate" destination="Xer-rc-IEg" id="7MK-NS-fFI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="F1 USGP Fan Guide" id="7T8-BN-xSs"/>
+                    <navigationItem key="navigationItem" title="USGP Fan Guide" id="7T8-BN-xSs"/>
                     <connections>
                         <outlet property="newsTable" destination="Bj4-pS-Uxs" id="JIV-qq-QcT"/>
                         <segue destination="9lX-bg-GJq" kind="push" identifier="showNewsStory" id="Xhz-Oi-w5T"/>
@@ -689,7 +689,6 @@ Circuit of The Americas is ideally situated on a 1000-acre site in southeast Aus
         <class className="M1ScheduleViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/M1ScheduleViewController.h"/>
             <relationships>
-                <relationship kind="action" name="whatsThisButtonClicked:"/>
                 <relationship kind="outlet" name="scheduleTabTable" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="scheduleTabTitle" candidateClass="UILabel"/>
             </relationships>
